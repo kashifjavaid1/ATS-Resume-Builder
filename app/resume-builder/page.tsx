@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import Faq from "@/components/Faq";
+import Builder from "@/components/Builder";
+
+export const metadata: Metadata = {
+  title: "Free Online Resume Builder",
+  description: "Build an ATS-friendly resume online with live preview and three templates. Autosaves locally and downloads as a PDF.",
+  alternates: { canonical: "/resume-builder" }
+};
+
+export default function Page() {
+  return (
+    <>
+      <h1 className="mb-4 text-3xl font-bold print:hidden">Free Online Resume Builder</h1>
+      <Builder />
+      <Faq
+        items={[
+          { q: "Is this resume builder free?", a: "Yes. The resume builder is free to use online. There is no sign-up and no watermark. You build your resume in your browser and use Print to PDF to save it." },
+          { q: "Does my resume stay private?", a: "Yes. Your resume is stored only in your browser's local storage. Nothing is uploaded to a server. Clearing your browser data deletes your saved draft, so export a JSON backup if you want one." },
+          { q: "What happens to my data after I download?", a: "After you print or download, you choose: Clear kar do deletes your saved resume from this browser, and Save rakho keeps it so you can edit it again later." },
+          { q: "Will my resume work with ATS?", a: "The builder uses single-column templates with standard headings that ATS software can read more easily. The ATS checker highlights common formatting and completeness issues. No tool can guarantee a pass, because every employer configures its system differently." },
+        ]}
+      />
+    </>
+  );
+}
