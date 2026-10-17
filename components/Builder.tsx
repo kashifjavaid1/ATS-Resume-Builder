@@ -54,7 +54,7 @@ const text = [
   ["location", "Location"]
 ] as const;
 
-const inputStyle = "w-full rounded-xl border border-indigo-100 bg-slate-50/80 px-4 py-3 text-sm font-medium text-slate-900 transition-all focus:border-indigo-600 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-600/10 shadow-sm";
+const inputStyle = "w-full rounded-xl border border-indigo-100 bg-slate-50/80 px-4 py-3 text-base sm:text-sm font-medium text-slate-900 transition-all focus:border-indigo-600 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-600/10 shadow-sm";
 
 export default function Builder() {
   const [r, setR] = useState<Resume>(emptyResume);
@@ -187,22 +187,24 @@ export default function Builder() {
   const isLocked = !!selectedCountry && !!COUNTRY_TEMPLATE_MAP[selectedCountry];
 
   return (
-    <div className="grid gap-8 lg:grid-cols-12 pb-12 items-start">
-      <section className="space-y-6 print:hidden lg:col-span-6 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/20 p-6 sm:p-8 rounded-3xl border border-indigo-100 shadow-2xl shadow-indigo-500/5 relative" aria-label="Resume editor">
+    <div className="grid gap-8 lg:grid-cols-12 pb-12 items-start overflow-x-clip">
+      {/* Print: exact A4 page, full template colors, no card radius/shadow — PDF matches the preview. */}
+      <style>{`@page { size: A4; margin: 0; } @media print { #resume { border-radius: 0 !important; box-shadow: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; } }`}</style>
+      <section className="min-w-0 space-y-6 print:hidden lg:col-span-6 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/20 p-4 sm:p-6 lg:p-8 rounded-3xl border border-indigo-100 shadow-2xl shadow-indigo-500/5 relative" aria-label="Resume editor">
 
-        <div className="flex items-center justify-between pb-5 border-b border-indigo-100/80">
-          <div>
+        <div className="flex items-center justify-between gap-3 pb-5 border-b border-indigo-100/80">
+          <div className="min-w-0">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-bold tracking-wide uppercase mb-1">
               Step {step} of 4 {selectedCountry && `• ${COUNTRY_NAMES[selectedCountry] || selectedCountry}`}
             </div>
-            <h2 className="text-xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-xl font-black text-slate-900 tracking-tight break-words">
               {step === 1 && (selectedCountry ? "Country Profile & Personal Info" : "Choose Template & Personal Info")}
               {step === 2 && "Professional Summary & Skills"}
               {step === 3 && "Work History & Education"}
               {step === 4 && "Certifications & Languages"}
             </h2>
           </div>
-          <span className={`text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm ${saved ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
+          <span className={`text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm shrink-0 ${saved ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
             {saved ? " Saved" : "Saving..."}
           </span>
         </div>
@@ -245,9 +247,9 @@ export default function Builder() {
             )}
 
             <div className="space-y-3 bg-white/80 p-4 rounded-2xl border border-indigo-50 shadow-sm">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-2 flex-wrap">
                 <span className="text-xs font-bold uppercase tracking-wider text-indigo-900">Accent Color Theme:</span>
-                <div className="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200">
+                <div className="flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200 shrink-0">
                   <input type="color" value={r.accent} onChange={e => up("accent", e.target.value)} className="h-7 w-9 cursor-pointer rounded-lg border-0 bg-transparent p-0" />
                   <span className="text-xs font-mono font-semibold text-slate-700">{r.accent}</span>
                 </div>
@@ -368,10 +370,10 @@ export default function Builder() {
                 <span className="h-2 w-2 rounded-full bg-indigo-600"></span> Languages
               </h3>
               {r.languages.map((l, i) => (
-                <div key={i} className="flex gap-2 items-center bg-indigo-50/20 p-3 rounded-2xl border border-indigo-100">
+                <div key={i} className="flex flex-col sm:flex-row gap-2 sm:items-center bg-indigo-50/20 p-3 rounded-2xl border border-indigo-100">
                   <input placeholder="Language" className={inputStyle} value={l.name} onChange={e => updateLang(i, "name", e.target.value)} />
                   <input placeholder="Proficiency" className={inputStyle} value={l.proficiency} onChange={e => updateLang(i, "proficiency", e.target.value)} />
-                  <button className="text-xs text-rose-600 font-extrabold px-3 py-2 hover:bg-rose-50 rounded-xl transition-colors" onClick={() => up("languages", r.languages.filter((_, idx) => idx !== i))}>✕</button>
+                  <button className="text-xs text-rose-600 font-extrabold px-3 py-2 hover:bg-rose-50 rounded-xl transition-colors self-end sm:self-auto" onClick={() => up("languages", r.languages.filter((_, idx) => idx !== i))}>✕</button>
                 </div>
               ))}
               <button className="w-full rounded-xl border border-dashed border-indigo-300 bg-indigo-50/50 px-4 py-3 text-xs font-extrabold uppercase tracking-wider text-indigo-700 hover:bg-indigo-100/60 transition-all shadow-sm" onClick={() => up("languages", [...r.languages, { name: "", proficiency: "" }])}>
@@ -381,7 +383,7 @@ export default function Builder() {
           </div>
         )}
 
-        <div className="flex items-center justify-between pt-6 border-t border-indigo-100/80">
+        <div className="flex items-center justify-between gap-3 flex-wrap pt-6 border-t border-indigo-100/80">
           {step > 1 ? (
             <button onClick={() => setStep(step - 1)} className="rounded-xl border-2 border-indigo-200 bg-white px-6 py-3 text-sm font-bold text-indigo-900 hover:bg-indigo-50 transition-all shadow-sm active:scale-95">
               ← Previous
@@ -401,20 +403,20 @@ export default function Builder() {
 
         {showPrintChoice && (
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 shadow-sm" role="status">
-            <p className="text-sm font-bold text-slate-900">Download ho gaya — Data clear kar dun ya Save rakhu?</p>
+            <p className="text-sm font-bold text-slate-900">Download complete — Clear your data or keep it saved?</p>
             <p className="mt-1 text-xs text-slate-600">Your CV is still saved in this browser. Choose what happens next.</p>
             <div className="mt-3 flex flex-wrap gap-2">
               <button onClick={handlePrintClear} className="rounded-xl bg-rose-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-rose-500">
-                Clear kar do
+                Clear data
               </button>
               <button onClick={() => setShowPrintChoice(false)} className="rounded-xl border border-emerald-300 bg-white px-4 py-2 text-xs font-bold text-emerald-700 shadow-sm hover:bg-emerald-100">
-                Save rakho
+                Keep saved
               </button>
             </div>
           </div>
         )}
 
-        <div className="flex justify-between items-center text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
+        <div className="flex flex-wrap gap-3 justify-between items-center text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
           <button onClick={exportJson} className="hover:text-indigo-600 transition-colors">Export JSON</button>
           <button onClick={handleClear} className="hover:text-rose-600 transition-colors">Clear Resume</button>
           <label className="cursor-pointer hover:text-indigo-600 transition-colors">
@@ -425,7 +427,7 @@ export default function Builder() {
 
       </section>
 
-     <section aria-label="Live preview" className="lg:col-span-6">
+     <section aria-label="Live preview" className="lg:col-span-6 min-w-0">
   <div
     id="resume"
     className="mx-auto w-full max-w-[794px] overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-slate-900/10 lg:sticky lg:top-24"
