@@ -426,7 +426,7 @@ export function Bold({ r }: { r: Resume }) {
   );
 
   return (
-    <div className="flex bg-white text-slate-900 text-sm min-h-[1000px]">
+    <div className="flex bg-white text-slate-900 text-sm min-h-[800px]">
 
       <aside
         className="w-[38%] sm:w-[36%] md:w-[34%] text-white px-3 sm:px-4 md:px-6 py-5 sm:py-6 md:py-8 flex flex-col gap-4 sm:gap-5 md:gap-6 shrink-0"
