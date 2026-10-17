@@ -24,7 +24,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "PK",
     badge: "Local Standard",
     accent: "from-emerald-500 to-green-600",
-    desc: "Pakistan CV format: name matching CNIC, Father's Name, Matric / FSc / Higher Secondary School Certificate, Bachelor's or Master's with years, single-column ATS layout. 1 page for freshers, up to 2-3 pages for experienced candidates.",
+    desc: "Pakistan CV format: name matching CNIC, Father's Name, Matric / FSc / Higher Secondary School Certificate, Bachelor's or Master's with years, single-column ATS layout. 1 page for freshers, up to 2 pages for experienced candidates.",
     rules: ["Name must match CNIC + Father's Name", "Matric, FSc / HSSC, degree with years", "1 page freshers, 2 pages experienced"],
     intro: [
       "A CV Maker Pakistan tool should match what Pakistani employers expect: your full name exactly as on your CNIC, your Father's Name, clear education with passing years, and a single-column layout that ATS software can read.",
@@ -405,7 +405,7 @@ export const COUNTRIES: Country[] = [
       { q: "What should a Saudi Arabia CV format for nurses include?", a: "Licence and registration, clinical areas, hospital experience, and certifications — with dates. Keep the same single-column, ATS-friendly structure." },
       { q: "Is a Saudi Arabia CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
-    metaTitle: "Saudi Arabia CV Format — Free Builder | KSA CV Template, PDF & Word",
+    metaTitle: "Saudi Arabia CV Format — Free Builder | KSA CV Template & PDF",
     metaDesc: "Build a Saudi Arabia (KSA) CV format free: formal Gulf CV template with credentials. PDF via print. No sign-up.",
   },
   {

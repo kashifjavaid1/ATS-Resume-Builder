@@ -4,7 +4,8 @@ import { Crumbs, Ld } from "@/components/Seo";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "CV Maker Pakistan — Free Online Resume Builder | Print to PDF",
+  // FIX — absolute title: layout ka template ab brand dobara nahi jodega
+  title: { absolute: "CV Maker Pakistan — Free Online Resume Builder | Print to PDF" },
   description:
     "CV Maker Pakistan: build a professional, ATS-friendly CV online free. No sign-up. Add your Matric, FSc / Higher Secondary School Certificate, degree, skills and work history, then Print to PDF. Your CV stays on your device.",
   alternates: { canonical: "/cv-maker-pakistan" },

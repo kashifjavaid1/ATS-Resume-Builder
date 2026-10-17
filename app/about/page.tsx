@@ -3,7 +3,8 @@ import Link from "next/link";
 import Faq from "@/components/Faq";
 
 export const metadata: Metadata = {
-  title: "About CV Maker Pakistan — Free ATS-Friendly Resume Builder",
+  // FIX 1 — absolute title: layout ka template ab brand dobara nahi jodega
+  title: { absolute: "About CV Maker Pakistan — Free ATS-Friendly Resume Builder" },
   description: "About CV Maker Pakistan: a free, private, ATS-friendly resume builder for Pakistan and 17 countries. No sign-up, no watermark. Build your CV online and Print to PDF.",
   alternates: { canonical: "/about" },
 };
@@ -58,7 +59,8 @@ export default function Page() {
             <p className="mt-1 text-sm leading-6 text-slate-600">Check your CV for ATS readability, missing sections and formatting issues before you apply.</p>
             <span className="mt-3 inline-block text-sm font-bold text-indigo-600">Open tool →</span>
           </Link>
-          <Link href="/job-matcher" className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl">
+          {/* FIX 2 — broken link: /job-matcher → /resume-job-matcher (asli route) */}
+          <Link href="/resume-job-matcher" className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl">
             <span className="text-3xl">🎯</span>
             <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Job Matcher</h3>
             <p className="mt-1 text-sm leading-6 text-slate-600">Compare your CV with a job description and find the missing keywords the employer is looking for.</p>

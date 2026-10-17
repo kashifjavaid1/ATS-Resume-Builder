@@ -63,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><Link href="/ats-resume-guide" prefetch={true} className="hover:text-white transition-colors">ATS Guide</Link></li>
                   <li><Link href="/resume-format-guide" prefetch={true} className="hover:text-white transition-colors">Format Guide</Link></li>
                   <li><Link href="/cv-format-pakistan" prefetch={true} className="hover:text-white transition-colors">CV Format Pakistan</Link></li>
+                  <li><Link href="/cv-for-freshers-pakistan" prefetch={true} className="hover:text-white transition-colors">CV for Freshers</Link></li>
                   <li><Link href="/cv-for-gulf-saudi-jobs" prefetch={true} className="hover:text-white transition-colors">Gulf CV Guide</Link></li>
                   <li><Link href="/europe-cv-format" prefetch={true} className="hover:text-white transition-colors">Europe CV Guide</Link></li>
                   <li><Link href="/blog" prefetch={true} className="hover:text-white transition-colors">Blog</Link></li>

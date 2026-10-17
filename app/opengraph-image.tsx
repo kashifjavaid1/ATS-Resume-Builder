@@ -15,17 +15,39 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "#4f46e5",
+          backgroundImage: "linear-gradient(135deg, #059669 0%, #4f46e5 100%)",
           color: "#ffffff",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ fontSize: 28, opacity: 0.85 }}>CV Maker Pakistan</div>
-        <div style={{ fontSize: 64, fontWeight: 800, lineHeight: 1.1, marginTop: 16 }}>
+        {/* Logo row — Navbar/Footer jaisa CV badge + naam */}
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 84,
+              height: 84,
+              borderRadius: 20,
+              background: "#ffffff",
+              color: "#4f46e5",
+              fontSize: 36,
+              fontWeight: 900,
+            }}
+          >
+            CV
+          </div>
+          <div style={{ fontSize: 32, fontWeight: 800 }}>
+            CV Maker <span style={{ color: "#6ee7b7" }}>Pakistan</span>
+          </div>
+        </div>
+
+        <div style={{ fontSize: 64, fontWeight: 800, lineHeight: 1.1, marginTop: 28 }}>
           Free Online Resume Builder
         </div>
         <div style={{ fontSize: 28, marginTop: 16, opacity: 0.9 }}>
-          ATS-friendly CV • No sign-up • Print to PDF
+          Pakistan + 16 More Countries • ATS-friendly CV • No sign-up • Print to PDF
         </div>
       </div>
     ),

@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#4f46e5"/><path d="M20 12h16l10 10v30a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z" fill="#ffffff"/><path d="M36 12v10h10" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linejoin="round"/><rect x="22" y="30" width="20" height="3" rx="1.5" fill="#4f46e5"/><rect x="22" y="37" width="20" height="3" rx="1.5" fill="#a5b4fc"/><rect x="22" y="44" width="14" height="3" rx="1.5" fill="#a5b4fc"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="cv-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="20" fill="url(#cv-grad)"/>
+  <text x="32" y="43" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="900" letter-spacing="-1" fill="#ffffff" text-anchor="middle">CV</text>
+  <circle cx="52" cy="12" r="10" fill="#34d399" stroke="#0f172a" stroke-width="2"/>
+  <path d="M47.5 12l3.3 3.2 5.7-6" stroke="#022c22" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

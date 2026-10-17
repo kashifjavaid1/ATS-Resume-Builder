@@ -191,8 +191,9 @@ function BottomCTA() {
         <h2 id="cta-heading" className="text-3xl font-black tracking-tight sm:text-4xl">
           Ready to Build Your International Resume?
         </h2>
+        {/* FIX — "100% client-side data privacy" absolute dawa → honest line */}
         <p className="mx-auto max-w-xl text-sm text-slate-300 sm:text-base">
-          Print to PDF, 100% client-side data privacy, and optimized for global Applicant Tracking Systems.
+          Print to PDF, your CV stays on your device — nothing is uploaded — and optimized for global Applicant Tracking Systems.
         </p>
         <div className="pt-4">
           <Link
