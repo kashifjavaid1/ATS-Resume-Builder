@@ -13,8 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/resume-templates",
     "/resume-examples",
     "/blog",
-    "/ats-resume-guide",
-    "/resume-format-guide",
     "/cv-maker-pakistan",
     "/country-templates",
     "/about",
