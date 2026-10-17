@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Script from "next/script";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
@@ -19,7 +20,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="bg-gradient-to-br from-slate-50 via-indigo-50/30 to-slate-100 font-sans text-slate-900 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col" suppressHydrationWarning>
-        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SLYHWKH165"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SLYHWKH165');`}
+        </Script>
+
         <Navbar />
 
         <main className="mx-auto max-w-6xl scroll-mt-24 p-4 pt-6 sm:p-6 sm:pt-8 flex-grow w-full">{children}</main>
