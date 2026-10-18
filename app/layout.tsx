@@ -8,12 +8,17 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
-export const metadata: Metadata = { 
-  metadataBase: new URL(SITE_URL), 
-  title: { default: "CV Maker Pakistan — Free Online Resume Builder | ATS-Friendly CV", template: "%s | CV Maker Pakistan" }, 
-  description: "CV Maker Pakistan — build a professional, ATS-friendly CV online free. No sign-up. Create your resume, check it, and print to PDF. Your CV stays on your device.", 
-  openGraph: { type: "website", siteName: SITE_NAME, url: SITE_URL, title: "CV Maker Pakistan — Free Online Resume Builder", description: "Build a professional, ATS-friendly CV online free. No sign-up. Print to PDF. Your CV stays on your device." }, 
-  twitter: { card: "summary_large_image" } 
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: { default: "CV Maker Pakistan — Free Online Resume Builder | ATS-Friendly CV", template: "%s | CV Maker Pakistan" },
+  description: "CV Maker Pakistan — build a professional, ATS-friendly CV online free. No sign-up. Create your resume, check it, and print to PDF. Your CV stays on your device.",
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "en_US",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "CV Maker Pakistan — Free Online Resume Builder" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
