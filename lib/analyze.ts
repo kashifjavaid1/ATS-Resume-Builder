@@ -4,7 +4,7 @@ const STOP = new Set("the a an and or of to in for with on at by is are be as yo
 export const words = (t: string) => (t.toLowerCase().match(/[a-z][a-z+#.]{1,}/g) ?? []).filter(w => !STOP.has(w));
 
 // Section text: from a heading until the next ALL-CAPS heading (or max length)
-const NEXT_CAPS_HEADING = /\b(EXPERIENCE|EMPLOYMENT|EDUCATION|SKILLS|SUMMARY|PROFILE|OBJECTIVE|PROJECTS|CERTIFICATIONS|LANGUAGES|CONTACT|ACHIEVEMENTS|AWARDS|REFERENCES)\b/;
+const NEXT_CAPS_HEADING = /\b(EXPERIENCE|EMPLOYMENT|EDUCATION|SKILLS|SUMMARY|PROFILE|OBJECTIVE|PROJECTS|CERTIFICATIONS|LANGUAGES|CONTACT|ACHIEVEMENTS|AWARDS|REFERENCES|ABOUT ME)\b/;
 function sectionAfter(t: string, heading: RegExp, maxLen: number): string {
   const m = t.match(heading);
   if (!m || m.index === undefined) return "";
@@ -60,8 +60,8 @@ export function analyze(text: string): Result {
   const skillsOk = skSeg.length > 0 && skillItems.length >= 5;
   add(skillsOk, "warn", "Skills section", skSeg.length === 0 ? "Skills drive keyword matching." : `Only ${skillItems.length} skill${skillItems.length === 1 ? "" : "s"} found — too few for keyword matching.`, "List at least 5 specific skills, separated by commas.");
 
-  // 8. Professional summary — present, 30–90 words
-  const sumSeg = sectionAfter(t, /summary|profile|objective/i, 900);
+  // 8. Professional summary — present, 30–90 words ("About Me" counts as a summary heading)
+  const sumSeg = sectionAfter(t, /summary|profile|objective|about me/i, 900);
   const sumWords = sumSeg ? sumSeg.split(/\s+/).filter(Boolean).length : 0;
   const sumOk = sumSeg.length > 0 && sumWords >= 30 && sumWords <= 90;
   let sumWhy = "";
@@ -76,17 +76,20 @@ export function analyze(text: string): Result {
   const signals = pct + verbNums;
   add(signals >= 2, "warn", "Measurable results", signals === 0 ? "No numbers found — achievements without metrics look vague." : `Only ${signals} measurable result${signals === 1 ? "" : "s"} found.`, "Add at least 2 metrics, e.g. 'Increased sales by 30%' or 'Cut load time from 5s to 1s'.");
 
-  // 10. Action verbs & bullets
+  // 10. Action verbs & bullets — ONLY inside the Experience section.
+  // (No Experience section → skip this check; the Experience error above already covers it.
+  //  Skills bullets like "Languages: ..." must not be flagged for missing action verbs.)
   const VERBS = new Set("built developed led managed designed implemented created improved increased reduced delivered launched optimized automated coordinated achieved generated established streamlined migrated integrated engineered drove owned spearheaded transformed supervised mentored analyzed resolved supported maintained tested deployed".split(" "));
-  const weakPhrase = /(responsible for|worked on|duties included|in charge of)/i.test(t);
-  const starts = [...t.matchAll(/•\s*([A-Za-z]+)/g), ...t.matchAll(/(?:^|\n)\s*[-–]\s+([A-Za-z]+)/g)].map(m => m[1].toLowerCase());
-  const strong = starts.filter(w => VERBS.has(w)).length;
-  let verbsOk = false; let verbsWhy = ""; let verbsFix = "";
-  if (starts.length === 0) { verbsWhy = "No bullet points found — parsers and recruiters scan bullets first."; verbsFix = "Use bullet points under each job, starting with action verbs like Built, Led or Delivered."; }
-  else if (weakPhrase) { verbsWhy = "Bullets use weak phrases like 'Responsible for' instead of action verbs."; verbsFix = "Rewrite bullets to start with action verbs: Built, Led, Delivered, Improved."; }
-  else if (strong / starts.length < 0.5) { verbsWhy = "Fewer than half of your bullets start with a strong action verb."; verbsFix = "Start most bullets with action verbs: Built, Led, Delivered, Improved."; }
-  else verbsOk = true;
-  add(verbsOk, "warn", "Action verbs & bullets", verbsWhy, verbsFix);
+  if (expSeg.length > 0) {
+    const weakPhrase = /(responsible for|worked on|duties included|in charge of)/i.test(expSeg);
+    const starts = [...expSeg.matchAll(/•\s*([A-Za-z]+)/g), ...expSeg.matchAll(/(?:^|\n)\s*[-–]\s+([A-Za-z]+)/g)].map(m => m[1].toLowerCase());
+    const strong = starts.filter(w => VERBS.has(w)).length;
+    let verbsOk = true; let verbsWhy = ""; let verbsFix = "";
+    if (starts.length === 0) { verbsOk = false; verbsWhy = "No bullet points found under Experience — parsers and recruiters scan bullets first."; verbsFix = "Use bullet points under each job, starting with action verbs like Built, Led or Delivered."; }
+    else if (weakPhrase) { verbsOk = false; verbsWhy = "Bullets use weak phrases like 'Responsible for' instead of action verbs."; verbsFix = "Rewrite bullets to start with action verbs: Built, Led, Delivered, Improved."; }
+    else if (strong / starts.length < 0.5) { verbsOk = false; verbsWhy = "Fewer than half of your bullets start with a strong action verb."; verbsFix = "Start most bullets with action verbs: Built, Led, Delivered, Improved."; }
+    add(verbsOk, "warn", "Action verbs & bullets", verbsWhy, verbsFix);
+  }
 
   // 11. Clichés — generic claims without proof
   const cliche = t.match(/hard worker|team player|fast learner|quick learner|highly motivated|self-starter/gi);
