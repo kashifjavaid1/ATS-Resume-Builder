@@ -3,8 +3,7 @@ import { useState, useRef } from "react";
 import { analyze, match, Result } from "@/lib/analyze";
 import { resumeToText, emptyResume } from "@/types/resume";
 import * as pdfjsLib from "pdfjs-dist";
-import Tesseract from "tesseract.js";
-import * as mammoth from "mammoth";
+
 
 if (typeof window !== "undefined") {
   pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
@@ -18,10 +17,6 @@ const ic = {
 
 const inputStyle = "w-full rounded-2xl border border-indigo-100 bg-slate-50/80 p-4 text-sm font-medium text-slate-900 transition-all focus:border-indigo-600 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-600/10 shadow-sm";
 
-// ---- OCR helpers: layout-aware (columns) + garbage-line cleanup ----
-
-// Find the vertical gutter (low-ink gap) between columns in the middle band of the page.
-// Returns the gutter position as a fraction of width (0–1), or null if no clear gutter.
 function findGutter(src: HTMLCanvasElement, topFrac: number, bottomFrac: number): number | null {
   const w = 300, h = 200;
   const tmp = document.createElement("canvas");
@@ -53,8 +48,6 @@ function findGutter(src: HTMLCanvasElement, topFrac: number, bottomFrac: number)
   return (best.start + best.len / 2) / w;
 }
 
-// Drop garbage lines from OCR output (icon noise, stray symbols, page numbers),
-// but keep lines that carry a real email / phone / URL / words.
 function cleanOcrText(raw: string): string {
   return raw.split("\n").map(l => l.trim()).filter(l => {
     if (!l) return false;
@@ -81,6 +74,7 @@ async function ocrWithLayout(src: HTMLCanvasElement): Promise<string> {
     return c;
   };
   const ocrOne = async (c: HTMLCanvasElement): Promise<string> => {
+    const Tesseract = (await import("tesseract.js")).default; // lazy: browser only
     const { data } = await Tesseract.recognize(c, "eng");
     return data.text || "";
   };
@@ -188,6 +182,7 @@ export default function Checker() {
         }
       } else if (lower.endsWith(".docx")) {
         setLoadingText("Reading Word file...");
+        const mammoth = await import("mammoth"); // lazy: browser only
         const arrayBuffer = await f.arrayBuffer();
         const { value } = await mammoth.extractRawText({ arrayBuffer });
         if (value.trim().length > 20) {
