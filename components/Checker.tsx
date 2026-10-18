@@ -4,6 +4,10 @@ import { analyze, match, Result } from "@/lib/analyze";
 import { resumeToText, emptyResume } from "@/types/resume";
 import * as pdfjsLib from "pdfjs-dist";
 
+// NOTE: tesseract.js and mammoth are NOT imported at the top.
+// They touch browser-only globals at import time, which breaks Next.js
+// prerendering during `next build`. They are lazy-loaded inside the
+// upload handler instead, so they only ever run in the browser.
 
 if (typeof window !== "undefined") {
   pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
@@ -17,6 +21,10 @@ const ic = {
 
 const inputStyle = "w-full rounded-2xl border border-indigo-100 bg-slate-50/80 p-4 text-sm font-medium text-slate-900 transition-all focus:border-indigo-600 focus:bg-white focus:outline-none focus:ring-4 focus:ring-indigo-600/10 shadow-sm";
 
+// ---- OCR helpers: layout-aware (columns) + garbage-line cleanup ----
+
+// Find the vertical gutter (low-ink gap) between columns in the middle band of the page.
+// Returns the gutter position as a fraction of width (0–1), or null if no clear gutter.
 function findGutter(src: HTMLCanvasElement, topFrac: number, bottomFrac: number): number | null {
   const w = 300, h = 200;
   const tmp = document.createElement("canvas");
@@ -48,6 +56,8 @@ function findGutter(src: HTMLCanvasElement, topFrac: number, bottomFrac: number)
   return (best.start + best.len / 2) / w;
 }
 
+// Drop garbage lines from OCR output (icon noise, stray symbols, page numbers),
+// but keep lines that carry a real email / phone / URL / words.
 function cleanOcrText(raw: string): string {
   return raw.split("\n").map(l => l.trim()).filter(l => {
     if (!l) return false;
@@ -146,7 +156,7 @@ export default function Checker() {
             canvas.height = viewport.height;
             const ctx = canvas.getContext("2d");
             if (ctx) {
-              await page.render({ canvasContext: ctx, viewport }).promise;
+            await page.render({ canvas, canvasContext: ctx, viewport }).promise;
               ocrText += (await ocrWithLayout(canvas)) + "\n";
             }
           }
