@@ -42,7 +42,7 @@ export const COUNTRIES: Country[] = [
       { q: "Should I add a photo to a Pakistani CV?", a: "A photo is not required for most private-sector jobs in Pakistan. Add one only if the job advertisement asks for it. Keep the rest of the CV clean and ATS-friendly either way." },
     ],
     metaTitle: "CV Maker Pakistan — Free Online Resume Builder | Print to PDF",
-    metaDesc: "CV Maker Pakistan: build a professional, ATS-friendly CV online free. No sign-up. Pakistan format with Matric, FSc, CNIC guidance. Print to PDF.",
+    metaDesc: "CV Maker Pakistan: build a professional, ATS-friendly CV online free. No sign-up. Pakistan format — the CV format in Pakistan — with Matric, FSc, CNIC guidance. Print to PDF.",
   },
   {
     slug: "usa",
@@ -55,7 +55,7 @@ export const COUNTRIES: Country[] = [
     desc: "Single-column chronological format focused heavily on core technical skills, metrics, and modern ATS parsers.",
     rules: ["No photo or DOB required", "Focus on ROI & metrics", "1-2 page limit"],
     intro: [
-      "A US resume template follows a simple rule: show results, not duties. Recruiters scan for a strong summary, recent experience with numbers, and skills that match the job posting.",
+      "A US resume template (USA CV) follows a simple rule: show results, not duties. Recruiters scan for a strong summary, recent experience with numbers, and skills that match the job posting.",
       "Build your US resume free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.",
     ],
     sections: [
@@ -70,7 +70,7 @@ export const COUNTRIES: Country[] = [
       { q: "What is the best US resume format for ATS?", a: "A single-column, reverse-chronological resume with standard headings (Summary, Experience, Skills, Education) and real bullet points. Avoid two-column layouts and text boxes." },
     ],
     metaTitle: "US Resume Template — Free Builder | ATS-Friendly US Format",
-    metaDesc: "Build a US resume template free: single-column, ATS-friendly format with metrics-driven bullets. No sign-up. Print to PDF. Free download as PDF via print.",
+    metaDesc: "Build a US resume template (USA CV) free: single-column, ATS-friendly format with metrics-driven bullets. No sign-up. Print to PDF. Free download as PDF via print.",
   },
   {
     slug: "united-kingdom",
@@ -80,7 +80,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "UK",
     badge: "High Demand",
     accent: "from-blue-500 to-indigo-600",
-    desc: "Formal CV structure highlighting academic credentials, professional memberships, and targeted achievements.",
+    desc: "Formal UK CV structure highlighting academic credentials, professional memberships, and targeted achievements.",
     rules: ["2-page maximum standard", "No personal photos", "Detailed employment history"],
     intro: [
       "A UK CV template is more formal than a US resume. Employers expect a clear personal statement, detailed employment history, education and professional memberships — usually across 2 pages.",
@@ -108,7 +108,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "GERMANY-AUSTRIA",
     badge: "Europass",
     accent: "from-emerald-500 to-teal-600",
-    desc: "Detailed chronological structures incorporating personal info, clear academic degrees, and skill matrices.",
+    desc: "Detailed chronological structures for a Germany CV and Austria CV, incorporating personal info, clear academic degrees, and skill matrices.",
     rules: ["Formal layout structure", "Structured education timeline", "Professional tone"],
     intro: [
       "A Germany CV format is formal, complete and chronological. German employers expect personal details, a clear education timeline, work history, skills and, often, a signed and dated CV.",
@@ -125,8 +125,8 @@ export const COUNTRIES: Country[] = [
       { q: "What is Europass?", a: "Europass is a standard European CV format with fixed sections. It is widely understood, but many German recruiters prefer a tailored tabular CV with the same information." },
       { q: "How long should a Germany CV be?", a: "Usually 2 pages. Keep it structured and factual — every section should support the role you want." },
     ],
-    metaTitle: "Germany CV Format — Free Builder | Europass & ATS-Friendly",
-    metaDesc: "Build a Germany CV format free: formal chronological CV with education timeline. Europass-compatible. No sign-up. Print to PDF.",
+    metaTitle: "Germany & Austria CV Format — Free Builder | Europass & ATS-Friendly",
+    metaDesc: "Build a Germany CV format (and Austria CV) free: formal chronological CV with education timeline. Europass-compatible. No sign-up. Print to PDF.",
   },
   {
     slug: "canada",
@@ -136,7 +136,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "CA",
     badge: "Top Choice",
     accent: "from-red-500 to-rose-600",
-    desc: "Similar to US standards with emphasis on work authorization status and Canadian experience equivalence.",
+    desc: "Similar to US standards — a Canadian resume with emphasis on work authorization status and Canadian experience equivalence.",
     rules: ["Chronological & hybrid", "Action-oriented bullets", "Standard Letter size"],
     intro: [
       "A Canada resume template is close to the US format, with extra attention to work authorization and how your international experience maps to Canadian roles.",
@@ -154,7 +154,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Canada resume template in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Canada Resume Template — Free Builder | ATS-Friendly",
-    metaDesc: "Build a Canada resume template free: chronological, ATS-friendly format with work authorization guidance. No sign-up. Print to PDF.",
+    metaDesc: "Build a Canada resume template (Canadian CV) free: chronological, ATS-friendly format with work authorization guidance. No sign-up. Print to PDF.",
   },
   {
     slug: "japan",
@@ -164,7 +164,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "JP",
     badge: "Specialized",
     accent: "from-pink-500 to-rose-600",
-    desc: "Clean, structured formats aligned with Japanese corporate recruitment standards and biographic precision.",
+    desc: "Clean, structured formats for a Japanese CV, aligned with Japanese corporate recruitment standards and biographic precision.",
     rules: ["Clear personal background", "Detailed career history", "Professional layout"],
     intro: [
       "A Japan CV format values precision and structure. Employers expect a clear personal background, exact dates, detailed career history and a formal, professional layout.",
@@ -182,7 +182,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Japan CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Japan CV Format — Free Builder | Structured & ATS-Friendly",
-    metaDesc: "Build a Japan CV format free: clean, structured CV with detailed career history. No sign-up. Print to PDF.",
+    metaDesc: "Build a Japan CV format (Japanese CV) free: clean, structured CV with detailed career history. No sign-up. Print to PDF.",
   },
   {
     slug: "sweden",
@@ -192,7 +192,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "SE",
     badge: "Nordic Style",
     accent: "from-sky-500 to-blue-600",
-    desc: "Minimalist, modern layouts focusing on transparency, teamwork competencies, and balanced lifestyles.",
+    desc: "Minimalist, modern layouts for a Swedish CV, focusing on transparency, teamwork competencies, and balanced lifestyles.",
     rules: ["Concise summary", "Clean ATS headings", "Verifiable experience"],
     intro: [
       "A Sweden CV format is minimalist and honest. Swedish employers value a concise summary, teamwork, and experience they can verify — not long lists of buzzwords.",
@@ -210,7 +210,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Sweden CV template in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Sweden CV Format — Free Builder | Template & Example",
-    metaDesc: "Build a Sweden CV format free: minimalist, ATS-friendly CV template with teamwork focus. No sign-up. Print to PDF.",
+    metaDesc: "Build a Sweden CV format (Swedish CV) free: minimalist, ATS-friendly CV template with teamwork focus. No sign-up. Print to PDF.",
   },
   {
     slug: "italy",
@@ -220,7 +220,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "IT",
     badge: "EU Format",
     accent: "from-green-500 to-emerald-600",
-    desc: "Europass-compatible structured layouts emphasizing linguistic capabilities and educational credentials.",
+    desc: "Europass-compatible structured layouts for an Italian CV, emphasizing linguistic capabilities and educational credentials.",
     rules: ["Europass standard", "Language proficiencies", "Clear contact details"],
     intro: [
       "An Italy CV format is usually Europass-compatible: structured sections, clear contact details, education, work history and language proficiencies.",
@@ -238,7 +238,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is an Italy CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Italy CV Format — Free Builder | Europass Template & PDF",
-    metaDesc: "Build an Italy CV format free: Europass-compatible CV template with languages. No sign-up. Print to PDF.",
+    metaDesc: "Build an Italy CV format (Italian CV) free: Europass-compatible CV template with languages. No sign-up. Print to PDF.",
   },
   {
     slug: "spain",
@@ -248,7 +248,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "ES",
     badge: "Euro Standard",
     accent: "from-yellow-500 to-amber-600",
-    desc: "Professional templates tailored for Iberian corporate markets and multinational enterprises.",
+    desc: "Professional templates for a Spanish CV, tailored for Iberian corporate markets and multinational enterprises.",
     rules: ["Chronological format", "Skills matrix", "Professional objective"],
     intro: [
       "A Spain CV format is professional and chronological, with a clear objective, a skills matrix and work history that shows what you delivered.",
@@ -266,7 +266,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Spain CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Spain CV Format — Free Builder | Template & ATS-Friendly",
-    metaDesc: "Build a Spain CV format free: chronological CV template with skills matrix. No sign-up. Print to PDF.",
+    metaDesc: "Build a Spain CV format (Spanish CV) free: chronological CV template with skills matrix. No sign-up. Print to PDF.",
   },
   {
     slug: "singapore",
@@ -276,7 +276,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "SG",
     badge: "Tech Hub",
     accent: "from-red-500 to-pink-600",
-    desc: "Fast-scanning resume layouts optimized for multinational corporations and financial institutions.",
+    desc: "Fast-scanning Singapore resume layouts optimized for multinational corporations and financial institutions.",
     rules: ["Impact-driven metrics", "Clean typography", "Tech stack focus"],
     intro: [
       "A Singapore CV format is built for fast scanning. Recruiters at multinationals and financial institutions look for impact, metrics and a clear tech stack — in seconds.",
@@ -294,7 +294,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Singapore CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Singapore CV Format — Free Builder | Template & ATS-Friendly",
-    metaDesc: "Build a Singapore CV format free: fast-scanning, metrics-driven CV template. No sign-up. Print to PDF.",
+    metaDesc: "Build a Singapore CV format (Singapore resume) free: fast-scanning, metrics-driven CV template. No sign-up. Print to PDF.",
   },
   {
     slug: "hong-kong",
@@ -304,7 +304,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "HONG-KONG",
     badge: "Corporate",
     accent: "from-red-500 to-rose-600",
-    desc: "International corporate standards balancing executive summaries and financial/tech expertise.",
+    desc: "International corporate standards for an HK CV (Hong Kong CV format), balancing executive summaries and financial/tech expertise.",
     rules: ["Executive summaries", "Bilingual readiness", "Structured experience"],
     intro: [
       "A Hong Kong CV format balances an executive summary with structured experience. Corporate recruiters expect concise, bilingual-ready presentation and clear evidence of results.",
@@ -321,8 +321,8 @@ export const COUNTRIES: Country[] = [
       { q: "Should I list languages on a Hong Kong CV?", a: "Yes. List English, Cantonese, Mandarin or other languages with honest levels — bilingual readiness matters." },
       { q: "Is a Hong Kong CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
-    metaTitle: "Hong Kong CV Format — Free Builder | Template & ATS-Friendly",
-    metaDesc: "Build a Hong Kong CV format free: corporate CV template with executive summary. No sign-up. Print to PDF.",
+    metaTitle: "Hong Kong (HK) CV Format — Free Builder | Template & ATS-Friendly",
+    metaDesc: "Build a Hong Kong CV format (HK CV) free: corporate CV template with executive summary. No sign-up. Print to PDF.",
   },
   {
     slug: "netherlands",
@@ -332,7 +332,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "NL",
     badge: "Direct Style",
     accent: "from-orange-500 to-amber-600",
-    desc: "Clear, direct, and results-oriented professional formats popular in Western European hubs.",
+    desc: "Clear, direct, and results-oriented Dutch CV formats popular in Western European hubs.",
     rules: ["Direct achievements", "Clean structure", "Professional focus"],
     intro: [
       "A Netherlands CV format is direct. Dutch employers value clear achievements, a clean structure and a professional focus — without long introductions.",
@@ -349,8 +349,8 @@ export const COUNTRIES: Country[] = [
       { q: "What style suits a Netherlands CV?", a: "Direct and results-oriented: plain language, clean structure, concrete achievements." },
       { q: "Is a Netherlands CV template in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
-    metaTitle: "Netherlands CV Format — Free Builder | Template, Example & Free Download",
-    metaDesc: "Build a Netherlands CV format free: direct, ATS-friendly CV template with example structure. No sign-up. Print to PDF.",
+    metaTitle: "Netherlands (Dutch) CV Format — Free Builder | Template, Example & Free Download",
+    metaDesc: "Build a Netherlands CV format (Dutch CV) free: direct, ATS-friendly CV template with example structure. No sign-up. Print to PDF.",
   },
   {
     slug: "uae",
@@ -363,7 +363,7 @@ export const COUNTRIES: Country[] = [
     desc: "Tailored for the dynamic Gulf job market, accommodating visa status and executive milestones.",
     rules: ["Nationality & contact info", "Project leadership", "Executive summary"],
     intro: [
-      "A UAE CV format is built for the Gulf job market: nationality and contact details, an executive summary, project leadership and clear credentials.",
+      "A UAE CV format (Dubai CV format) is built for the Gulf job market: nationality and contact details, an executive summary, project leadership and clear credentials.",
       "Build your UAE CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.",
     ],
     sections: [
@@ -377,8 +377,8 @@ export const COUNTRIES: Country[] = [
       { q: "How long should a UAE CV be?", a: "Usually 2 pages. Use the space for project leadership and credentials." },
       { q: "Is a UAE CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
-    metaTitle: "UAE CV Format — Free Builder | Gulf CV Template",
-    metaDesc: "Build a UAE CV format free: Gulf CV template with nationality, visa status and project leadership. No sign-up. Print to PDF.",
+    metaTitle: "UAE / Dubai CV Format — Free Builder | Gulf CV Template",
+    metaDesc: "Build a UAE CV format (Dubai CV) free: Gulf CV template with nationality, visa status and project leadership. No sign-up. Print to PDF.",
   },
   {
     slug: "saudi-arabia",
@@ -388,7 +388,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "SAUDI-ARABIA",
     badge: "Executive",
     accent: "from-emerald-600 to-green-700",
-    desc: "Designed for Vision-aligned mega projects, engineering, and enterprise leadership roles.",
+    desc: "Designed for a KSA CV format: Vision-aligned mega projects, engineering, and enterprise leadership roles.",
     rules: ["Detailed credentials", "Large-scale projects", "Formal profile header"],
     intro: [
       "A Saudi Arabia CV format is formal and credential-heavy. Employers look for a clear profile header, detailed credentials and large-scale project experience.",
@@ -406,7 +406,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Saudi Arabia CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Saudi Arabia CV Format — Free Builder | KSA CV Template & PDF",
-    metaDesc: "Build a Saudi Arabia (KSA) CV format free: formal Gulf CV template with credentials. PDF via print. No sign-up.",
+    metaDesc: "Build a Saudi CV format (Saudi Arabia / KSA) free: formal Gulf CV template with credentials. PDF via print. No sign-up.",
   },
   {
     slug: "qatar",
@@ -416,7 +416,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "QA",
     badge: "GCC Market",
     accent: "from-purple-600 to-fuchsia-700",
-    desc: "Optimized for energy, corporate, and regional international recruitment pipelines.",
+    desc: "Optimized for a Qatar CV in energy, corporate, and regional international recruitment pipelines.",
     rules: ["Clear work history", "Certifications section", "Professional photo space"],
     intro: [
       "A Qatar CV format is built for energy, corporate and international recruitment: clear work history, a strong certifications section and a professional layout.",
@@ -434,7 +434,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is a Qatar CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Qatar CV Format — Free Builder | Template, Sample & PDF",
-    metaDesc: "Build a Qatar CV format free: Gulf CV template with certifications. PDF via print. No sign-up.",
+    metaDesc: "Build a Qatar CV format free: Gulf CV template with certifications for your Qatar CV. PDF via print. No sign-up.",
   },
   {
     slug: "australia",
@@ -444,7 +444,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "AU",
     badge: "Oceania",
     accent: "from-blue-600 to-indigo-700",
-    desc: "Comprehensive professional standards focusing on competency indicators and career progression.",
+    desc: "Comprehensive professional standards for an Australian CV, focusing on competency indicators and career progression.",
     rules: ["2-3 page flexibility", "Competency-based", "Clear referee section"],
     intro: [
       "An Australia CV format is competency-based and can run longer than a US resume: 2-3 pages is normal, with clear referees at the end.",
@@ -462,7 +462,7 @@ export const COUNTRIES: Country[] = [
       { q: "Is an Australia CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
     metaTitle: "Australia CV Format — Free Builder | Template, Sample & Cover Letter",
-    metaDesc: "Build an Australia CV format free: competency-based CV template with referees. No sign-up. Print to PDF.",
+    metaDesc: "Build an Australia CV format (Australian CV) free: competency-based CV template with referees. No sign-up. Print to PDF.",
   },
   {
     slug: "new-zealand",
@@ -472,7 +472,7 @@ export const COUNTRIES: Country[] = [
     builderCode: "NEW-ZEALAND",
     badge: "Verified",
     accent: "from-teal-500 to-cyan-600",
-    desc: "Clear, concise layouts aligning with local corporate expectations and verifiable experience.",
+    desc: "Clear, concise layouts for an NZ CV, aligning with local corporate expectations and verifiable experience.",
     rules: ["Clean ATS headings", "Reference-ready", "Action bullet points"],
     intro: [
       "A New Zealand CV format is clear and concise: clean ATS headings, action bullets and reference-ready referees.",
@@ -489,8 +489,8 @@ export const COUNTRIES: Country[] = [
       { q: "Should a New Zealand CV include referees?", a: "Yes. End with referees or Available on request. Confirm your referees are willing to be contacted." },
       { q: "Is a New Zealand CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it." },
     ],
-    metaTitle: "New Zealand CV Format — Free Builder | Template, Sample PDF & Cover Letter",
-    metaDesc: "Build a New Zealand CV format free: clear CV template with referees. No sign-up. Print to PDF.",
+    metaTitle: "New Zealand (NZ) CV Format — Free Builder | Template, Sample PDF & Cover Letter",
+    metaDesc: "Build a New Zealand CV format (NZ CV) free: clear CV template with referees. No sign-up. Print to PDF.",
   },
 ];
 
