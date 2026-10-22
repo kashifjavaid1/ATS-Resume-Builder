@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "CV Maker Pakistan — Free Online Resume Builder | ATS-Friendly CV", template: "%s | CV Maker Pakistan" },
   description: "CV Maker Pakistan — build a professional, ATS-friendly CV online free. No sign-up. Create your resume, check it, and print to PDF. Your CV stays on your device.",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon',
+  },
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
