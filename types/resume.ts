@@ -2,6 +2,7 @@ export type Exp = { title: string; company: string; dates: string; bullets: stri
 export type Cert = { name: string; issuer: string; date: string };
 export type Edu = { degree: string; institution: string; dates: string; details?: string };
 export type Language = { name: string; proficiency: string };
+export type Project = { name: string; description: string; link?: string };
 
 export type TemplateId = 
   | "executive" 
@@ -30,6 +31,7 @@ export type Resume = {
   educationList: Edu[]; 
   certifications: Cert[];
   languages: Language[];
+  projects?: Project[];
   template: TemplateId; 
   accent: string 
 };
@@ -58,6 +60,9 @@ export const emptyResume: Resume = {
   languages: [
     { name: "English", proficiency: "Professional" }
   ],
+  projects: [
+    { name: "Project Title", description: "What you built and the result it produced\nTools or skills you used", link: "" }
+  ],
   template: "modern", 
   accent: "#4f46e5" 
 };
@@ -69,5 +74,6 @@ export const resumeToText = (r: Resume) => [
   "Experience", ...r.experience.flatMap(e => [`${e.title} ${e.company} ${e.dates}`, e.bullets]), 
   "Education", ...(r.educationList || []).map(ed => `${ed.degree} ${ed.institution} ${ed.dates} ${ed.details || ""}`),
   "Certifications", ...(r.certifications || []).map(c => `${c.name} ${c.issuer} ${c.date}`),
-  "Languages", ...(r.languages || []).map(l => `${l.name} ${l.proficiency}`)
+  "Languages", ...(r.languages || []).map(l => `${l.name} ${l.proficiency}`),
+  "Projects", ...(r.projects || []).map(p => `${p.name} ${p.link || ""} ${p.description}`)
 ].join("\n");
