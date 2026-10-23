@@ -204,13 +204,14 @@ export default function Builder() {
         <div className="flex items-center justify-between gap-3 pb-5 border-b border-indigo-100/80">
           <div className="min-w-0">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-bold tracking-wide uppercase mb-1">
-              Step {step} of 4 {selectedCountry && `• ${COUNTRY_NAMES[selectedCountry] || selectedCountry}`}
+              Step {step} of 5 {selectedCountry && `• ${COUNTRY_NAMES[selectedCountry] || selectedCountry}`}
             </div>
             <h2 className="text-xl font-black text-slate-900 tracking-tight break-words">
               {step === 1 && (selectedCountry ? "Country Profile & Personal Info" : "Choose Template & Personal Info")}
               {step === 2 && "Professional Summary & Skills"}
-              {step === 3 && "Work History, Projects & Education"}
-              {step === 4 && "Certifications & Languages"}
+              {step === 3 && "Work History & Education"}
+              {step === 4 && "Projects"}
+              {step === 5 && "Certifications & Languages"}
             </h2>
           </div>
           <span className={`text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm shrink-0 ${saved ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
@@ -352,7 +353,13 @@ export default function Builder() {
               </button>
             </div>
 
-            <div className="space-y-4 bg-white/80 p-5 rounded-2xl border border-indigo-50 shadow-sm">
+            
+          </div>
+        )}
+
+        {step === 4 && (
+          <div className="space-y-6">
+<div className="space-y-4 bg-white/80 p-5 rounded-2xl border border-indigo-50 shadow-sm">
               <h3 className="text-xs font-extrabold uppercase tracking-wider text-indigo-900 flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-indigo-600"></span> Projects
               </h3>
@@ -372,7 +379,7 @@ export default function Builder() {
           </div>
         )}
 
-        {step === 4 && (
+        {step === 5 && (
           <div className="space-y-6">
             <div className="space-y-4 bg-white/80 p-5 rounded-2xl border border-indigo-50 shadow-sm">
               <h3 className="text-xs font-extrabold uppercase tracking-wider text-indigo-900 flex items-center gap-2">
@@ -417,7 +424,7 @@ export default function Builder() {
             </button>
           ) : <div />}
 
-          {step < 4 ? (
+          {step < 5 ? (
             <button onClick={() => setStep(step + 1)} className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-8 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-indigo-600/30 hover:from-indigo-500 hover:to-violet-500 transition-all active:scale-95">
               Continue →
             </button>
