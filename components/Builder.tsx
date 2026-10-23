@@ -198,7 +198,7 @@ export default function Builder() {
   return (
     <div className="grid gap-8 lg:grid-cols-12 pb-12 items-start overflow-x-clip">
       {/* Print: exact A4 page, full template colors, no card radius/shadow — PDF matches the preview. */}
-      <style>{`@page { size: A4; margin: 0; } @media print { #resume { border-radius: 0 !important; box-shadow: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; } }`}</style>
+      <style>{`@page { size: A4; margin: 0; } @media print { #resume { border-radius: 0 !important; box-shadow: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; } #resume .cv-section { break-inside: avoid; page-break-inside: avoid; } }`}</style>
       <section className="min-w-0 space-y-6 print:hidden lg:col-span-6 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/20 p-4 sm:p-6 lg:p-8 rounded-3xl border border-indigo-100 shadow-2xl shadow-indigo-500/5 relative" aria-label="Resume editor">
 
         <div className="flex items-center justify-between gap-3 pb-5 border-b border-indigo-100/80">
