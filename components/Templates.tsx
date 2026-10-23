@@ -104,12 +104,12 @@ export function Modern({ r }: { r: Resume }) {
         <p className="text-xs mt-2 opacity-90 font-medium break-words">{contact(r)}</p>
       </header>
       <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
-        {r.summary && <div><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-        {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-        {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-        {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-        {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
-        {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
       </div>
     </div>
   );
@@ -124,12 +124,12 @@ export function Classic({ r }: { r: Resume }) {
         <p className="italic text-slate-600 mt-0.5 break-words">{r.title}</p>
         <p className="text-xs text-slate-500 mt-1 break-words">{contact(r)}</p>
       </div>
-      {r.summary && <div><H c="Summary" /><p className="text-slate-700 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-      {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-      {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-      {r.skills && <div><H c="Skills" /><p className="text-slate-700 text-[13px] break-words">{r.skills}</p></div>}
-      {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-700 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+      {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+      {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      {r.skills && <div className="cv-section"><H c="Skills" /><p className="text-slate-700 text-[13px] break-words">{r.skills}</p></div>}
+      {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
     </div>
   );
 }
@@ -141,12 +141,12 @@ export function Tech({ r }: { r: Resume }) {
       <h1 className="font-mono text-xl sm:text-2xl font-bold break-words">{r.name}</h1>
       <p style={{ color: r.accent }} className="font-mono font-medium break-words">{r.title}</p>
       <p className="text-xs text-slate-500 mt-1 font-mono break-words">{contact(r)}</p>
-      {r.summary && <div><H c="Summary" /><p className="text-slate-600 font-mono text-xs leading-relaxed break-words">{r.summary}</p></div>}
-      {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
-      {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-      {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-      {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 font-mono text-xs leading-relaxed break-words">{r.summary}</p></div>}
+      {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+      {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+      {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
     </div>
   );
 }
@@ -161,12 +161,12 @@ export function Executive({ r }: { r: Resume }) {
         <p className="mt-2 text-xs text-slate-300 font-sans break-words">{contact(r)}</p>
       </header>
       <div className="px-5 sm:px-8 py-5 sm:py-6 font-sans space-y-4">
-        {r.summary && <div><H c="Executive Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-        {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-        {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-        {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-        {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
-        {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+        {r.summary && <div className="cv-section"><H c="Executive Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
       </div>
     </div>
   );
@@ -179,12 +179,12 @@ export function Minimal({ r }: { r: Resume }) {
       <h1 className="text-3xl sm:text-4xl font-extralight tracking-tight text-slate-900 break-words">{r.name}</h1>
       <p className="mt-1 text-sm font-medium text-slate-500 break-words">{r.title}</p>
       <p className="mt-1 text-xs text-slate-400 break-words">{contact(r)}</p>
-      {r.summary && <div><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-      {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-      {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-      {r.skills && <div><H c="Skills" /><p className="text-slate-600 text-[13px] break-words">{r.skills}</p></div>}
-      {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+      {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+      {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      {r.skills && <div className="cv-section"><H c="Skills" /><p className="text-slate-600 text-[13px] break-words">{r.skills}</p></div>}
+      {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
     </div>
   );
 }
@@ -198,12 +198,12 @@ export function Creative({ r }: { r: Resume }) {
         <p className="mt-1 text-base font-semibold text-slate-700 break-words">{r.title}</p>
         <p className="mt-1 text-xs text-slate-500 break-words">{contact(r)}</p>
       </div>
-      {r.summary && <div><H c="About" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-      {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-      {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-      {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
-      {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      {r.summary && <div className="cv-section"><H c="About" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+      {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+      {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+      {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
     </div>
   );
 }
@@ -215,12 +215,12 @@ export function Graduate({ r }: { r: Resume }) {
       <h1 className="text-2xl sm:text-3xl font-extrabold break-words" style={{ color: r.accent }}>{r.name}</h1>
       <p className="font-semibold text-slate-700 break-words">{r.title}</p>
       <p className="text-xs text-slate-500 mt-0.5 break-words">{contact(r)}</p>
-      {r.summary && <div><H c="Objective" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-      {r.projects && r.projects.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
-      {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
-      {r.experience?.length > 0 && <div><H c="Experience & Internships" /><Exp r={r} /></div>}
-      {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
-      {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      {r.summary && <div className="cv-section"><H c="Objective" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+      {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      {r.experience?.length > 0 && <div className="cv-section"><H c="Experience & Internships" /><Exp r={r} /></div>}
+      {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+      {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
     </div>
   );
 }
@@ -317,7 +317,7 @@ export function Sidebar({ r }: { r: Resume }) {
 
         {/* Profile */}
         {r.summary && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <MainH c="Profile" />
             <p className="text-slate-600 leading-relaxed text-[12px] sm:text-[13px] break-words">
               {r.summary}
@@ -327,7 +327,7 @@ export function Sidebar({ r }: { r: Resume }) {
 
         {/* Work Experience */}
         {r.experience?.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <MainH c="Work Experience" />
             <div className="space-y-3.5 sm:space-y-4 md:space-y-5">
               {r.experience.map((e, i) => (
@@ -361,7 +361,7 @@ export function Sidebar({ r }: { r: Resume }) {
 
         {/* Projects */}
         {r.projects && r.projects.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <MainH c="Projects" />
             <div className="space-y-3.5 sm:space-y-4 md:space-y-5">
               {(r.projects || []).map((p, i) => (
@@ -388,7 +388,7 @@ export function Sidebar({ r }: { r: Resume }) {
 
         {/* Education */}
         {r.educationList?.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <MainH c="Education" />
             <div className="space-y-3 md:space-y-4">
               {r.educationList.map((ed, i) => (
@@ -413,7 +413,7 @@ export function Sidebar({ r }: { r: Resume }) {
 
         {/* Certifications */}
         {r.certifications?.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <MainH c="Certifications" />
             <div className="space-y-2">
               {r.certifications.map((c, i) => (
@@ -479,13 +479,13 @@ export function Bold({ r }: { r: Resume }) {
 
 
         {r.summary && (
-          <section>
+          <section className="cv-section">
             <SidebarHeading c="About Me" />
             <p className="text-[10px] sm:text-[11px] leading-relaxed text-white/85 break-words">{r.summary}</p>
           </section>
         )}
 
-        <section>
+        <section className="cv-section">
           <SidebarHeading c="Contact" />
           <ul className="space-y-2 sm:space-y-3 text-[10px] sm:text-[11px]">
             {r.phone && (
@@ -532,7 +532,7 @@ export function Bold({ r }: { r: Resume }) {
         </section>
 
         {r.languages?.length > 0 && (
-          <section>
+          <section className="cv-section">
             <SidebarHeading c="Language" />
             <ul className="space-y-1.5 text-[10px] sm:text-[11px] text-white/90">
               {r.languages.map((l, i) => (
@@ -546,7 +546,7 @@ export function Bold({ r }: { r: Resume }) {
         )}
 
         {skills.length > 0 && (
-          <section>
+          <section className="cv-section">
             <SidebarHeading c="Expertise" />
             <ul className="space-y-1.5 text-[10px] sm:text-[11px] text-white/90">
               {skills.map((s, i) => (
@@ -575,7 +575,7 @@ export function Bold({ r }: { r: Resume }) {
         </header>
 
         {r.experience?.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <DarkBar c="Experience" />
             <div className="space-y-3 sm:space-y-4 md:space-y-5">
               {r.experience.map((e, i) => (
@@ -596,7 +596,7 @@ export function Bold({ r }: { r: Resume }) {
         )}
 
         {r.projects && r.projects.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <DarkBar c="Projects" />
             <div className="space-y-3 sm:space-y-4 md:space-y-5">
               {(r.projects || []).map((p, i) => (
@@ -619,7 +619,7 @@ export function Bold({ r }: { r: Resume }) {
         )}
 
         {r.educationList?.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <DarkBar c="Education" />
             <div className="space-y-2 sm:space-y-3">
               {r.educationList.map((ed, i) => (
@@ -640,7 +640,7 @@ export function Bold({ r }: { r: Resume }) {
         )}
 
         {r.certifications?.length > 0 && (
-          <section className="mb-5 sm:mb-6 md:mb-7">
+          <section className="cv-section mb-5 sm:mb-6 md:mb-7">
             <DarkBar c="Certifications" />
             <div className="space-y-2">
               {r.certifications.map((c, i) => (
@@ -656,7 +656,7 @@ export function Bold({ r }: { r: Resume }) {
         )}
 
         {skills.length > 0 && (
-          <section>
+          <section className="cv-section">
             <DarkBar c="Skills Summary" />
             <div className="space-y-2 sm:space-y-3">
               {skills.slice(0, 6).map((skill, i) => {
