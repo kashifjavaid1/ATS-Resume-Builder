@@ -1,4 +1,4 @@
-import { Resume, Edu, Cert, Language } from "@/types/resume";
+import { Resume, Edu, Cert, Language, Project } from "@/types/resume";
 
 const bullets = (s: string) => s.split("\n").filter(Boolean);
 
@@ -49,6 +49,23 @@ const CertificationsList = ({ certifications }: { certifications: Cert[] }) => {
   );
 };
 
+const ProjectsList = ({ projects }: { projects: Project[] }) => {
+  if (!projects || projects.length === 0) return null;
+  return (
+    <div className="space-y-3">
+      {projects.map((p, i) => (
+        <div key={i} className="min-w-0">
+          <h3 className="text-sm font-bold text-slate-900 break-words">{p.name}</h3>
+          {p.link && <p className="text-xs text-slate-500 break-all">{p.link}</p>}
+          <ul className="list-disc ml-4 text-[13px] text-slate-700 space-y-1 mt-1">
+            {bullets(p.description).map((b, j) => <li key={j} className="break-words">{b}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const LanguagesList = ({ languages }: { languages: Language[] }) => {
   if (!languages || languages.length === 0) return null;
   return (
@@ -89,7 +106,7 @@ export function Modern({ r }: { r: Resume }) {
       <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
         {r.summary && <div><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
         {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-        {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
         {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
         {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
         {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
@@ -109,7 +126,7 @@ export function Classic({ r }: { r: Resume }) {
       </div>
       {r.summary && <div><H c="Summary" /><p className="text-slate-700 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
       {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
       {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
       {r.skills && <div><H c="Skills" /><p className="text-slate-700 text-[13px] break-words">{r.skills}</p></div>}
       {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
@@ -127,7 +144,7 @@ export function Tech({ r }: { r: Resume }) {
       {r.summary && <div><H c="Summary" /><p className="text-slate-600 font-mono text-xs leading-relaxed break-words">{r.summary}</p></div>}
       {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
       {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
       {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
       {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
     </div>
@@ -146,7 +163,7 @@ export function Executive({ r }: { r: Resume }) {
       <div className="px-5 sm:px-8 py-5 sm:py-6 font-sans space-y-4">
         {r.summary && <div><H c="Executive Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
         {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-        {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
         {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
         {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
         {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
@@ -164,7 +181,7 @@ export function Minimal({ r }: { r: Resume }) {
       <p className="mt-1 text-xs text-slate-400 break-words">{contact(r)}</p>
       {r.summary && <div><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
       {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
       {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
       {r.skills && <div><H c="Skills" /><p className="text-slate-600 text-[13px] break-words">{r.skills}</p></div>}
       {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
@@ -183,7 +200,7 @@ export function Creative({ r }: { r: Resume }) {
       </div>
       {r.summary && <div><H c="About" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
       {r.experience?.length > 0 && <div><H c="Experience" /><Exp r={r} /></div>}
-      {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
       {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
       {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
       {r.languages?.length > 0 && <div><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
@@ -199,7 +216,7 @@ export function Graduate({ r }: { r: Resume }) {
       <p className="font-semibold text-slate-700 break-words">{r.title}</p>
       <p className="text-xs text-slate-500 mt-0.5 break-words">{contact(r)}</p>
       {r.summary && <div><H c="Objective" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
-      {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.projects?.length > 0 && <div><H c="Projects" /><ProjectsList projects={r.projects} /></div>} {r.educationList?.length > 0 && <div><H c="Education" /><EducationList educationList={r.educationList} /></div>}
       {r.certifications?.length > 0 && <div><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
       {r.experience?.length > 0 && <div><H c="Experience & Internships" /><Exp r={r} /></div>}
       {r.skills && <div><H c="Skills" /><SkillsList skills={r.skills} /></div>}
@@ -336,6 +353,33 @@ export function Sidebar({ r }: { r: Resume }) {
                       ))}
                     </ul>
                   )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Projects */}
+        {r.projects?.length > 0 && (
+          <section className="mb-5 sm:mb-6 md:mb-7">
+            <MainH c="Projects" />
+            <div className="space-y-3.5 sm:space-y-4 md:space-y-5">
+              {r.projects.map((p, i) => (
+                <div key={i}>
+                  <h3 className="text-[12px] sm:text-sm font-bold text-slate-900 break-words">
+                    {p.name}
+                  </h3>
+                  {p.link && (
+                    <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 break-all">{p.link}</p>
+                  )}
+                  <ul className="mt-1.5 space-y-1 text-[12px] sm:text-[13px] text-slate-600">
+                    {bullets(p.description).map((b, j) => (
+                      <li key={j} className="flex gap-1.5 sm:gap-2">
+                        <span className="mt-1.5 h-1 w-1 rounded-full bg-slate-400 shrink-0" />
+                        <span className="break-words leading-snug">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -543,6 +587,29 @@ export function Bold({ r }: { r: Resume }) {
                   {e.bullets && (
                     <p className="mt-1.5 text-[11px] sm:text-[12px] leading-relaxed text-slate-700 whitespace-pre-line break-words">
                       {e.bullets}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {r.projects?.length > 0 && (
+          <section className="mb-5 sm:mb-6 md:mb-7">
+            <DarkBar c="Projects" />
+            <div className="space-y-3 sm:space-y-4 md:space-y-5">
+              {r.projects.map((p, i) => (
+                <div key={i}>
+                  <h3 className="text-[12px] sm:text-[13px] md:text-[14px] font-black text-slate-900 break-words">{p.name}</h3>
+                  {p.link && (
+                    <p className="text-[10.5px] sm:text-[11px] md:text-[11.5px] text-slate-600 mt-0.5 break-all">
+                      {p.link}
+                    </p>
+                  )}
+                  {p.description && (
+                    <p className="mt-1.5 text-[11px] sm:text-[12px] leading-relaxed text-slate-700 whitespace-pre-line break-words">
+                      {p.description}
                     </p>
                   )}
                 </div>
