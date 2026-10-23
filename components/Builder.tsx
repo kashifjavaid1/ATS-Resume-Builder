@@ -101,6 +101,18 @@ export default function Builder() {
     return () => clearTimeout(t);
   }, [r, ready]);
 
+  // If the builder is open in two tabs, keep them in sync: when the resume is
+  // saved in another tab, adopt that version here. Without this, an older tab
+  // would overwrite the newer tab's entries (added jobs/projects) on its next save.
+  useEffect(() => {
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== KEY || !e.newValue) return;
+      try { setR({ ...emptyResume, ...JSON.parse(e.newValue) }); } catch {}
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
   const T = TEMPLATES[r.template] || TEMPLATES.modern;
 
   const up = useCallback(<K extends keyof Resume>(k: K, v: Resume[K]) => {
@@ -179,6 +191,7 @@ export default function Builder() {
   };
 
   const handlePrintClear = () => {
+    if (!window.confirm("Clear your resume? This cannot be undone.")) return;
     setR(emptyResume);
     try { localStorage.removeItem(KEY); } catch {}
     setShowPrintChoice(false);
