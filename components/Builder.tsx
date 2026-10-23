@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useCallback, startTransition } from "react";
-import { emptyResume, Resume, TemplateId, Edu, Cert, Language } from "@/types/resume";
+import { emptyResume, Resume, TemplateId, Edu, Cert, Language, Project } from "@/types/resume";
 import { TEMPLATES, TEMPLATE_INFO } from "./Templates";
 
 
@@ -134,6 +134,15 @@ export default function Builder() {
     });
   };
 
+  const updateProject = (i: number, k: keyof Project, v: string) => {
+    startTransition(() => {
+      setR(p => ({
+        ...p,
+        projects: (p.projects || []).map((pr, idx) => idx === i ? { ...pr, [k]: v } : pr)
+      }));
+    });
+  };
+
   const updateLang = (i: number, k: keyof Language, v: string) => {
     startTransition(() => {
       setR(p => ({
@@ -200,7 +209,7 @@ export default function Builder() {
             <h2 className="text-xl font-black text-slate-900 tracking-tight break-words">
               {step === 1 && (selectedCountry ? "Country Profile & Personal Info" : "Choose Template & Personal Info")}
               {step === 2 && "Professional Summary & Skills"}
-              {step === 3 && "Work History & Education"}
+              {step === 3 && "Work History, Projects & Education"}
               {step === 4 && "Certifications & Languages"}
             </h2>
           </div>
@@ -340,6 +349,24 @@ export default function Builder() {
               ))}
               <button className="w-full rounded-xl border border-dashed border-indigo-300 bg-indigo-50/50 px-4 py-3 text-xs font-extrabold uppercase tracking-wider text-indigo-700 hover:bg-indigo-100/60 transition-all shadow-sm" onClick={() => up("educationList", [...r.educationList, { degree: "", institution: "", dates: "", details: "" }])}>
                 + Add Education
+              </button>
+            </div>
+
+            <div className="space-y-4 bg-white/80 p-5 rounded-2xl border border-indigo-50 shadow-sm">
+              <h3 className="text-xs font-extrabold uppercase tracking-wider text-indigo-900 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-indigo-600"></span> Projects
+              </h3>
+              {(r.projects || []).map((pr, i) => (
+                <fieldset key={i} className="space-y-3 rounded-2xl border border-indigo-100 bg-indigo-50/20 p-4 shadow-sm">
+                  <legend className="px-2 text-xs font-bold uppercase tracking-wider text-indigo-800">Project {i + 1}</legend>
+                  <input placeholder="Project Name (e.g. Online Store Website)" className={inputStyle} value={pr.name} onChange={e => updateProject(i, "name", e.target.value)} />
+                  <textarea placeholder="What you built and the result — one achievement per line" className={inputStyle} rows={3} value={pr.description} onChange={e => updateProject(i, "description", e.target.value)} />
+                  <input placeholder="Link (optional — e.g. github.com/you/project)" className={inputStyle} value={pr.link || ""} onChange={e => updateProject(i, "link", e.target.value)} />
+                  <button className="text-xs font-bold text-rose-600 hover:text-rose-700 transition-colors" onClick={() => up("projects", (r.projects || []).filter((_, idx) => idx !== i))}>Remove Project</button>
+                </fieldset>
+              ))}
+              <button className="w-full rounded-xl border border-dashed border-indigo-300 bg-indigo-50/50 px-4 py-3 text-xs font-extrabold uppercase tracking-wider text-indigo-700 hover:bg-indigo-100/60 transition-all shadow-sm" onClick={() => up("projects", [...(r.projects || []), { name: "", description: "", link: "" }])}>
+                + Add Project
               </button>
             </div>
           </div>
