@@ -202,6 +202,11 @@ export default function Builder() {
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
       if (e.key !== KEY || !e.newValue) return;
+      // A tab opened with ?data= (an example) owns its document: never let
+      // another tab's draft overwrite the example through storage sync.
+      // (A hidden tab saves on hide, so without this guard the example
+      // would be replaced by the older tab's draft.)
+      if (new URLSearchParams(window.location.search).get("data")) return;
       try {
         if (lastSavedRef.current !== null && JSON.stringify(rRef.current) !== lastSavedRef.current) return;
         const parsed = JSON.parse(e.newValue);
