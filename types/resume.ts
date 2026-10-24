@@ -17,7 +17,24 @@ export type TemplateId =
   | "slate"
   | "midnight"
   | "ivy"
-  | "compact";
+  | "compact"
+  | "heritage"
+  | "oxford"
+  | "berlin"
+  | "maple"
+  | "sakura"
+  | "nordic"
+  | "euro"
+  | "iberia"
+  | "harbour"
+  | "pearl"
+  | "tulip"
+  | "gulf"
+  | "emerald"
+  | "maroon"
+  | "southern"
+  | "fern"
+  | "duo";
 
 export type Resume = { 
   name: string; 

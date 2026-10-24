@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback, startTransition } from "react";
 import { emptyResume, Resume, TemplateId, Edu, Cert, Language, Project } from "@/types/resume";
 import { TEMPLATES, TEMPLATE_INFO } from "./Templates";
+import { GENERAL_TEMPLATES, COUNTRY_TEMPLATE_SETS } from "@/lib/countryTemplates";
 
 
 const KEY = "ats-resume-v1";
@@ -26,21 +27,7 @@ const COUNTRY_TEMPLATE_MAP: Record<string, TemplateId> = {
   PK: "classic", PAKISTAN: "classic",
 };
 
-const COUNTRY_TEMPLATE_SETS: Record<string, TemplateId[]> = {
-  US: ["modern", "slate", "midnight", "ivy", "compact"],
-  USA: ["modern", "slate", "midnight", "ivy", "compact"],
-};
 
-// Templates shown in the plain builder (no country selected). The 4 new
-// country-exclusive templates are NOT listed here on purpose: they are only
-// shown inside their country's flow (e.g. the US set above).
-const GENERAL_TEMPLATES: TemplateId[] = [
-  "executive", "modern", "minimal", "creative", "tech",
-  "graduate", "classic", "sidebar", "bold",
-];
-const COUNTRY_EXCLUSIVE_TEMPLATES: TemplateId[] = [
-  "slate", "midnight", "ivy", "compact",
-];
 
 const COUNTRY_NAMES: Record<string, string> = {
   US: "United States", USA: "United States",
@@ -106,14 +93,14 @@ export default function Builder() {
       setR(p => ({ ...p, template: templateQuery as TemplateId }));
     }
 
-    // No country selected: a country-exclusive template saved earlier (or
-    // passed via ?t=) must not stay active here — fall back to Modern so the
-    // plain builder never shows a country template.
+    // No country selected: only the general templates may stay active here —
+    // a country-exclusive template saved earlier (or passed via ?t=) falls
+    // back to Modern so the plain builder never shows a country template.
     if (!countryQuery) {
       setR(p =>
-        (COUNTRY_EXCLUSIVE_TEMPLATES as string[]).includes(p.template)
-          ? { ...p, template: "modern" }
-          : p
+        (GENERAL_TEMPLATES as string[]).includes(p.template)
+          ? p
+          : { ...p, template: "modern" }
       );
     }
 
@@ -291,7 +278,7 @@ export default function Builder() {
 
             {isLocked && countrySet && (
               <div className="space-y-3 bg-white/80 p-4 rounded-2xl border border-indigo-50 shadow-sm">
-                <label className="text-xs font-bold uppercase tracking-wider text-indigo-900 block">Choose Your US Template</label>
+                <label className="text-xs font-bold uppercase tracking-wider text-indigo-900 block">Choose Your {COUNTRY_NAMES[selectedCountry] || selectedCountry} Template</label>
                 <div className="flex flex-wrap gap-2">
                   {countrySet.map(t => (
   <button
@@ -309,7 +296,7 @@ export default function Builder() {
   </button>
 ))}
                 </div>
-                <p className="text-xs text-slate-500">All 5 are single-column and ATS-friendly for US employers. The preview updates as you choose.</p>
+                <p className="text-xs text-slate-500">{countrySet.length} ATS-friendly designs for {COUNTRY_NAMES[selectedCountry] || selectedCountry} employers. The preview updates as you choose.</p>
               </div>
             )}
 

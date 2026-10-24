@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COUNTRIES, countryBySlug, type Country } from "@/lib/countries";
+import { COUNTRY_TEMPLATE_SETS } from "@/lib/countryTemplates";
+import { TEMPLATE_INFO } from "@/components/Templates";
 import { SITE_URL } from "@/lib/site";
 import { Crumbs } from "@/components/Seo";
 import Faq from "@/components/Faq";
@@ -32,6 +34,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const c = found as Country;
   const others = COUNTRIES.filter((x) => x.slug !== c.slug).slice(0, 6);
   const path = `/country-templates/${c.slug}`;
+  const templateSet = COUNTRY_TEMPLATE_SETS[c.builderCode];
+  const hasTwoColumn = templateSet?.includes("sidebar") || templateSet?.includes("duo");
   return (
     <div className="mx-auto max-w-3xl space-y-8 leading-7">
       <Crumbs items={[["Country Formats", "/country-templates"], [c.name, path]]} />
@@ -71,28 +75,23 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </ul>
       </section>
 
-      {c.slug === "usa" && (
+      {templateSet && (
         <section className="rounded-3xl border border-indigo-100 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-2xl font-bold">Choose your US resume template</h2>
+          <h2 className="text-2xl font-bold">Choose your {c.name} resume template</h2>
           <p className="mt-2 text-slate-700">
-            Five single-column, ATS-friendly designs for US employers. Pick one below — the builder
+            {templateSet.length} ATS-friendly designs for {c.name} employers. Pick one below — the builder
             opens with that template already selected and the live preview on top.
+            {hasTwoColumn && " Includes a two-column option for roles where it is accepted."}
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {([
-              ["modern", "Modern Impact", "Vibrant color header with bold sections that stand out to recruiters."],
-              ["slate", "Slate Professional", "Dark slate header with a bold amber rule — a sharp, boardroom-ready US look."],
-              ["midnight", "Midnight Bold", "Black header block with accent bars — high contrast without a photo, fully ATS-readable."],
-              ["ivy", "Ivy Minimal", "Centered serif layout with classic rules — quiet, credible, and recruiter-friendly."],
-              ["compact", "Compact Metrics", "Skills strip up top and tight sections that put numbers and outcomes first."],
-            ] as const).map(([id, name, desc]) => (
+            {templateSet.map((id) => (
               <Link
                 key={id}
-                href={`/resume-builder?country=US&t=${id}`}
+                href={`/resume-builder?country=${encodeURIComponent(c.builderCode)}&t=${id}`}
                 className="block rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50"
               >
-                <span className="block text-sm font-bold text-indigo-700">{name} →</span>
-                <span className="mt-1 block text-sm font-normal text-slate-600">{desc}</span>
+                <span className="block text-sm font-bold text-indigo-700">{TEMPLATE_INFO[id].name} →</span>
+                <span className="mt-1 block text-sm font-normal text-slate-600">{TEMPLATE_INFO[id].desc}</span>
               </Link>
             ))}
           </div>

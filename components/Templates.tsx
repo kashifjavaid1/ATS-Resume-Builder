@@ -780,6 +780,467 @@ export function Compact({ r }: { r: Resume }) {
   );
 }
 
+export function Heritage({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider border-b pb-1 text-[#166534]" style={{ borderColor: "#16653466" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 pt-6 pb-4 border-b-4 border-double" style={{ borderColor: "#166534" }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#166534]">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words text-slate-600">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Oxford({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 font-serif text-sm font-bold uppercase tracking-wide text-[#7f1d1d]">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="font-serif text-base mt-1 break-words text-[#7f1d1d]">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+        <div className="h-0.5 mt-4 bg-[#7f1d1d]" />
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Berlin({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-900 border-b border-slate-300 pb-1">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 border-b border-slate-300">
+        <h1 className="text-xl sm:text-2xl font-bold uppercase tracking-wide break-words text-slate-900">{r.name}</h1>
+        <p className="text-xs uppercase tracking-[0.2em] mt-1 break-words text-slate-500">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Maple({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider border-b-2 pb-1 text-[#c8102e]" style={{ borderColor: "#c8102e55" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm border-t-8" style={{ borderColor: "#c8102e" }}>
+      <header className="px-5 sm:px-8 py-5 sm:py-6">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base font-semibold mt-0.5 break-words text-[#c8102e]">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Sakura({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#be123c]">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-7 sm:py-8">
+        <h1 className="text-2xl sm:text-3xl font-medium tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base mt-1 break-words text-slate-500">{r.title}</p>
+        <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-5">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Nordic({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-sky-700 border-b border-sky-200 pb-1">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-6 sm:py-7">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base mt-1 break-words text-slate-500">{r.title}</p>
+        <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-5">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Euro({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-[#14532d] border-b pb-1" style={{ borderColor: "#14532d55" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words text-[#14532d]">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Iberia({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-[#c2410c]">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 border-b-4 border-[#c2410c]">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base font-semibold mt-0.5 break-words text-[#c2410c]">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Harbour({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-teal-800 border-b pb-1" style={{ borderColor: "#0f766e55" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 border-b-4 border-teal-700">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base font-semibold mt-0.5 break-words text-teal-800">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Pearl({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-zinc-900 border-b pb-1" style={{ borderColor: "#d4af37aa" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-zinc-800">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words text-zinc-300">{r.title}</p>
+        <p className="text-xs mt-2 text-zinc-400 font-medium break-words">{contact(r)}</p>
+        <div className="h-px mt-4 bg-amber-400/70" />
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Tulip({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-orange-600">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm border-t-4 border-orange-600">
+      <header className="px-5 sm:px-8 py-5 sm:py-6">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base font-semibold mt-0.5 break-words text-orange-600">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Gulf({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-amber-900 border-b pb-1" style={{ borderColor: "#b4530999" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 bg-[#f5efe0]">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#451a03]">{r.name}</h1>
+        <p className="text-base font-semibold mt-0.5 break-words text-[#92400e]">{r.title}</p>
+        <p className="text-xs mt-2 text-stone-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Emerald({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-900 border-b pb-1" style={{ borderColor: "#064e3b33" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-emerald-900">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words text-emerald-100">{r.title}</p>
+        <p className="text-xs mt-2 text-emerald-200/80 font-medium break-words">{contact(r)}</p>
+        <div className="h-px mt-4 bg-amber-300/40" />
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Maroon({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-[#8A1538] border-b pb-1" style={{ borderColor: "#8A153855" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-[#8A1538]">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words text-rose-100">{r.title}</p>
+        <p className="text-xs mt-2 text-rose-200/80 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Southern({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-amber-800">{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm border-t-4 border-amber-700/70">
+      <header className="px-5 sm:px-8 py-6 sm:py-7">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <p className="text-base mt-1 break-words text-amber-800">{r.title}</p>
+        <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-5">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Fern({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider text-green-800 border-b-2 pb-1" style={{ borderColor: "#16653488" }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#052e16]">{r.name}</h1>
+        <p className="text-base font-semibold mt-0.5 break-words text-green-800">{r.title}</p>
+        <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Duo({ r }: { r: Resume }) {
+  const contactItems = [
+    { label: "Address", value: r.location },
+    { label: "Phone", value: r.phone },
+    { label: "Email", value: r.email },
+  ].filter(item => item.value);
+
+  const skillsList = r.skills
+    ? r.skills.split(",").map(s => s.trim()).filter(Boolean)
+    : [];
+
+  const SideH = ({ c }: { c: string }) => (
+    <h2 className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-stone-900 border-b border-stone-300 pb-1 mb-2 sm:mb-3">
+      {c}
+    </h2>
+  );
+
+  const MainH = ({ c }: { c: string }) => (
+    <h2 className="text-sm sm:text-base font-bold text-slate-900 pb-1 mb-2 sm:mb-3 border-b-2" style={{ borderColor: r.accent }}>
+      {c}
+    </h2>
+  );
+
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] flex">
+      <aside className="w-[38%] sm:w-[36%] md:w-[34%] bg-stone-100 text-stone-800 px-3 sm:px-4 md:px-6 py-5 sm:py-6 md:py-10 flex flex-col shrink-0">
+        {contactItems.length > 0 && (
+          <div className="mb-5 sm:mb-6 md:mb-8">
+            <SideH c="Contact" />
+            <div className="space-y-2 md:space-y-3 text-[11px] sm:text-xs">
+              {contactItems.map((item, i) => (
+                <div key={i}>
+                  <p className="font-bold text-stone-900">{item.label}</p>
+                  <p className="text-stone-600 break-words leading-snug">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {skillsList.length > 0 && (
+          <div className="mb-5 sm:mb-6 md:mb-8">
+            <SideH c="Skills" />
+            <ul className="space-y-1.5 text-[11px] sm:text-xs text-stone-700">
+              {skillsList.map((s, i) => (
+                <li key={i} className="flex items-start gap-1.5 sm:gap-2">
+                  <span className="mt-1.5 h-1 w-1 rounded-full bg-stone-400 shrink-0" />
+                  <span className="break-words leading-snug">{s}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {r.languages?.length > 0 && (
+          <div className="mb-5 sm:mb-6 md:mb-8">
+            <SideH c="Languages" />
+            <LanguagesList languages={r.languages} />
+          </div>
+        )}
+      </aside>
+      <div className="flex-1 min-w-0 px-4 sm:px-6 md:px-8 py-5 sm:py-6 md:py-10">
+        <header className="mb-5 sm:mb-6">
+          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+          <p className="text-sm font-semibold mt-0.5 break-words text-slate-600">{r.title}</p>
+        </header>
+        {r.summary && <div className="cv-section"><MainH c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><MainH c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><MainH c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><MainH c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><MainH c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      </div>
+    </div>
+  );
+}
+
 export const TEMPLATES = {
   executive: Executive,
   modern: Modern,
@@ -794,6 +1255,23 @@ export const TEMPLATES = {
   midnight: Midnight,
   ivy: Ivy,
   compact: Compact,
+  heritage: Heritage,
+  oxford: Oxford,
+  berlin: Berlin,
+  maple: Maple,
+  sakura: Sakura,
+  nordic: Nordic,
+  euro: Euro,
+  iberia: Iberia,
+  harbour: Harbour,
+  pearl: Pearl,
+  tulip: Tulip,
+  gulf: Gulf,
+  emerald: Emerald,
+  maroon: Maroon,
+  southern: Southern,
+  fern: Fern,
+  duo: Duo,
 } as const;
 
 export const TEMPLATE_INFO: Record<keyof typeof TEMPLATES, { name: string; bestFor: string; desc: string }> = {
@@ -861,5 +1339,90 @@ export const TEMPLATE_INFO: Record<keyof typeof TEMPLATES, { name: string; bestF
     name: "Compact Metrics",
     bestFor: "Analysts, engineers, and results-driven roles",
     desc: "Skills strip up top and tight sections that put numbers and outcomes first."
+  },
+  heritage: {
+    name: "Heritage Green",
+    bestFor: "Pakistan, Gulf, and formal markets",
+    desc: "Deep green double rule with classic formal sections — a dignified look for Pakistani and Gulf employers."
+  },
+  oxford: {
+    name: "Oxford Classic",
+    bestFor: "UK professionals, law, academia, consulting",
+    desc: "Left-aligned serif layout with a burgundy rule — the traditional British CV, polished for modern hiring."
+  },
+  berlin: {
+    name: "Berlin Tabular",
+    bestFor: "Germany, Austria, and structured EU markets",
+    desc: "Monochrome tabular layout with letterspaced headings — formal, precise, and easy to scan."
+  },
+  maple: {
+    name: "Maple Clean",
+    bestFor: "Canada, public sector, and corporate roles",
+    desc: "Clean single-column design with a bold red top rule and clear, confident sections."
+  },
+  sakura: {
+    name: "Sakura Minimal",
+    bestFor: "Japan and refined minimal markets",
+    desc: "Airy minimal layout with soft rose accents and generous spacing — calm, precise, professional."
+  },
+  nordic: {
+    name: "Nordic Light",
+    bestFor: "Sweden, Netherlands, and Nordic markets",
+    desc: "Light, airy design with sky-blue rules — concise and modern, built for Nordic hiring."
+  },
+  euro: {
+    name: "Euro Classic",
+    bestFor: "Italy, Spain, Germany, and EU markets",
+    desc: "Classic continental design with deep green headings — formal enough for Europass-style hiring."
+  },
+  iberia: {
+    name: "Iberia Warm",
+    bestFor: "Spain, Portugal, and Mediterranean markets",
+    desc: "Warm terracotta rules and confident sections — a professional Mediterranean look."
+  },
+  harbour: {
+    name: "Harbour Corporate",
+    bestFor: "Singapore, Hong Kong, and corporate Asia",
+    desc: "Teal-ruled corporate design with tight, confident sections for fast-moving Asian markets."
+  },
+  pearl: {
+    name: "Pearl Executive",
+    bestFor: "Hong Kong, finance, and senior corporate roles",
+    desc: "Charcoal header with a fine gold divider — understated executive polish."
+  },
+  tulip: {
+    name: "Tulip Direct",
+    bestFor: "Netherlands and direct-style markets",
+    desc: "Bold orange top rule with direct, achievement-first sections — no fluff, just results."
+  },
+  gulf: {
+    name: "Gulf Gold",
+    bestFor: "UAE, executive, and premium Gulf roles",
+    desc: "Warm sand header with gold rules — premium, elegant, and unmistakably Gulf."
+  },
+  emerald: {
+    name: "Gulf Executive",
+    bestFor: "Saudi Arabia, UAE, Qatar, and Gulf markets",
+    desc: "Deep emerald header with a fine gold divider — formal executive presence for Gulf hiring."
+  },
+  maroon: {
+    name: "Qatar Maroon",
+    bestFor: "Qatar, government, and large-project roles",
+    desc: "Rich maroon header in the Qatar national color — formal, confident, and distinctive."
+  },
+  southern: {
+    name: "Southern Ease",
+    bestFor: "Australia, New Zealand, and Oceania roles",
+    desc: "Warm ochre accents with relaxed, airy spacing — professional without stiffness."
+  },
+  fern: {
+    name: "Fern Clean",
+    bestFor: "New Zealand and clean-ATS markets",
+    desc: "Deep green headings with strong rules — clean, reference-ready, and ATS-friendly."
+  },
+  duo: {
+    name: "Duo Light",
+    bestFor: "Modern two-column markets: UK, NL, AU, SG, CA, UAE",
+    desc: "Light sidebar for contact, skills, and languages with a full-width experience column — two-column where it is accepted."
   },
 };

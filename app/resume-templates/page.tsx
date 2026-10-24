@@ -7,7 +7,7 @@ import { emptyResume } from "@/types/resume";
 
 export const metadata: Metadata = {
   title: "ATS-Friendly Resume Templates",
-  description: "Seven professional single-column resume templates designed for ATS readability. Preview each one and use it in the free builder.",
+  description: "Professional ATS-friendly resume templates designed for ATS readability. Preview each one and use it in the free builder.",
   alternates: { canonical: "/resume-templates" }
 };
 
@@ -19,7 +19,7 @@ export default function Page() {
       <Crumbs items={[["Resume Templates", "/resume-templates"]]} />
       <h1 className="text-3xl font-extrabold">Professional ATS-Friendly Resume Templates</h1>
       <p className="mt-3 max-w-2xl text-slate-600">
-        All seven templates use real, selectable text, standard headings and a single column. They are designed for ATS readability. Your content is kept when you switch.
+        All templates use real, selectable text and standard headings. They are designed for ATS readability. Your content is kept when you switch.
       </p>
 
       <ul className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -52,7 +52,7 @@ export default function Page() {
       </ul>
       <Faq
         items={[
-          { q: "Which resume template should I choose?", a: "Choose the layout that fits the job and country you are applying to. All seven templates are single-column and ATS-friendly, so pick the one whose structure matches your experience, then keep your content the same when you switch." },
+          { q: "Which resume template should I choose?", a: "Choose the layout that fits the job and country you are applying to. All templates are ATS-friendly, so pick the one whose structure matches your experience, then keep your content the same when you switch." },
           { q: "Are these templates ATS-friendly?", a: "Yes. They use real, selectable text, standard headings and a single column. Avoid adding two-column sections, text boxes or images of text, which parsers can misread." },
           { q: "Can I change the template after filling in my resume?", a: "Yes. Your content is kept when you switch templates in the builder. Preview each one and pick the layout that presents your experience best." },
           { q: "Is there a Pakistan template?", a: "Yes. Use the builder with the Pakistan country format, or start from the CV Maker Pakistan page, which follows the Pakistan format with CNIC-matching name and Matric / FSc education." },
