@@ -31,6 +31,17 @@ const COUNTRY_TEMPLATE_SETS: Record<string, TemplateId[]> = {
   USA: ["modern", "slate", "midnight", "ivy", "compact"],
 };
 
+// Templates shown in the plain builder (no country selected). The 4 new
+// country-exclusive templates are NOT listed here on purpose: they are only
+// shown inside their country's flow (e.g. the US set above).
+const GENERAL_TEMPLATES: TemplateId[] = [
+  "executive", "modern", "minimal", "creative", "tech",
+  "graduate", "classic", "sidebar", "bold",
+];
+const COUNTRY_EXCLUSIVE_TEMPLATES: TemplateId[] = [
+  "slate", "midnight", "ivy", "compact",
+];
+
 const COUNTRY_NAMES: Record<string, string> = {
   US: "United States", USA: "United States",
   UK: "United Kingdom", GB: "United Kingdom", "UNITED-KINGDOM": "United Kingdom",
@@ -93,6 +104,17 @@ export default function Builder() {
       });
     } else if (templateQuery && templateQuery in TEMPLATES) {
       setR(p => ({ ...p, template: templateQuery as TemplateId }));
+    }
+
+    // No country selected: a country-exclusive template saved earlier (or
+    // passed via ?t=) must not stay active here — fall back to Modern so the
+    // plain builder never shows a country template.
+    if (!countryQuery) {
+      setR(p =>
+        (COUNTRY_EXCLUSIVE_TEMPLATES as string[]).includes(p.template)
+          ? { ...p, template: "modern" }
+          : p
+      );
     }
 
     setReady(true);
@@ -248,7 +270,7 @@ export default function Builder() {
               <div className="space-y-3 bg-white/80 p-4 rounded-2xl border border-indigo-50 shadow-sm">
                 <label className="text-xs font-bold uppercase tracking-wider text-indigo-900 block">Select Style & Template</label>
                 <div className="flex flex-wrap gap-2">
-                  {(Object.keys(TEMPLATES) as TemplateId[]).map(t => (
+                  {GENERAL_TEMPLATES.map(t => (
   <button
     key={t}
     onClick={() => up("template", t)}
