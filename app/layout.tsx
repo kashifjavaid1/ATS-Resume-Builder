@@ -28,6 +28,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        {/* Google AdSense (same account as PixelTools) */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2579648355308599"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="bg-gradient-to-br from-slate-50 via-indigo-50/30 to-slate-100 font-sans text-slate-900 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col" suppressHydrationWarning>
         {/* Google Analytics */}
         <Script
