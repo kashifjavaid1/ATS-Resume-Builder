@@ -4,5 +4,4 @@ export const SITE_URL = "https://cvmakerpakistan.com";
 export const SITE_NAME = "CV Maker Pakistan";
 export const CONTACT_EMAIL = "gmdcf797@gmail.com";
 // Used for <lastmod> in the sitemap. Update only when page content really changes.
-export const CONTENT_UPDATED = "2026-10-17";
-export const abs = (path: string) => `${SITE_URL}${path === "/" ? "" : path}`;
+export const CONTENT_UPDATED = "2026-10-24";

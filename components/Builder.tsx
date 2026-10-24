@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useCallback, startTransition } from "react";
+import { useEffect, useState, useCallback, useRef, startTransition } from "react";
 import { emptyResume, Resume, TemplateId, Edu, Cert, Language, Project } from "@/types/resume";
 import { TEMPLATES, TEMPLATE_INFO } from "./Templates";
 import { GENERAL_TEMPLATES, COUNTRY_TEMPLATE_SETS } from "@/lib/countryTemplates";
@@ -74,37 +74,89 @@ export default function Builder() {
   const [step, setStep] = useState(1);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
-  useEffect(() => {
-    try {
-      const s = localStorage.getItem(KEY);
-      if (s) setR({ ...emptyResume, ...JSON.parse(s) });
-    } catch {}
+  const rRef = useRef(r);
+  const lastSavedRef = useRef<string | null>(null);
 
+  useEffect(() => {
+    rRef.current = r;
+  }, [r]);
+
+  // Keep stored resumes shape-safe: a hand-edited or stale draft with a
+  // non-array section (e.g. experience: null) used to crash the render (M6 fix).
+  const sanitize = (o: any): Resume => {
+    if (!o || typeof o !== "object" || Array.isArray(o)) return emptyResume;
+    return {
+      ...emptyResume,
+      ...o,
+      experience: Array.isArray(o.experience) ? o.experience : emptyResume.experience,
+      educationList: Array.isArray(o.educationList) ? o.educationList : emptyResume.educationList,
+      certifications: Array.isArray(o.certifications) ? o.certifications : emptyResume.certifications,
+      languages: Array.isArray(o.languages) ? o.languages : emptyResume.languages,
+      projects: Array.isArray(o.projects) ? o.projects : emptyResume.projects,
+    };
+  };
+
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const templateQuery = params.get("t");
     const countryQuery = params.get("country");
+    const dataQuery = params.get("data");
 
-    if (countryQuery) {
-      const countryCode = countryQuery.toUpperCase();
-      setSelectedCountry(countryCode);
+    // Example pages link here with ?data=<encoded resume>: load that resume
+    // instead of the saved draft (B2 fix). Invalid data is ignored safely.
+    let dataResume: Resume | null = null;
+    if (dataQuery) {
+      try {
+        const parsed = JSON.parse(decodeURIComponent(dataQuery));
+        if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) dataResume = sanitize(parsed);
+      } catch {}
+    }
+
+    // Unknown country codes (or codes with stray spaces) are ignored entirely,
+    // so Step 1 never ends up with no template selector at all (S1 fix).
+    const countryCode = countryQuery ? countryQuery.trim().toUpperCase() : null;
+    const validCountry = countryCode && COUNTRY_TEMPLATE_MAP[countryCode] ? countryCode : null;
+    const dataCountryRaw = dataResume ? dataResume.targetCountry : "";
+    const dataCountry = dataCountryRaw && COUNTRY_TEMPLATE_MAP[dataCountryRaw.trim().toUpperCase()]
+      ? dataCountryRaw.trim().toUpperCase()
+      : null;
+    // A country-exclusive template in the example data implies its home country.
+    const templateHome = dataResume && !dataCountry && !(GENERAL_TEMPLATES as string[]).includes(dataResume.template)
+      ? Object.keys(COUNTRY_TEMPLATE_SETS).find((c) => (COUNTRY_TEMPLATE_SETS[c] as string[]).includes(dataResume.template)) || null
+      : null;
+    const effectiveCountry = validCountry || dataCountry || templateHome;
+
+    if (dataResume) {
+      setR(dataResume);
+      if (effectiveCountry) setSelectedCountry(effectiveCountry);
+    } else {
+      try {
+        const s = localStorage.getItem(KEY);
+        if (s) setR(sanitize(JSON.parse(s)));
+      } catch {}
+    }
+
+    if (validCountry) {
+      setSelectedCountry(validCountry);
       setR(p => {
-        const updated = { ...p, targetCountry: countryCode };
-        const locked = COUNTRY_TEMPLATE_MAP[countryCode];
+        const updated = { ...p, targetCountry: validCountry };
+        const locked = COUNTRY_TEMPLATE_MAP[validCountry];
         if (locked) {
-          const set = COUNTRY_TEMPLATE_SETS[countryCode];
+          const set = COUNTRY_TEMPLATE_SETS[validCountry];
           const requested = templateQuery && set && (set as string[]).includes(templateQuery) ? (templateQuery as TemplateId) : null;
-          updated.template = requested ?? locked;
+          // Keep a saved template that belongs to this country's set (S2 fix).
+          updated.template = requested ?? (set && (set as string[]).includes(p.template) ? p.template : locked);
         }
         return updated;
       });
-    } else if (templateQuery && templateQuery in TEMPLATES) {
+    } else if (templateQuery && Object.prototype.hasOwnProperty.call(TEMPLATES, templateQuery)) {
       setR(p => ({ ...p, template: templateQuery as TemplateId }));
     }
 
     // No country selected: only the general templates may stay active here —
     // a country-exclusive template saved earlier (or passed via ?t=) falls
     // back to Modern so the plain builder never shows a country template.
-    if (!countryQuery) {
+    if (!effectiveCountry) {
       setR(p =>
         (GENERAL_TEMPLATES as string[]).includes(p.template)
           ? p
@@ -121,19 +173,41 @@ export default function Builder() {
     const t = setTimeout(() => {
       try {
         localStorage.setItem(KEY, JSON.stringify(r));
+        lastSavedRef.current = JSON.stringify(r);
         setSaved(true);
       } catch {}
     }, 600);
-    return () => clearTimeout(t);
+    // Also save immediately on tab hide/close so the last edit is never
+    // lost to the 600ms debounce (M7 fix).
+    const saveNow = () => {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(r));
+        lastSavedRef.current = JSON.stringify(r);
+      } catch {}
+    };
+    const onVis = () => { if (document.hidden) saveNow(); };
+    window.addEventListener("beforeunload", saveNow);
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("beforeunload", saveNow);
+      document.removeEventListener("visibilitychange", onVis);
+    };
   }, [r, ready]);
 
   // If the builder is open in two tabs, keep them in sync: when the resume is
-  // saved in another tab, adopt that version here. Without this, an older tab
-  // would overwrite the newer tab's entries (added jobs/projects) on its next save.
+  // saved in another tab, adopt that version here. While this tab has unsaved
+  // edits, the incoming version is ignored so in-flight typing is never
+  // overwritten (M8 fix); shape is validated before use (M6 fix).
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
       if (e.key !== KEY || !e.newValue) return;
-      try { setR({ ...emptyResume, ...JSON.parse(e.newValue) }); } catch {}
+      try {
+        if (lastSavedRef.current !== null && JSON.stringify(rRef.current) !== lastSavedRef.current) return;
+        const parsed = JSON.parse(e.newValue);
+        if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return;
+        setR(sanitize(parsed));
+      } catch {}
     };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
@@ -201,7 +275,7 @@ export default function Builder() {
     if (!f || f.size > 1e6) return;
     try {
       const textData = await f.text();
-      setR({ ...emptyResume, ...JSON.parse(textData) });
+      setR(sanitize(JSON.parse(textData)));
     } catch {
       alert("Invalid resume JSON file.");
     }
@@ -238,7 +312,7 @@ export default function Builder() {
   return (
     <div className="grid gap-8 lg:grid-cols-12 pb-12 items-start overflow-x-clip">
       {/* Print: exact A4 page, full template colors, no card radius/shadow — PDF matches the preview. */}
-      <style>{`@page { size: A4; margin: 10mm 0 0 0; } @page :first { margin: 0; } @media print { #resume { border-radius: 0 !important; box-shadow: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; } #resume .cv-section { break-inside: avoid; page-break-inside: avoid; } }`}</style>
+      <style>{`@page { size: A4; margin: 10mm 0 0 0; } @page :first { margin: 0; } @media print { body * { visibility: hidden !important; } #resume, #resume * { visibility: visible !important; } #resume { position: absolute !important; left: 0 !important; top: 0 !important; width: 100% !important; margin: 0 !important; padding: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: white !important; overflow: visible !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; } #resume .cv-section { break-inside: avoid; page-break-inside: avoid; } }`}</style>
       <section className="min-w-0 space-y-6 print:hidden lg:col-span-6 bg-gradient-to-b from-white via-slate-50/50 to-indigo-50/20 p-4 sm:p-6 lg:p-8 rounded-3xl border border-indigo-100 shadow-2xl shadow-indigo-500/5 relative" aria-label="Resume editor">
 
         <div className="flex items-center justify-between gap-3 pb-5 border-b border-indigo-100/80">
@@ -314,7 +388,7 @@ export default function Builder() {
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-emerald-700">Template Locked</p>
                   <p className="text-sm font-bold text-slate-800 capitalize">
-                    {r.template} — {COUNTRY_NAMES[selectedCountry!] || selectedCountry} Standard
+                    {TEMPLATE_INFO[r.template]?.name ?? r.template} — {COUNTRY_NAMES[selectedCountry!] || selectedCountry} Standard
                   </p>
                 </div>
               </div>

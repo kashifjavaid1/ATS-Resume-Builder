@@ -18,7 +18,7 @@ const TOOLS = [
   { title: "ATS Resume Checker", text: "Check your CV for ATS readability, missing sections and formatting issues.", href: "/ats-resume-checker", icon: "✅" },
   // FIX 2 — broken link: /job-matcher → /resume-job-matcher (asli route)
   { title: "Job Matcher", text: "Compare your CV with a job description and find the missing keywords.", href: "/resume-job-matcher", icon: "🎯" },
-  { title: "Resume Templates", text: "Choose a clean, single-column template that ATS software can read easily.", href: "/resume-templates", icon: "🎨" },
+  { title: "Resume Templates", text: "Choose a clean template with standard headings that ATS software can read easily.", href: "/resume-templates", icon: "🎨" },
   { title: "Resume Examples", text: "See real examples by role and adapt them with your own experience and numbers.", href: "/resume-examples", icon: "💼" },
 ];
 
@@ -127,7 +127,7 @@ export default function Home() {
           {/* FIX 2 — CV Preview alt: role + aria-label (ye <img> nahi, live component hai) */}
           <div className="relative mx-auto w-full lg:col-span-6 flex justify-center">
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-500 opacity-20 blur-2xl"></div>
-            <div role="img" aria-label="Live preview of a modern professional ATS-friendly resume with name, summary, experience, education, skills and languages" className="relative w-full max-w-[440px] h-[550px] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-900/10 flex flex-col">
+            <div role="img" aria-label="Live preview of a modern professional ATS-friendly resume with name, summary, experience, education, skills and languages" className="relative w-full max-w-[440px] h-[720px] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-900/10 flex flex-col">
               <div className="px-4 py-3 bg-slate-900 text-white text-xs font-medium flex items-center justify-between shrink-0">
                 <span>Live Preview • Modern Professional</span>
                 <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -228,9 +228,9 @@ export default function Home() {
           items={[
             { q: "Is CV Maker Pakistan really free?", a: "Yes. CV Maker Pakistan is free to use online. There is no sign-up and no watermark. You build your CV in your browser and use Print to PDF to save it." },
             { q: "Can I make a CV for other countries too?", a: "Yes. This builder covers Pakistan plus 20 more countries — USA, UK, Germany, Canada, Japan, Sweden, Italy, Spain, Singapore, Hong Kong, Netherlands, UAE, Saudi Arabia, Qatar, Australia, New Zealand, India, Bangladesh, Sri Lanka and China. Each country has its own format page." },
-            { q: "Will my CV pass ATS?", a: "The builder uses single-column templates with standard headings that ATS software can read more easily, and the ATS checker highlights common issues. No tool can guarantee a pass, because every employer configures its system differently." },
-            { q: "How long should my CV be?", a: "Fresh graduates: 1 page. 1-5 years of experience: 1 page, maximum 2. More than 5 years: up to 2 pages. Keep only what the job asks for." },
-            { q: "Do I need a photo on my CV?", a: "It depends on the country. US and UK CVs usually leave out the photo. Pakistan and Gulf CVs include one only if the job advertisement asks for it. Each country page explains its own rule." },
+            { q: "Will my CV pass ATS?", a: "The builder uses templates with standard headings that ATS software can read more easily, and the ATS checker highlights common issues. Most designs are single-column for maximum parser compatibility; two-column options are offered only for markets where they are accepted. No tool can guarantee a pass, because every employer configures its system differently." },
+            { q: "How long should my CV be?", a: "Fresh graduates: 1 page. 1-5 years of experience: 1 page, maximum 2. More than 5 years: usually up to 2 pages (Australia and New Zealand commonly use 2–3). Keep only what the job asks for." },
+            { q: "Do I need a photo on my CV?", a: "It depends on the country. US and UK CVs usually leave out the photo. Pakistan and Gulf CVs include one only if the job advertisement asks for it. Each country page explains its own rule. Note: this builder does not add photos — if one is required, add it in your document tool before printing." },
             { q: "Is my data safe?", a: "Yes. Your data is secure on this website — it is never saved on our server. Your CV stays on your device only, and you can delete it anytime with one click." },
           ]}
         />

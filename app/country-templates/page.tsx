@@ -5,7 +5,7 @@ import { Crumbs } from "@/components/Seo";
 export const metadata: Metadata = {
   title: "International Resume & CV Templates by Country | Free ATS Builder",
   description:
-    "Create 100% free, ATS-friendly resumes and CVs tailored for USA, UK, Germany, Canada, Japan, Australia, GCC, India, Bangladesh, Sri Lanka, China, and global job markets. Zero sign-up required, Print to PDF.",
+    "Create 100% free, ATS-friendly resumes and CVs tailored for Pakistan, USA, UK, Germany, Canada, Japan, Australia, GCC, India, Bangladesh, Sri Lanka, China, and global job markets. No sign-up required. Print to PDF.",
   alternates: { canonical: "/country-templates" },
   openGraph: {
     title: "International Resume & CV Templates by Country | Free ATS Builder",
@@ -103,7 +103,7 @@ function CountryCard({ country }: { country: (typeof countries)[number] }) {
         {/* Title + Description */}
         <div className="relative mt-4">
           <h2 className="text-base font-bold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-indigo-600">
-            {country.name} Resume Template
+            {country.name} {country.slug === "usa" || country.slug === "united-kingdom" || country.slug === "canada" ? "Resume Template" : "CV Format"}
           </h2>
           <p className="mt-1.5 line-clamp-3 text-xs leading-relaxed text-slate-500">
             {country.desc}
@@ -210,7 +210,7 @@ function BottomCTA() {
 
 export default function CountryTemplatesPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-indigo-50/30">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-indigo-50/30">
       <BackgroundDecor />
 
       <div className="relative z-10 mx-auto max-w-7xl space-y-12 px-4 py-12 sm:px-6">
@@ -245,11 +245,11 @@ export default function CountryTemplatesPage() {
               { q: "Which country CV format should I choose?", a: "Choose the country where you will apply. Each country page explains its format, rules and photo guidance. The builder then applies that country's template." },
               { q: "Is this country CV builder free?", a: "Yes. Every country format uses the same free builder. There is no sign-up and no watermark. You build your CV in your browser and use Print to PDF to save it." },
               { q: "Does one CV work for every country?", a: "No. Photo rules, length, personal details and section order differ by country. A US resume leaves out the photo, while a Gulf CV usually includes nationality and visa status. Use the format for the country you are applying to." },
-              { q: "Will my CV work with ATS?", a: "The builder uses single-column templates with standard headings that ATS software can read more easily. The ATS checker highlights common formatting and completeness issues. No tool can guarantee a pass, because every employer configures its system differently." },
+              { q: "Will my CV work with ATS?", a: "The builder uses templates with standard headings that ATS software can read more easily. Most designs are single-column for maximum parser compatibility; two-column options are offered only for markets where they are accepted. The ATS checker highlights common formatting and completeness issues. No tool can guarantee a pass, because every employer configures its system differently." },
             ]}
           />
         </div>
       </div>
-    </main>
+    </div>
   );
 }

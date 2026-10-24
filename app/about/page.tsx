@@ -5,7 +5,7 @@ import Faq from "@/components/Faq";
 export const metadata: Metadata = {
   // FIX 1 — absolute title: layout ka template ab brand dobara nahi jodega
   title: { absolute: "About CV Maker Pakistan — Free ATS-Friendly Resume Builder" },
-  description: "About CV Maker Pakistan: a free, private, ATS-friendly resume builder for Pakistan and 21 countries. No sign-up, no watermark. Build your CV online and Print to PDF.",
+  description: "About CV Maker Pakistan: a free, private, ATS-friendly resume builder for 21 countries, including Pakistan. No sign-up, no watermark. Build your CV online and Print to PDF.",
   alternates: { canonical: "/about" },
 };
 
@@ -31,7 +31,7 @@ export default function Page() {
         <h2 className="text-2xl font-bold text-slate-900">Why we built this CV maker</h2>
         <p>
           Good CV tools are often locked behind paywalls, accounts and watermarks. You fill a long form,
-          then you are asked to sign up — and only then you find out the download costs money.
+          then you are asked to sign up — and only then do you find out the download costs money.
           That is frustrating when you just need one clean CV for a job today.
         </p>
         <p>
@@ -50,7 +50,7 @@ export default function Page() {
           <Link href="/resume-builder" className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl">
             <span className="text-3xl">📝</span>
             <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Resume Builder</h3>
-            <p className="mt-1 text-sm leading-6 text-slate-600">Build a professional, ATS-friendly CV in minutes with live preview and clean, single-column templates.</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">Build a professional, ATS-friendly CV in minutes with live preview and clean templates with standard headings.</p>
             <span className="mt-3 inline-block text-sm font-bold text-indigo-600">Open tool →</span>
           </Link>
           <Link href="/ats-resume-checker" className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-xl">
@@ -112,10 +112,10 @@ export default function Page() {
         <Faq
           heading="Frequently Asked Questions"
           items={[
-            { q: "Is CV Maker Pakistan really free?", a: "Yes. Free CV Maker Pakistan is 100% free to use online. There is no sign-up, no watermark and no payment. You build your CV in your browser and save it with Print to PDF." },
-            { q: "Can I use CV Maker Pakistan online without downloading anything?", a: "Yes. CV Maker Pakistan online works fully in your browser — no app, no software download. Open the builder, fill your details, preview live, and Print to PDF." },
-            { q: "How do I download my CV as PDF?", a: "Build your CV, then use Print to PDF in your browser. That gives you a clean CV Maker Pakistan PDF you can send with job applications. No sign-up or watermark." },
-            { q: "Is there a Pakistani CV template free download?", a: "Yes. Use the CV Maker Pakistan builder with the Pakistan CV format — CNIC name, Father's Name, Matric / FSc and single-column ATS layout. Then Print to PDF to download your Pakistani CV template free." },
+            { q: "Is CV Maker Pakistan really free?", a: "Yes. The builder is 100% free to use online. There is no sign-up, no watermark and no payment. You build your CV in your browser and save it with Print to PDF." },
+            { q: "Can I use CV Maker Pakistan online without downloading anything?", a: "Yes. The builder works fully in your browser — no app, no software download. Open the builder, fill your details, preview live, and Print to PDF." },
+            { q: "How do I download my CV as PDF?", a: "Build your CV, then use Print to PDF in your browser. That gives you a clean PDF you can send with job applications. No sign-up or watermark." },
+            { q: "Is there a Pakistani CV template free download?", a: "There is no separate file — Print to PDF is how you download it. Use the builder with the Pakistan CV format — CNIC name, Father's Name, Matric / FSc and single-column ATS layout — then Print to PDF to save your CV." },
             { q: "What is the CV format Pakistan for jobs?", a: "CV format Pakistan usually means: name matching CNIC, Father's Name, Matric / FSc with passing years, degrees, skills and experience in a single-column layout. Fresh graduates keep it to 1 page; experienced candidates may use 2 pages. See the Pakistan format page for full guidance." },
             { q: "Can I make a CV for other countries too?", a: "Yes. This builder covers Pakistan plus 20 more countries — USA, UK, Germany, Canada, Japan, Sweden, Italy, Spain, Singapore, Hong Kong, Netherlands, UAE, Saudi Arabia, Qatar, Australia, New Zealand, India, Bangladesh, Sri Lanka and China. Each country has its own format page." },
             { q: "Is my data safe?", a: "Yes. Your CV is never saved on our server. It stays on your device in local storage, and you can delete it anytime. There is no account and no server-side CV storage." },

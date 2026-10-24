@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TEMPLATES, TEMPLATE_INFO } from "@/components/Templates";
 import { Crumbs } from "@/components/Seo";
+import { GENERAL_TEMPLATES, COUNTRY_TEMPLATE_SETS } from "@/lib/countryTemplates";
 import Faq from "@/components/Faq";
 import { emptyResume } from "@/types/resume";
 
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const ids = Object.keys(TEMPLATES) as (keyof typeof TEMPLATES)[];
+  // Country-exclusive templates must open with their country selected,
+  // otherwise the plain-builder fallback resets them to Modern (B3 fix).
+  const builderHref = (id: string) => {
+    if ((GENERAL_TEMPLATES as string[]).includes(id)) return `/resume-builder?t=${id}`;
+    const code = Object.keys(COUNTRY_TEMPLATE_SETS).find((c) => (COUNTRY_TEMPLATE_SETS[c] as string[]).includes(id));
+    return code ? `/resume-builder?country=${code}&t=${id}` : `/resume-builder?t=${id}`;
+  };
 
   return (
     <div>
@@ -28,7 +36,7 @@ export default function Page() {
           const i = TEMPLATE_INFO[id];
           return (
             <li key={id} className="flex flex-col rounded-2xl border bg-white p-4">
-              <div className="relative h-[360px] overflow-hidden rounded-lg ring-1 ring-slate-200" role="img" aria-label={`${i.name} ATS resume template preview`}>
+              <div className="relative h-[430px] overflow-hidden rounded-lg ring-1 ring-slate-200" role="img" aria-label={`${i.name} ATS resume template preview`}>
                 <div className="absolute left-0 top-0 w-[794px] origin-top-left scale-[0.42] pointer-events-none">
                   <T r={emptyResume} />
                 </div>
@@ -40,7 +48,7 @@ export default function Page() {
 
               <div className="mt-auto pt-4">
                 <Link
-                  href={`/resume-builder?t=${id}`}
+                  href={builderHref(id)}
                   className="inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
                 >
                   Use {i.name}
@@ -53,7 +61,7 @@ export default function Page() {
       <Faq
         items={[
           { q: "Which resume template should I choose?", a: "Choose the layout that fits the job and country you are applying to. All templates are ATS-friendly, so pick the one whose structure matches your experience, then keep your content the same when you switch." },
-          { q: "Are these templates ATS-friendly?", a: "Yes. They use real, selectable text, standard headings and a single column. Avoid adding two-column sections, text boxes or images of text, which parsers can misread." },
+          { q: "Are these templates ATS-friendly?", a: "Yes. They use real, selectable text and standard headings. Most designs are single-column for maximum parser compatibility; Two-Column Pro, Duo Light and Twin Columns are two-column options for markets where they are accepted. Avoid text boxes or images of text, which parsers can misread." },
           { q: "Can I change the template after filling in my resume?", a: "Yes. Your content is kept when you switch templates in the builder. Preview each one and pick the layout that presents your experience best." },
           { q: "Is there a Pakistan template?", a: "Yes. Use the builder with the Pakistan country format, or start from the CV Maker Pakistan page, which follows the Pakistan format with CNIC-matching name and Matric / FSc education." },
         ]}

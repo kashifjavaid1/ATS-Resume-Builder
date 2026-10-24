@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const others = COUNTRIES.filter((x) => x.slug !== c.slug).slice(0, 6);
   const path = `/country-templates/${c.slug}`;
   const templateSet = COUNTRY_TEMPLATE_SETS[c.builderCode];
-  const hasTwoColumn = templateSet?.includes("sidebar") || templateSet?.includes("duo");
+  const hasTwoColumn = templateSet?.includes("sidebar") || templateSet?.includes("duo") || templateSet?.includes("twin");
   return (
     <div className="mx-auto max-w-3xl space-y-8 leading-7">
       <Crumbs items={[["Country Formats", "/country-templates"], [c.name, path]]} />
@@ -52,7 +52,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             href={`/resume-builder?country=${encodeURIComponent(c.builderCode)}`}
             className="rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-500"
           >
-            Create {c.name} CV Free
+            Create Your {c.name} CV — Free
           </Link>
           <Link
             href="/ats-resume-checker"
@@ -146,7 +146,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               { "@type": "ListItem", position: 2, name: "Country Formats", item: `${SITE_URL}/country-templates` },
               { "@type": "ListItem", position: 3, name: c.name, item: `${SITE_URL}${path}` },
             ],
-          }).replace(/</g, "\u003c"),
+          }).replace(/</g, "\\u003c"),
         }}
       />
     </div>

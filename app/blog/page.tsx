@@ -44,7 +44,6 @@ export default function Page() {
                   <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-xl">
                     {a.guide ? "Comprehensive Guide" : "Expert Article"}
                   </span>
-                  <span className="text-slate-400 text-xs font-semibold">3 min read</span>
                 </div>
                 
                 <h2 className="text-lg sm:text-xl font-black text-slate-900">

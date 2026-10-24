@@ -253,7 +253,7 @@ export function Sidebar({ r }: { r: Resume }) {
   return (
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] flex">
       {/* ---------- LEFT SIDEBAR (always left, even on mobile) ---------- */}
-      <aside className="w-[38%] sm:w-[36%] md:w-[34%] bg-slate-900 text-white px-3 sm:px-4 md:px-6 py-5 sm:py-6 md:py-10 flex flex-col shrink-0">
+      <aside className="cv-section w-[38%] sm:w-[36%] md:w-[34%] bg-slate-900 text-white px-3 sm:px-4 md:px-6 py-5 sm:py-6 md:py-10 flex flex-col shrink-0">
         {/* Contact */}
         {contactItems.length > 0 && (
           <div className="mb-5 sm:mb-6 md:mb-8">
@@ -304,7 +304,7 @@ export function Sidebar({ r }: { r: Resume }) {
       </aside>
 
       {/* ---------- MAIN CONTENT ---------- */}
-      <main className="w-[62%] sm:w-[64%] md:w-[66%] px-4 sm:px-5 md:px-8 py-5 sm:py-6 md:py-10 min-w-0">
+      <div className="w-[62%] sm:w-[64%] md:w-[66%] px-4 sm:px-5 md:px-8 py-5 sm:py-6 md:py-10 min-w-0">
         {/* Header */}
         <header className="mb-5 sm:mb-6 md:mb-8">
           <h1 className="text-xl sm:text-2xl md:text-4xl font-black tracking-tight text-slate-900 uppercase leading-tight break-words">
@@ -435,7 +435,7 @@ export function Sidebar({ r }: { r: Resume }) {
             </div>
           </section>
         )}
-      </main>
+      </div>
     </div>
   );
 }
@@ -560,7 +560,7 @@ export function Bold({ r }: { r: Resume }) {
         )}
       </aside>
 
-      <main className="flex-1 min-w-0 px-4 sm:px-5 md:px-8 py-5 sm:py-6 md:py-10">
+      <div className="flex-1 min-w-0 px-4 sm:px-5 md:px-8 py-5 sm:py-6 md:py-10">
         <header className="mb-5 sm:mb-6 md:mb-8">
           <h1
             className="text-[32px] sm:text-[40px] md:text-[52px] font-black uppercase tracking-tight leading-[0.9] break-words"
@@ -679,7 +679,7 @@ export function Bold({ r }: { r: Resume }) {
             </div>
           </section>
         )}
-      </main>
+      </div>
     </div>
   );
 }
@@ -1192,7 +1192,7 @@ export function Duo({ r }: { r: Resume }) {
 
   return (
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] flex">
-      <aside className="w-[38%] sm:w-[36%] md:w-[34%] bg-stone-100 text-stone-800 px-3 sm:px-4 md:px-6 py-5 sm:py-6 md:py-10 flex flex-col shrink-0">
+      <aside className="cv-section w-[38%] sm:w-[36%] md:w-[34%] bg-stone-100 text-stone-800 px-3 sm:px-4 md:px-6 py-5 sm:py-6 md:py-10 flex flex-col shrink-0">
         {contactItems.length > 0 && (
           <div className="mb-5 sm:mb-6 md:mb-8">
             <SideH c="Contact" />
@@ -1451,7 +1451,7 @@ export function Twin({ r }: { r: Resume }) {
           {r.educationList?.length > 0 && <div className="cv-section"><MainH c="Education" /><EducationList educationList={r.educationList} /></div>}
           {r.certifications?.length > 0 && <div className="cv-section"><MainH c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
         </div>
-        <aside className="w-[36%] sm:w-[34%] md:w-[32%] bg-slate-100 text-slate-800 px-3 sm:px-4 md:px-6 py-5 sm:py-6 flex flex-col shrink-0">
+        <aside className="cv-section w-[36%] sm:w-[34%] md:w-[32%] bg-slate-100 text-slate-800 px-3 sm:px-4 md:px-6 py-5 sm:py-6 flex flex-col shrink-0">
           {contactItems.length > 0 && (
             <div className="mb-5 sm:mb-6">
               <SideH c="Contact" />

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Is CV Maker Pakistan free?",
-    a: "Yes. CV Maker Pakistan is free to use online. There is no sign-up and no watermark. You build your CV in your browser and use Print to PDF to save it.",
+    a: "Yes. The builder is free to use online. There is no sign-up and no watermark. You build your CV in your browser and use Print to PDF to save it.",
   },
   {
     q: "What should a Pakistani CV include?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Does this CV maker work for ATS?",
-    a: "The builder uses single-column templates with standard headings (Experience, Education, Skills) that ATS software can read more easily. The ATS checker highlights common formatting and completeness issues. No tool can guarantee a pass, because every employer configures its system differently.",
+    a: "The builder uses templates with standard headings (Experience, Education, Skills) that ATS software can read more easily. Most designs are single-column for maximum parser compatibility; two-column options are offered only for markets where they are accepted. The ATS checker highlights common formatting and completeness issues. No tool can guarantee a pass, because every employer configures its system differently.",
   },
   {
     q: "Can I download a Pakistani CV template free?",
@@ -58,11 +58,11 @@ export default function Page() {
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-indigo-100 sm:text-lg">
           Build a professional, ATS-friendly CV for jobs in Pakistan — online free, with no sign-up.
-          Add your photo, skills and work history, then Print to PDF. Your CV stays on your device.
+          Add your skills and work history, then Print to PDF. Your CV stays on your device.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/resume-builder"
+            href="/resume-builder?country=PK"
             className="rounded-xl bg-white px-6 py-3 text-sm font-bold text-indigo-700 shadow hover:bg-indigo-50"
           >
             Build My CV Free →
@@ -94,7 +94,7 @@ export default function Page() {
           <li className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-lg">
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-base font-black text-white shadow-md">1</span>
             <h3 className="mt-3 font-bold text-slate-900">Personal details</h3>
-            <p className="mt-1 text-sm leading-6 text-slate-600">Full name exactly as on your CNIC, Father&apos;s Name, mobile number, email and city. Add your CNIC number only if the job post asks for it.</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">Full name exactly as on your CNIC, Father&apos;s Name, mobile number, email and city. Do not put your full CNIC number on your CV unless the job post explicitly asks for it.</p>
           </li>
           <li className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-lg">
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-base font-black text-white shadow-md">2</span>
@@ -114,7 +114,7 @@ export default function Page() {
           <li className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-lg">
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-base font-black text-white shadow-md">5</span>
             <h3 className="mt-3 font-bold text-slate-900">Length</h3>
-            <p className="mt-1 text-sm leading-6 text-slate-600">Keep a free Pakistan resume template to 1 page if you are a fresh graduate, and up to 2 pages if you have several years of experience.</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">Keep your CV to 1 page if you are a fresh graduate, and up to 2 pages if you have several years of experience.</p>
           </li>
           <li className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-lg">
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-base font-black text-white shadow-md">6</span>
@@ -156,7 +156,7 @@ export default function Page() {
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-lg">
             <span className="text-3xl">🆓</span>
             <h3 className="mt-3 font-bold text-slate-900">Free, no sign-up</h3>
-            <p className="mt-1 text-sm leading-6 text-slate-600">CV Maker Pakistan online free — open the builder and start. No account, no watermark.</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">Open the builder and start. No account, no watermark.</p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-indigo-300 hover:shadow-lg">
             <span className="text-3xl">🇵🇰</span>
@@ -178,7 +178,7 @@ export default function Page() {
             <h3 className="mt-3 font-bold text-slate-900">Checker included</h3>
             <p className="mt-1 text-sm leading-6 text-slate-600">Run the <Link href="/ats-resume-checker" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">ATS resume checker</Link> before you apply.</p>
           </div>
-          <Link href="/resume-builder" className="group flex flex-col justify-center rounded-3xl border-2 border-dashed border-indigo-300 bg-indigo-50/50 p-6 transition hover:bg-indigo-50">
+          <Link href="/resume-builder?country=PK" className="group flex flex-col justify-center rounded-3xl border-2 border-dashed border-indigo-300 bg-indigo-50/50 p-6 transition hover:bg-indigo-50">
             <span className="text-lg font-bold text-indigo-700">Start now — it takes 5 minutes →</span>
             <span className="mt-1 text-sm leading-6 text-indigo-600">Open the free builder, fill your details, preview live, Print to PDF.</span>
           </Link>
@@ -202,11 +202,11 @@ export default function Page() {
       <aside className="rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-center text-white shadow-xl sm:p-10">
         <h2 className="text-2xl font-bold sm:text-3xl">Ready to build your CV?</h2>
         <p className="mx-auto mt-2 max-w-xl leading-7 text-emerald-100">
-          Start with the free <Link href="/resume-builder" className="font-semibold text-white no-underline hover:text-emerald-100">online resume builder</Link>,
+          Start with the free <Link href="/resume-builder?country=PK" className="font-semibold text-white no-underline hover:text-emerald-100">online resume builder</Link>,
           then test it with the <Link href="/ats-resume-checker" className="font-semibold text-white no-underline hover:text-emerald-100">ATS resume checker</Link>.
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <Link href="/resume-builder" className="rounded-xl bg-white px-6 py-3 text-sm font-bold text-emerald-700 shadow hover:bg-emerald-50">Start Building Free →</Link>
+          <Link href="/resume-builder?country=PK" className="rounded-xl bg-white px-6 py-3 text-sm font-bold text-emerald-700 shadow hover:bg-emerald-50">Start Building Free →</Link>
           <Link href="/ats-resume-checker" className="rounded-xl border border-white/40 px-6 py-3 text-sm font-bold text-white hover:bg-white/10">Check ATS Score</Link>
         </div>
       </aside>

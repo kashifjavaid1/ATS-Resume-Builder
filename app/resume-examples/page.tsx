@@ -28,6 +28,10 @@ const COUNTRY_EXAMPLES = [
   { label: "Qatar CV Format", href: "/country-templates/qatar", flag: "🇶🇦", color: "from-purple-500 to-fuchsia-600" },
   { label: "Australia CV Format", href: "/country-templates/australia", flag: "🇦🇺", color: "from-cyan-500 to-blue-600" },
   { label: "New Zealand CV Format", href: "/country-templates/new-zealand", flag: "🇳🇿", color: "from-teal-500 to-cyan-600" },
+  { label: "India CV Format", href: "/country-templates/india", flag: "🇮🇳", color: "from-orange-500 to-amber-600" },
+  { label: "Bangladesh CV Format", href: "/country-templates/bangladesh", flag: "🇧🇩", color: "from-emerald-600 to-teal-600" },
+  { label: "Sri Lanka CV Format", href: "/country-templates/sri-lanka", flag: "🇱🇰", color: "from-red-600 to-amber-500" },
+  { label: "China CV Format", href: "/country-templates/china", flag: "🇨🇳", color: "from-red-600 to-rose-600" },
 ];
 
 const STEPS = [
@@ -72,7 +76,7 @@ export default function Page() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-block rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-indigo-700">
-                      ✓ Verified Template
+                      Free Example
                     </span>
                     <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-sm font-black text-white shadow-md">
                       {String(i + 1).padStart(2, "0")}
