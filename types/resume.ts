@@ -13,7 +13,11 @@ export type TemplateId =
   | "graduate" 
   | "classic"
   | "sidebar"
-  | "bold";
+  | "bold"
+  | "slate"
+  | "midnight"
+  | "ivy"
+  | "compact";
 
 export type Resume = { 
   name: string; 

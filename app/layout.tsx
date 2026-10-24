@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "CV Maker Pakistan — build a professional, ATS-friendly CV online free. No sign-up. Create your resume, check it, and print to PDF. Your CV stays on your device.",
   icons: {
     icon: '/favicon.ico',
-    apple: '/apple-icon',
+    apple: '/apple-icon.png',
   },
   openGraph: {
     type: "website",

@@ -71,6 +71,34 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </ul>
       </section>
 
+      {c.slug === "usa" && (
+        <section className="rounded-3xl border border-indigo-100 bg-white p-6 shadow-sm sm:p-8">
+          <h2 className="text-2xl font-bold">Choose your US resume template</h2>
+          <p className="mt-2 text-slate-700">
+            Five single-column, ATS-friendly designs for US employers. Pick one below — the builder
+            opens with that template already selected and the live preview on top.
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {([
+              ["modern", "Modern Impact", "Vibrant color header with bold sections that stand out to recruiters."],
+              ["slate", "Slate Professional", "Dark slate header with a bold amber rule — a sharp, boardroom-ready US look."],
+              ["midnight", "Midnight Bold", "Black header block with accent bars — high contrast without a photo, fully ATS-readable."],
+              ["ivy", "Ivy Minimal", "Centered serif layout with classic rules — quiet, credible, and recruiter-friendly."],
+              ["compact", "Compact Metrics", "Skills strip up top and tight sections that put numbers and outcomes first."],
+            ] as const).map(([id, name, desc]) => (
+              <Link
+                key={id}
+                href={`/resume-builder?country=US&t=${id}`}
+                className="block rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <span className="block text-sm font-bold text-indigo-700">{name} →</span>
+                <span className="mt-1 block text-sm font-normal text-slate-600">{desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       <div className="space-y-8">
         {c.intro.map((p, i) => (
           <p key={i} className="text-slate-700">{p}</p>

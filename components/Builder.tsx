@@ -26,6 +26,11 @@ const COUNTRY_TEMPLATE_MAP: Record<string, TemplateId> = {
   PK: "classic", PAKISTAN: "classic",
 };
 
+const COUNTRY_TEMPLATE_SETS: Record<string, TemplateId[]> = {
+  US: ["modern", "slate", "midnight", "ivy", "compact"],
+  USA: ["modern", "slate", "midnight", "ivy", "compact"],
+};
+
 const COUNTRY_NAMES: Record<string, string> = {
   US: "United States", USA: "United States",
   UK: "United Kingdom", GB: "United Kingdom", "UNITED-KINGDOM": "United Kingdom",
@@ -79,7 +84,11 @@ export default function Builder() {
       setR(p => {
         const updated = { ...p, targetCountry: countryCode };
         const locked = COUNTRY_TEMPLATE_MAP[countryCode];
-        if (locked) updated.template = locked;
+        if (locked) {
+          const set = COUNTRY_TEMPLATE_SETS[countryCode];
+          const requested = templateQuery && set && (set as string[]).includes(templateQuery) ? (templateQuery as TemplateId) : null;
+          updated.template = requested ?? locked;
+        }
         return updated;
       });
     } else if (templateQuery && templateQuery in TEMPLATES) {
@@ -207,6 +216,7 @@ export default function Builder() {
   const isEurope = ["GERMANY-AUSTRIA", "DE", "EUROPE", "EU", "IT", "ES"].includes(country);
   const isGCC = ["UAE", "SAUDI-ARABIA", "QATAR", "KSA", "QA", "SA"].includes(country);
   const isLocked = !!selectedCountry && !!COUNTRY_TEMPLATE_MAP[selectedCountry];
+  const countrySet = selectedCountry ? COUNTRY_TEMPLATE_SETS[selectedCountry] : undefined;
 
   return (
     <div className="grid gap-8 lg:grid-cols-12 pb-12 items-start overflow-x-clip">
@@ -257,7 +267,31 @@ export default function Builder() {
               </div>
             )}
 
-            {isLocked && (
+            {isLocked && countrySet && (
+              <div className="space-y-3 bg-white/80 p-4 rounded-2xl border border-indigo-50 shadow-sm">
+                <label className="text-xs font-bold uppercase tracking-wider text-indigo-900 block">Choose Your US Template</label>
+                <div className="flex flex-wrap gap-2">
+                  {countrySet.map(t => (
+  <button
+    key={t}
+    onClick={() => up("template", t)}
+    aria-pressed={r.template === t}
+    title={TEMPLATE_INFO[t].bestFor}
+    className={`rounded-xl px-4 py-2.5 text-xs font-bold transition-all ${
+      r.template === t
+        ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/25 scale-105"
+        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+    }`}
+  >
+    {TEMPLATE_INFO[t].name}
+  </button>
+))}
+                </div>
+                <p className="text-xs text-slate-500">All 5 are single-column and ATS-friendly for US employers. The preview updates as you choose.</p>
+              </div>
+            )}
+
+            {isLocked && !countrySet && (
               <div className="flex items-center gap-3 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 p-4 rounded-2xl shadow-sm">
                 <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg font-bold">🔒</div>
                 <div>

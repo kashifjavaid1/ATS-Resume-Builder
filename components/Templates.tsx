@@ -684,6 +684,102 @@ export function Bold({ r }: { r: Resume }) {
   );
 }
 
+export function Slate({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider border-l-4 pl-2 text-slate-900" style={{ borderColor: r.accent }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ backgroundColor: "#0f172a" }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words" style={{ color: "#fbbf24" }}>{r.title}</p>
+        <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Midnight({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-[11px] font-black uppercase tracking-wider text-white px-3 py-1.5 rounded-sm" style={{ backgroundColor: r.accent }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ backgroundColor: "#000000" }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words" style={{ color: r.accent }}>{r.title}</p>
+        <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Ivy({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-widest pb-1 border-b-4 border-double" style={{ color: "#1e3a5f", borderColor: r.accent }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-900 p-5 sm:p-8 text-sm min-h-[1000px]" style={{ fontFamily: "Georgia, serif" }}>
+      <div className="text-center border-b border-slate-200 pb-4 mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-wide break-words">{r.name}</h1>
+        <p className="italic mt-0.5 break-words" style={{ color: "#1e3a5f" }}>{r.title}</p>
+        <p className="text-xs text-slate-500 mt-1 break-words">{contact(r)}</p>
+      </div>
+      {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-700 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+      {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+      {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+      {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+      {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+      {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+      {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+    </div>
+  );
+}
+
+export function Compact({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => (
+    <h2 className="mt-4 mb-1.5 text-xs font-bold uppercase tracking-wider border-b pb-1" style={{ color: r.accent }}>{c}</h2>
+  );
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <div className="px-5 sm:px-8 pt-5 sm:pt-6 pb-4 border-b-2 border-slate-900 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
+        <div className="min-w-0">
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+          <p className="text-base font-medium mt-0.5 break-words" style={{ color: r.accent }}>{r.title}</p>
+        </div>
+        <p className="text-xs text-slate-500 font-medium break-words sm:text-right shrink-0">{contact(r)}</p>
+      </div>
+      <div className="px-5 sm:px-8 py-4 sm:py-5 space-y-3">
+        {r.skills && <div className="cv-section"><H c="Core Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
 export const TEMPLATES = {
   executive: Executive,
   modern: Modern,
@@ -694,6 +790,10 @@ export const TEMPLATES = {
   classic: Classic,
   sidebar: Sidebar,
   bold: Bold,
+  slate: Slate,
+  midnight: Midnight,
+  ivy: Ivy,
+  compact: Compact,
 } as const;
 
 export const TEMPLATE_INFO: Record<keyof typeof TEMPLATES, { name: string; bestFor: string; desc: string }> = {
@@ -741,5 +841,25 @@ export const TEMPLATE_INFO: Record<keyof typeof TEMPLATES, { name: string; bestF
     name: "Designer Portfolio",
     bestFor: "Designers, product managers, creative leads",
     desc: "Striking sidebar with avatar circle and skill progress bars."
+  },
+  slate: {
+    name: "Slate Professional",
+    bestFor: "Corporate, finance, and operations roles",
+    desc: "Dark slate header with a bold amber rule — a sharp, boardroom-ready US look."
+  },
+  midnight: {
+    name: "Midnight Bold",
+    bestFor: "Marketing, sales, and creative professionals",
+    desc: "Black header block with accent bars — high contrast without a photo, fully ATS-readable."
+  },
+  ivy: {
+    name: "Ivy Minimal",
+    bestFor: "Academia, law, consulting, and senior professionals",
+    desc: "Centered serif layout with classic rules — quiet, credible, and recruiter-friendly."
+  },
+  compact: {
+    name: "Compact Metrics",
+    bestFor: "Analysts, engineers, and results-driven roles",
+    desc: "Skills strip up top and tight sections that put numbers and outcomes first."
   },
 };
