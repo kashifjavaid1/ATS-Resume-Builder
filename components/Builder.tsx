@@ -107,7 +107,7 @@ export default function Builder() {
     let dataResume: Resume | null = null;
     if (dataQuery) {
       try {
-        const parsed = JSON.parse(decodeURIComponent(dataQuery));
+        const parsed = JSON.parse(dataQuery); // URLSearchParams.get() already decodes %XX, so no second decode (a literal % in data, e.g. "40%", broke the old double-decode and dropped the example)
         if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) dataResume = sanitize(parsed);
       } catch {}
     }
