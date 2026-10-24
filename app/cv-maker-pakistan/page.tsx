@@ -52,7 +52,7 @@ export default function Page() {
 
       {/* ===== Hero ===== */}
       <div className="rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-8 text-white shadow-xl sm:p-10">
-        <p className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-bold">🇵🇰 Pakistan + 16 More Countries • 100% Free</p>
+        <p className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-bold">🇵🇰 Pakistan + 20 More Countries • 100% Free</p>
         <h1 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
           CV Maker Pakistan — Free Online Resume Builder
         </h1>
@@ -248,3 +248,4 @@ export default function Page() {
     </div>
   );
 }
+

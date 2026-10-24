@@ -5,7 +5,7 @@ import Faq from "@/components/Faq";
 export const metadata: Metadata = {
   // FIX 1 — absolute title: layout ka template ab brand dobara nahi jodega
   title: { absolute: "About CV Maker Pakistan — Free ATS-Friendly Resume Builder" },
-  description: "About CV Maker Pakistan: a free, private, ATS-friendly resume builder for Pakistan and 17 countries. No sign-up, no watermark. Build your CV online and Print to PDF.",
+  description: "About CV Maker Pakistan: a free, private, ATS-friendly resume builder for Pakistan and 21 countries. No sign-up, no watermark. Build your CV online and Print to PDF.",
   alternates: { canonical: "/about" },
 };
 
@@ -80,7 +80,7 @@ export default function Page() {
         </p>
         <p className="mt-3 leading-7 text-slate-600">
           Applying outside Pakistan? Choose from{" "}
-          <Link href="/country-templates" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">17 country formats</Link>{" "}
+          <Link href="/country-templates" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">21 country formats</Link>{" "}
           — including{" "}
           <Link href="/country-templates/usa" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">US Resume Template</Link>,{" "}
           <Link href="/country-templates/united-kingdom" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">UK Resume Template</Link>,{" "}
@@ -117,7 +117,7 @@ export default function Page() {
             { q: "How do I download my CV as PDF?", a: "Build your CV, then use Print to PDF in your browser. That gives you a clean CV Maker Pakistan PDF you can send with job applications. No sign-up or watermark." },
             { q: "Is there a Pakistani CV template free download?", a: "Yes. Use the CV Maker Pakistan builder with the Pakistan CV format — CNIC name, Father's Name, Matric / FSc and single-column ATS layout. Then Print to PDF to download your Pakistani CV template free." },
             { q: "What is the CV format Pakistan for jobs?", a: "CV format Pakistan usually means: name matching CNIC, Father's Name, Matric / FSc with passing years, degrees, skills and experience in a single-column layout. Fresh graduates keep it to 1 page; experienced candidates may use 2 pages. See the Pakistan format page for full guidance." },
-            { q: "Can I make a CV for other countries too?", a: "Yes. This builder covers Pakistan plus 16 more countries — USA, UK, Germany, Canada, Japan, Sweden, Italy, Spain, Singapore, Hong Kong, Netherlands, UAE, Saudi Arabia, Qatar, Australia and New Zealand. Each country has its own format page." },
+            { q: "Can I make a CV for other countries too?", a: "Yes. This builder covers Pakistan plus 20 more countries — USA, UK, Germany, Canada, Japan, Sweden, Italy, Spain, Singapore, Hong Kong, Netherlands, UAE, Saudi Arabia, Qatar, Australia, New Zealand, India, Bangladesh, Sri Lanka and China. Each country has its own format page." },
             { q: "Is my data safe?", a: "Yes. Your CV is never saved on our server. It stays on your device in local storage, and you can delete it anytime. There is no account and no server-side CV storage." },
           ]}
         />
@@ -137,3 +137,4 @@ export default function Page() {
     </div>
   );
 }
+

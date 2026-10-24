@@ -1,0 +1,1033 @@
+# CV Maker Pakistan — Full site content
+
+> Free ATS-friendly resume and CV builder for 21 countries — Pakistan, USA, UK, Germany, Canada, India, Bangladesh, Sri Lanka, China, Gulf and more. No sign-up, no watermark. Build in your browser and save with Print to PDF. Your data stays on your device.
+
+## Main pages
+- [CV Maker Pakistan — Home](https://cvmakerpakistan.com/): Free ATS-friendly CV builder for Pakistan and 20 more countries. No sign-up, no watermark, Print to PDF. Your data stays on your device.
+- [Free Online Resume Builder](https://cvmakerpakistan.com/resume-builder): Build a CV step by step with live preview, country formats and 38 templates, then save with Print to PDF.
+- [ATS Resume Checker](https://cvmakerpakistan.com/ats-resume-checker): Check a CV against 14 ATS checks, with a score capped at 95 and clear issues to fix.
+- [Resume Job Matcher](https://cvmakerpakistan.com/resume-job-matcher): Compare a resume with a job description and find missing keywords.
+- [Resume Templates](https://cvmakerpakistan.com/resume-templates): All 38 ATS-friendly resume templates, including single-column and two-column designs.
+- [Resume Examples](https://cvmakerpakistan.com/resume-examples): Resume examples to model a CV on.
+- [CV Formats by Country](https://cvmakerpakistan.com/country-templates): CV and resume formats for 21 countries, each with its own local rules.
+- [Pakistan CV Format](https://cvmakerpakistan.com/cv-format-pakistan): Pakistan CV format guide: CNIC name, Father’s Name, Matric / FSc guidance and a free builder.
+- [CV Maker Pakistan](https://cvmakerpakistan.com/cv-maker-pakistan): About the free CV builder for Pakistan and international formats.
+- [CV for Freshers Pakistan](https://cvmakerpakistan.com/cv-for-freshers-pakistan): CV guidance for fresh graduates in Pakistan.
+- [CV for Gulf & Saudi Jobs](https://cvmakerpakistan.com/cv-for-gulf-saudi-jobs): CV guidance for Gulf and Saudi Arabia jobs.
+- [Europe CV Format](https://cvmakerpakistan.com/europe-cv-format): Europe CV format guide.
+- [ATS Resume Guide](https://cvmakerpakistan.com/ats-resume-guide): Guide to writing an ATS-friendly resume.
+- [Resume Format Guide](https://cvmakerpakistan.com/resume-format-guide): Guide to resume formats.
+- [Blog](https://cvmakerpakistan.com/blog): Blog posts about CVs, resumes and job applications.
+- [About](https://cvmakerpakistan.com/about): About CV Maker Pakistan.
+- [Contact](https://cvmakerpakistan.com/contact): Contact CV Maker Pakistan.
+- [Privacy Policy](https://cvmakerpakistan.com/privacy): Privacy policy: CVs are built in the browser and stay on the user’s device.
+- [Terms of Use](https://cvmakerpakistan.com/terms): Terms of use.
+
+## CV formats by country
+
+### Pakistan — https://cvmakerpakistan.com/country-templates/pakistan
+
+Pakistan CV format: name matching CNIC, Father's Name, Matric / FSc / Higher Secondary School Certificate, Bachelor's or Master's with years, single-column ATS layout. 1 page for freshers, up to 2 pages for experienced candidates.
+
+A CV Maker Pakistan tool should match what Pakistani employers expect: your full name exactly as on your CNIC, your Father's Name, clear education with passing years, and a single-column layout that ATS software can read.
+
+This free CV Maker Pakistan builder needs no sign-up and adds no watermark. Build your CV in your browser, then use Print to PDF to save it. Your CV stays on your device.
+
+#### What to include in a Pakistani CV
+
+Start with your full name (as on your CNIC), Father's Name, phone, email and city. Then add a short professional summary, work experience with results, education, skills and, only if asked, references.
+
+For education, write Matriculation, then FSc / ICS / A-Levels (Higher Secondary School Certificate), then your Bachelor's or Master's degree with institution and passing year. Recruiters in Pakistan check these lines first.
+
+#### CV format Pakistan: length and layout
+
+Fresh graduates and entry-level candidates should usually keep the CV to 1 page. Candidates with several years of experience may use 2 pages. Use one column, standard headings (Experience, Education, Skills) and real bullet points.
+
+Do not use two columns, text boxes or tables for key details. ATS parsers can read them out of order, and your experience can end up under the wrong heading.
+
+#### Pakistani CV template: free download as PDF
+
+There is no separate file to download. Build your CV with the free builder, preview it live, then choose Print to PDF in your browser to save a print-ready PDF. That is the Pakistani CV template free download most job seekers need.
+
+Submit the PDF unless the employer asks for Word (.doc / .docx). PDF keeps your formatting the same on every device.
+
+Key rules: Name must match CNIC + Father's Name; Matric, FSc / HSSC, degree with years; 1 page freshers, 2 pages experienced.
+
+Frequently asked questions:
+
+Q: Is CV Maker Pakistan free?
+A: Yes. CV Maker Pakistan is free to use online. There is no sign-up and no watermark. You build your CV in your browser and use Print to PDF to save it.
+
+Q: What should a Pakistani CV include?
+A: Include your full name matching your CNIC, Father's Name, contact details, education (Matriculation, FSc / Higher Secondary School Certificate, Bachelor's or Master's with passing years), work experience, skills, and references if asked. Keep it single-column with standard headings so ATS software can read it.
+
+Q: How long should a CV be in Pakistan?
+A: Fresh graduates and entry-level candidates should usually keep it to 1 page. Candidates with several years of experience may use 2 pages. Every line should support the job you want.
+
+Q: Should I add a photo to a Pakistani CV?
+A: A photo is not required for most private-sector jobs in Pakistan. Add one only if the job advertisement asks for it. Keep the rest of the CV clean and ATS-friendly either way.
+
+### United States — https://cvmakerpakistan.com/country-templates/usa
+
+Single-column chronological format focused heavily on core technical skills, metrics, and modern ATS parsers.
+
+A US resume template (USA CV) follows a simple rule: show results, not duties. Recruiters scan for a strong summary, recent experience with numbers, and skills that match the job posting.
+
+Build your US resume free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### US resume format
+
+Use a single-column, reverse-chronological layout. Start with a 2-3 line summary, then Experience, Skills and Education. Keep it to 1 page early in your career and up to 2 pages with more experience.
+
+Leave out your photo, date of birth, marital status and full street address. US employers do not expect them, and they add nothing to your application.
+
+#### Write bullets with metrics
+
+Each bullet should show an action and a result: what you did, and what changed. Add numbers where you honestly can — revenue, users, time saved, or percentage improvements.
+
+Mirror the exact skill names from the job posting where they truthfully describe your work. That helps both ATS keyword matching and the human reader.
+
+#### US resume template: Word, PDF and Google Docs
+
+Many job seekers search for a US resume template in Word or Google Docs. This builder gives you the same result without a download: build it here, then Print to PDF. A text-based PDF keeps your formatting identical everywhere.
+
+Submit the PDF unless the employer asks for .docx. If they ask for Word, print to PDF first to check the layout, then export from your document tool.
+
+#### US resume keywords: match the posting, honestly
+
+A US resume format works best when its skills and job titles mirror the posting you are applying for. Recruiters and ATS software both scan for the exact skill names in the ad — programming languages, tools, certifications — so use the posting's own words wherever they truthfully describe your work.
+
+Do not paste a block of keywords at the bottom of the page. Instead, weave each skill into a real bullet or the skills section, with a result attached. A keyword with no evidence behind it hurts you in the interview, even if it helps you pass a filter.
+
+Key rules: No photo or DOB required; Focus on ROI & metrics; 1-2 page limit.
+
+Frequently asked questions:
+
+Q: Should a US resume include a photo?
+A: No. US resumes do not include a photo, date of birth or marital status. Leave them out and use the space for experience and results.
+
+Q: How long should a US resume be?
+A: Usually 1 page early in your career and up to 2 pages with substantial experience. Cut older or irrelevant roles before adding a third page.
+
+Q: Is a US resume template in Word or PDF better?
+A: A text-based PDF is usually best because formatting stays the same. Use .docx only when the employer asks for it.
+
+Q: What is the best US resume format for ATS?
+A: A single-column, reverse-chronological resume with standard headings (Summary, Experience, Skills, Education) and real bullet points. Avoid two-column layouts and text boxes.
+
+Q: Is a US resume the same as a CV?
+A: In the United States, a resume is the standard 1-2 page job document. A CV in the US is mostly used in academia and research and can run much longer. For almost every US job application, employers expect a resume, not a CV.
+
+### United Kingdom — https://cvmakerpakistan.com/country-templates/united-kingdom
+
+Formal UK CV structure highlighting academic credentials, professional memberships, and targeted achievements.
+
+A UK CV template is more formal than a US resume. Employers expect a clear personal statement, detailed employment history, education and professional memberships — usually across 2 pages.
+
+Build your UK CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### UK CV format
+
+Open with your name, contact details and a short personal statement (3-4 lines) that names the role you want and your strongest evidence. Then list employment history from newest to oldest, followed by education and skills.
+
+Keep it to a 2-page maximum in most cases. Recruiters in the UK expect depth, but they still scan quickly — put your strongest, most relevant experience first.
+
+#### What to leave out
+
+Do not add a personal photo, date of birth or marital status. UK employers do not expect them. Keep your address to city and postcode, plus phone and email.
+
+Avoid creative headings such as My Journey. Use standard headings — Personal Statement, Employment History, Education, Skills — so ATS software can parse your CV.
+
+#### UK resume template: Word and free download
+
+Many job seekers look for a UK resume template in Word or a free download. This builder gives you the same result without a file download: build it here, then Print to PDF for a print-ready file.
+
+Submit the PDF unless the employer asks for Word. If you need a Word version, keep the same single-column structure when you copy your text across.
+
+Key rules: 2-page maximum standard; No personal photos; Detailed employment history.
+
+Frequently asked questions:
+
+Q: Should a UK CV include a photo?
+A: No. UK CVs do not include personal photos. Leave the photo out and use the space for your employment history and achievements.
+
+Q: How long should a UK CV be?
+A: A 2-page maximum is the standard for most roles. One page can work for students and recent graduates.
+
+Q: What is the difference between a UK CV and a US resume?
+A: A UK CV is usually longer (up to 2 pages) and more detailed about education and memberships. A US resume is shorter and more results-focused. Both should be single-column and ATS-friendly.
+
+Q: Is a UK CV template in Word or PDF better?
+A: A text-based PDF is usually best because formatting stays the same. Use Word only when the employer asks for it.
+
+### Germany & Austria — https://cvmakerpakistan.com/country-templates/germany-austria
+
+Detailed chronological structures for a Germany CV and Austria CV, incorporating personal info, clear academic degrees, and skill matrices.
+
+A Germany CV format is formal, complete and chronological. German employers expect personal details, a clear education timeline, work history, skills and, often, a signed and dated CV.
+
+Build your Germany CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Germany CV format
+
+Use a clear chronological structure: personal details, professional experience (newest first), education, skills, languages and additional qualifications. Keep dates in one consistent format throughout.
+
+Unlike US resumes, a German CV usually includes a photo, date of birth, nationality and place of birth. Check the job posting — some employers now accept a photo-free CV, but the traditional format still includes these details.
+
+#### Europass and professional tone
+
+Europass is a standard European CV format. It is structured and widely understood, but many German recruiters prefer a well-designed tabular CV with the same information. Either way, keep the tone formal and factual.
+
+List degrees with their full names, institutions and dates. Add a short skills matrix for tools, languages and certifications so a reader can scan your qualifications quickly.
+
+#### Germany CV format: PDF and free download
+
+Job seekers often search for a Germany CV format PDF or free download. This builder gives you the same result without a file download: build it here, then Print to PDF for a clean, print-ready file.
+
+Submit the PDF unless the employer asks for another format. A text-based PDF keeps your layout identical and lets ATS software read your text.
+
+Key rules: Formal layout structure; Structured education timeline; Professional tone.
+
+Frequently asked questions:
+
+Q: Does a Germany CV need a photo?
+A: Traditionally yes — a professional photo is common on German CVs. Some employers now accept photo-free CVs, so check the posting. The builder lets you decide either way.
+
+Q: Should a Germany CV include date of birth and nationality?
+A: Yes, in the traditional German format these details are expected. Keep them in the personal details section at the top.
+
+Q: What is Europass?
+A: Europass is a standard European CV format with fixed sections. It is widely understood, but many German recruiters prefer a tailored tabular CV with the same information.
+
+Q: How long should a Germany CV be?
+A: Usually 2 pages. Keep it structured and factual — every section should support the role you want.
+
+### Canada — https://cvmakerpakistan.com/country-templates/canada
+
+Similar to US standards — a Canadian resume with emphasis on work authorization status and Canadian experience equivalence.
+
+A Canada resume template is close to the US format, with extra attention to work authorization and how your international experience maps to Canadian roles.
+
+Build your Canada resume free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Canada resume format
+
+Use a single-column chronological or hybrid layout on standard Letter size. Open with a summary, then Experience, Skills and Education. Keep it to 1-2 pages.
+
+Do not include a photo, date of birth, marital status or SIN number. Canadian employers do not expect them.
+
+#### Work authorization and Canadian experience
+
+If you are authorized to work in Canada, say so briefly in your summary or at the top — for example, authorized to work in Canada. Do not include permit numbers on the resume itself.
+
+For international experience, explain your role in terms a Canadian reader understands: team size, budget, tools and results, rather than local job titles alone.
+
+#### Canada resume template: Word, PDF and free download
+
+Job seekers often look for a Canada resume template in Word or a free PDF download. This builder gives you the same result without a file download: build it here, then Print to PDF.
+
+Submit the PDF unless the employer asks for Word. A text-based PDF keeps your formatting identical and parses cleanly in ATS software.
+
+Key rules: Chronological & hybrid; Action-oriented bullets; Standard Letter size.
+
+Frequently asked questions:
+
+Q: Should a Canada resume include a photo?
+A: No. Canadian resumes do not include photos, date of birth or marital status.
+
+Q: How long should a Canada resume be?
+A: Usually 1-2 pages. Keep it to 1 page early in your career and up to 2 pages with more experience.
+
+Q: Should I mention work authorization on a Canada resume?
+A: Yes, a brief line such as authorized to work in Canada helps recruiters. Do not include permit or SIN numbers.
+
+Q: Is a Canada resume template in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Japan — https://cvmakerpakistan.com/country-templates/japan
+
+Clean, structured formats for a Japanese CV, aligned with Japanese corporate recruitment standards and biographic precision.
+
+A Japan CV format values precision and structure. Employers expect a clear personal background, exact dates, detailed career history and a formal, professional layout.
+
+Build your Japan CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Japan CV format
+
+Use a clean, structured layout with exact dates for every role and qualification. List education and work history in chronological order with no gaps left unexplained.
+
+Keep the tone formal and factual. Japanese recruiters value completeness and accuracy over creative design — a tidy, consistent CV beats a flashy one.
+
+#### Personal background and career history
+
+Include your personal background, contact details, education, career history, qualifications, skills and languages. For each role, state your responsibilities and concrete results.
+
+If you are applying in English, keep job titles and company names in the form the employer will recognize, and add a short note where a local term needs explanation.
+
+#### Japan CV format: PDF and free download
+
+Job seekers often search for a Japan CV format PDF or free download. This builder gives you the same result without a file download: build it here, then Print to PDF for a clean file.
+
+Submit the PDF unless the employer asks for another format. A text-based PDF keeps your layout identical and lets ATS software read your text.
+
+Key rules: Clear personal background; Detailed career history; Professional layout.
+
+Frequently asked questions:
+
+Q: Should a Japan CV include a photo?
+A: A professional photo is common on Japanese CVs, especially for traditional rirekisho-style applications. For English-language applications, follow the employer's instructions.
+
+Q: How detailed should a Japan CV be?
+A: More detailed than a US resume. List exact dates, full career history and qualifications with no unexplained gaps.
+
+Q: Is a Japan CV format in English acceptable?
+A: Yes, for international roles and foreign companies in Japan. For domestic Japanese companies, a Japanese rirekisho may be expected — check the posting.
+
+Q: Is a Japan CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Sweden — https://cvmakerpakistan.com/country-templates/sweden
+
+Minimalist, modern layouts for a Swedish CV, focusing on transparency, teamwork competencies, and balanced lifestyles.
+
+A Sweden CV format is minimalist and honest. Swedish employers value a concise summary, teamwork, and experience they can verify — not long lists of buzzwords.
+
+Build your Sweden CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Sweden CV format
+
+Keep it concise: a short summary, experience with concrete results, education, skills and languages. One to two pages is the norm.
+
+Use clean ATS headings — Summary, Experience, Education, Skills — and a single column. Swedish recruiters scan quickly and appreciate white space.
+
+#### Teamwork and verifiable experience
+
+Show how you worked with others: team size, shared goals and what the team achieved. Swedish workplaces value collaboration, so teamwork evidence matters.
+
+Keep every claim verifiable. Swedish employers often check references, so only list experience and results you can back up.
+
+#### Sweden CV: photo or not?
+
+A photo is not required on a Sweden CV. Most candidates leave it out. Use the space for a stronger summary and better bullets.
+
+If you do add a photo, keep it professional and small. The layout must stay single-column and ATS-friendly either way.
+
+Key rules: Concise summary; Clean ATS headings; Verifiable experience.
+
+Frequently asked questions:
+
+Q: Should a Sweden CV include a photo?
+A: No, a photo is not required on a Sweden CV. Most candidates leave it out.
+
+Q: How long should a Sweden CV be?
+A: Usually 1-2 pages. Keep it concise and focused on relevant experience.
+
+Q: What style suits a Sweden CV?
+A: Minimalist and modern: clean headings, generous white space, concrete results and evidence of teamwork.
+
+Q: Is a Sweden CV template in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Italy — https://cvmakerpakistan.com/country-templates/italy
+
+Europass-compatible structured layouts for an Italian CV, emphasizing linguistic capabilities and educational credentials.
+
+An Italy CV format is usually Europass-compatible: structured sections, clear contact details, education, work history and language proficiencies.
+
+Build your Italy CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Italy CV format
+
+Use the Europass structure or a clean equivalent: personal information, work experience, education and training, personal skills, and additional information. Keep dates consistent throughout.
+
+List your education with full institution names and dates. Italian recruiters pay close attention to degrees and qualifications.
+
+#### Languages and photo
+
+Languages matter on an Italy CV. List each language with an honest level (for example, B2, C1, or native) and mention certificates where you have them.
+
+A professional photo is common on Italian CVs. If you add one, keep it small and professional so the layout stays single-column and ATS-friendly.
+
+#### Italy CV format: PDF and template
+
+Job seekers often search for an Italy CV format PDF or template. This builder gives you the same result without a file download: build it here, then Print to PDF for a clean file.
+
+Submit the PDF unless the employer asks for another format. A text-based PDF keeps your layout identical and lets ATS software read your text.
+
+Key rules: Europass standard; Language proficiencies; Clear contact details.
+
+Frequently asked questions:
+
+Q: Should an Italy CV include a photo?
+A: A professional photo is common on Italian CVs. Keep it small and professional if you add one.
+
+Q: What is Europass?
+A: Europass is a standard European CV format with fixed sections. It is widely understood in Italy and across the EU.
+
+Q: How should I list languages on an Italy CV?
+A: List each language with an honest level (A1-C2 or native) and any certificates. Language skills are a key section on Italian CVs.
+
+Q: Is an Italy CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Spain — https://cvmakerpakistan.com/country-templates/spain
+
+Professional templates for a Spanish CV, tailored for Iberian corporate markets and multinational enterprises.
+
+A Spain CV format is professional and chronological, with a clear objective, a skills matrix and work history that shows what you delivered.
+
+Build your Spain CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Spain CV format
+
+Open with your contact details and a short professional objective that names the role you want. Then list experience from newest to oldest, followed by education and skills.
+
+Keep it to 1-2 pages. Spanish recruiters value clarity — use standard headings and real bullet points, not creative layouts.
+
+#### Skills matrix and languages
+
+Add a compact skills matrix: the tools and skills for the role, grouped by area. List languages with honest levels — Spanish employers often weigh languages heavily.
+
+For each role, show results with numbers where you honestly can. That is what separates a good Spain CV from a list of duties.
+
+#### Spain CV: photo and PDF
+
+A professional photo is common on Spanish CVs but not required. If you add one, keep it small so the layout stays single-column and ATS-friendly.
+
+Submit a text-based PDF unless the employer asks for another format. Build it here, then Print to PDF.
+
+Key rules: Chronological format; Skills matrix; Professional objective.
+
+Frequently asked questions:
+
+Q: Should a Spain CV include a photo?
+A: A professional photo is common but not required on Spanish CVs. Keep it small if you add one.
+
+Q: How long should a Spain CV be?
+A: Usually 1-2 pages. Keep it focused on relevant experience.
+
+Q: What should a Spain CV objective say?
+A: Name the role you want and your strongest evidence in 2 lines. Avoid generic statements that could apply to anyone.
+
+Q: Is a Spain CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Singapore — https://cvmakerpakistan.com/country-templates/singapore
+
+Fast-scanning Singapore resume layouts optimized for multinational corporations and financial institutions.
+
+A Singapore CV format is built for fast scanning. Recruiters at multinationals and financial institutions look for impact, metrics and a clear tech stack — in seconds.
+
+Build your Singapore CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Singapore CV format
+
+Open with a 2-line summary, then Experience with metrics, Skills (including your tech stack), and Education. Keep it to 1-2 pages with clean typography.
+
+Use a single column and standard headings. Two-column layouts and text boxes can be read out of order by ATS software.
+
+#### Metrics and tech stack
+
+Every bullet should show a result: revenue, users, cost saved, time saved, or scale. For technical roles, name the stack you actually used — recruiters search by technology.
+
+If you worked across regions, say so briefly. Regional experience is a real advantage in Singapore's multinational job market.
+
+#### Singapore CV: photo and PDF
+
+A photo is not required on a Singapore CV. Leave it out unless the posting asks for one.
+
+Submit a text-based PDF unless the employer asks for another format. Build it here, then Print to PDF.
+
+Key rules: Impact-driven metrics; Clean typography; Tech stack focus.
+
+Frequently asked questions:
+
+Q: Should a Singapore CV include a photo?
+A: No, a photo is not required on a Singapore CV.
+
+Q: How long should a Singapore CV be?
+A: Usually 1-2 pages. Keep it scannable with metrics in every role.
+
+Q: What matters most on a Singapore CV?
+A: Impact and metrics: what changed because of your work, plus a clear tech stack for technical roles.
+
+Q: Is a Singapore CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Hong Kong — https://cvmakerpakistan.com/country-templates/hong-kong
+
+International corporate standards for an HK CV (Hong Kong CV format), balancing executive summaries and financial/tech expertise.
+
+A Hong Kong CV format balances an executive summary with structured experience. Corporate recruiters expect concise, bilingual-ready presentation and clear evidence of results.
+
+Build your Hong Kong CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Hong Kong CV format
+
+Open with a short executive summary, then Experience, Skills and Education. Keep it to 1-2 pages with clean, corporate typography.
+
+Use a single column and standard headings. Recruiters in Hong Kong scan quickly — your strongest results should appear in the first half of page one.
+
+#### Bilingual readiness
+
+If you work in English and Cantonese or Mandarin, list your languages with honest levels. Bilingual readiness is a real advantage in Hong Kong's corporate market.
+
+For finance and tech roles, name the systems, markets and tools you worked with. Recruiters search by these terms.
+
+#### Hong Kong CV: photo and PDF
+
+A photo is not required on a Hong Kong CV. Leave it out unless the posting asks for one.
+
+Submit a text-based PDF unless the employer asks for another format. Build it here, then Print to PDF.
+
+Key rules: Executive summaries; Bilingual readiness; Structured experience.
+
+Frequently asked questions:
+
+Q: Should a Hong Kong CV include a photo?
+A: No, a photo is not required on a Hong Kong CV.
+
+Q: How long should a Hong Kong CV be?
+A: Usually 1-2 pages. Keep the executive summary short and results visible early.
+
+Q: Should I list languages on a Hong Kong CV?
+A: Yes. List English, Cantonese, Mandarin or other languages with honest levels — bilingual readiness matters.
+
+Q: Is a Hong Kong CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Netherlands — https://cvmakerpakistan.com/country-templates/netherlands
+
+Clear, direct, and results-oriented Dutch CV formats popular in Western European hubs.
+
+A Netherlands CV format is direct. Dutch employers value clear achievements, a clean structure and a professional focus — without long introductions.
+
+Build your Netherlands CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Netherlands CV format
+
+Open with a 2-line profile, then Experience, Skills and Education. Keep it to 1-2 pages with standard headings and a single column.
+
+Write directly: what you did, and what changed. Dutch recruiters appreciate plain, honest language over superlatives.
+
+#### Achievements and languages
+
+Show results with numbers where you honestly can. For international roles, list Dutch, English and other languages with honest levels.
+
+Keep every claim verifiable. Dutch employers often check references, so only list experience you can back up.
+
+#### Netherlands CV: photo or not?
+
+A photo is not required on a Netherlands CV. Most candidates leave it out. Use the space for a stronger summary and better bullets.
+
+If you add a photo, keep it small and professional so the layout stays single-column and ATS-friendly.
+
+Key rules: Direct achievements; Clean structure; Professional focus.
+
+Frequently asked questions:
+
+Q: Should a Netherlands CV include a photo?
+A: No, a photo is not required on a Netherlands CV. Most candidates leave it out.
+
+Q: How long should a Netherlands CV be?
+A: Usually 1-2 pages. Keep it direct and focused on relevant achievements.
+
+Q: What style suits a Netherlands CV?
+A: Direct and results-oriented: plain language, clean structure, concrete achievements.
+
+Q: Is a Netherlands CV template in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### United Arab Emirates — https://cvmakerpakistan.com/country-templates/uae
+
+Tailored for the dynamic Gulf job market, accommodating visa status and executive milestones.
+
+A UAE CV format (Dubai CV format) is built for the Gulf job market: nationality and contact details, an executive summary, project leadership and clear credentials.
+
+Build your UAE CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### UAE CV format
+
+Open with your name, nationality, contact details and visa status, then an executive summary. Follow with Experience, Education, Skills and Certifications.
+
+Gulf CVs are often 2 pages. Use a single column with standard headings so ATS software can read your experience correctly.
+
+#### Project leadership and credentials
+
+For each role, show the projects you led: scope, team size, budget and results. UAE recruiters weigh project leadership heavily.
+
+List licences, certifications and professional memberships clearly. They are often checked before an interview is offered.
+
+#### UAE CV: photo and PDF
+
+A professional photo is common on UAE CVs. If you add one, keep it small and professional so the layout stays single-column and ATS-friendly.
+
+Submit a text-based PDF unless the employer asks for another format. Build it here, then Print to PDF.
+
+Key rules: Nationality & contact info; Project leadership; Executive summary.
+
+Frequently asked questions:
+
+Q: Should a UAE CV include a photo?
+A: A professional photo is common on UAE CVs. Keep it small and professional if you add one.
+
+Q: Should a UAE CV include nationality and visa status?
+A: Yes. Gulf employers expect nationality and visa / work status on the CV. Keep them in the personal details section.
+
+Q: How long should a UAE CV be?
+A: Usually 2 pages. Use the space for project leadership and credentials.
+
+Q: Is a UAE CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Saudi Arabia — https://cvmakerpakistan.com/country-templates/saudi-arabia
+
+Designed for a KSA CV format: Vision-aligned mega projects, engineering, and enterprise leadership roles.
+
+A Saudi Arabia CV format is formal and credential-heavy. Employers look for a clear profile header, detailed credentials and large-scale project experience.
+
+Build your Saudi Arabia CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Saudi Arabia CV format
+
+Open with a formal profile header: name, nationality, contact details and visa status. Follow with a short executive profile, Experience, Education, Skills and Certifications.
+
+Gulf CVs are often 2 pages. Use a single column with standard headings so ATS software can read your experience correctly.
+
+#### Credentials and mega projects
+
+List degrees, licences and certifications with full names and dates. For project roles, show the project, your role, scale (budget, team, timeline) and the outcome.
+
+If you worked on Vision-aligned or giga-project work, say so plainly. Recruiters search for that experience.
+
+#### Saudi Arabia CV format: PDF, Word and for nurses
+
+Job seekers often search for a Saudi Arabia CV format PDF, in Word, or for nurses. The structure is the same: build it here, then Print to PDF for a clean file. Submit the PDF unless the employer asks for Word.
+
+For nursing roles, add your licence, registration and clinical areas clearly. Gulf hospitals check credentials before shortlisting.
+
+Key rules: Detailed credentials; Large-scale projects; Formal profile header.
+
+Frequently asked questions:
+
+Q: Should a Saudi Arabia CV include a photo?
+A: A professional photo is common on Saudi CVs. Keep it small and professional if you add one.
+
+Q: Should a Saudi Arabia CV include nationality and visa status?
+A: Yes. Gulf employers expect nationality and visa / work status on the CV.
+
+Q: What should a Saudi Arabia CV format for nurses include?
+A: Licence and registration, clinical areas, hospital experience, and certifications — with dates. Keep the same single-column, ATS-friendly structure.
+
+Q: Is a Saudi Arabia CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Qatar — https://cvmakerpakistan.com/country-templates/qatar
+
+Optimized for a Qatar CV in energy, corporate, and regional international recruitment pipelines.
+
+A Qatar CV format is built for energy, corporate and international recruitment: clear work history, a strong certifications section and a professional layout.
+
+Build your Qatar CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Qatar CV format
+
+Open with your name, nationality, contact details and visa status, then a short profile. Follow with Experience, Education, Skills and Certifications.
+
+Gulf CVs are often 2 pages. Use a single column with standard headings so ATS software can read your experience correctly.
+
+#### Certifications and energy experience
+
+List certifications with full names and dates. For energy, construction and corporate roles, show project scale and your role clearly.
+
+If you worked on regional or international projects, say so briefly. Qatar recruiters value regional experience.
+
+#### Qatar CV format: PDF and for nurses
+
+Job seekers often search for a Qatar CV format PDF, free download, or for nurses. The structure is the same: build it here, then Print to PDF for a clean file.
+
+For nursing roles, add your licence, registration and clinical areas clearly. Hospitals check credentials before shortlisting.
+
+Key rules: Clear work history; Certifications section; Professional photo space.
+
+Frequently asked questions:
+
+Q: Should a Qatar CV include a photo?
+A: A professional photo is common on Qatar CVs. Keep it small and professional if you add one.
+
+Q: Should a Qatar CV include nationality and visa status?
+A: Yes. Gulf employers expect nationality and visa / work status on the CV.
+
+Q: What should a Qatar CV format for nurses include?
+A: Licence and registration, clinical areas, hospital experience, and certifications — with dates. Keep the same single-column structure.
+
+Q: Is a Qatar CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### Australia — https://cvmakerpakistan.com/country-templates/australia
+
+Comprehensive professional standards for an Australian CV, focusing on competency indicators and career progression.
+
+An Australia CV format is competency-based and can run longer than a US resume: 2-3 pages is normal, with clear referees at the end.
+
+Build your Australia CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### Australia CV format
+
+Open with a short profile, then Key Skills or Competencies, Employment History, Education and Referees. Use a single column with standard headings.
+
+Australian employers expect detail: what you did, how you did it, and what changed. Use the extra space for evidence, not filler.
+
+#### Competencies and referees
+
+Show competencies with short examples: the situation, what you did, and the outcome. That is what Australian recruiters read for.
+
+End with referees (name, role, organisation, phone/email) or Available on request. If you list referees, confirm they are willing to be contacted.
+
+#### Australia CV: cover letter and PDF
+
+Job seekers often search for an Australia CV and cover letter format. Keep the CV as described here, and write the cover letter as a separate one-page letter for the specific role.
+
+Submit a text-based PDF unless the employer asks for another format. Build it here, then Print to PDF.
+
+Key rules: 2-3 page flexibility; Competency-based; Clear referee section.
+
+Frequently asked questions:
+
+Q: Should an Australia CV include a photo?
+A: No, a photo is not required on an Australia CV.
+
+Q: How long should an Australia CV be?
+A: Usually 2-3 pages. Australian employers expect more detail than US employers.
+
+Q: Should an Australia CV include referees?
+A: Yes. End with referees or Available on request. Confirm your referees are willing to be contacted.
+
+Q: Is an Australia CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### New Zealand — https://cvmakerpakistan.com/country-templates/new-zealand
+
+Clear, concise layouts for an NZ CV, aligning with local corporate expectations and verifiable experience.
+
+A New Zealand CV format is clear and concise: clean ATS headings, action bullets and reference-ready referees.
+
+Build your New Zealand CV free in the browser with no sign-up and no watermark, then use Print to PDF to save it. Your data stays on your device.
+
+#### New Zealand CV format
+
+Open with a short profile, then Key Skills, Employment History, Education and Referees. Use a single column with standard headings.
+
+Keep it to 2-3 pages. New Zealand employers value plain language and verifiable experience over long introductions.
+
+#### Action bullets and referees
+
+Write action bullets: what you did, and what changed. Add numbers where you honestly can.
+
+End with referees (name, role, organisation, phone/email) or Available on request. Confirm your referees are willing to be contacted.
+
+#### New Zealand CV: cover letter and PDF
+
+Job seekers often search for a New Zealand CV and cover letter format. Keep the CV as described here, and write the cover letter as a separate one-page letter for the specific role.
+
+Submit a text-based PDF unless the employer asks for another format. Build it here, then Print to PDF.
+
+Key rules: Clean ATS headings; Reference-ready; Action bullet points.
+
+Frequently asked questions:
+
+Q: Should a New Zealand CV include a photo?
+A: No, a photo is not required on a New Zealand CV.
+
+Q: How long should a New Zealand CV be?
+A: Usually 2-3 pages. Keep it clear and focused on relevant experience.
+
+Q: Should a New Zealand CV include referees?
+A: Yes. End with referees or Available on request. Confirm your referees are willing to be contacted.
+
+Q: Is a New Zealand CV format in Word or PDF better?
+A: A text-based PDF is usually best. Use Word only when the employer asks for it.
+
+### India — https://cvmakerpakistan.com/country-templates/india
+
+India CV format: reverse-chronological resume, 1 page for freshers and up to 2 pages for experienced candidates, CGPA with scale, Class X and XII for freshers, skills and projects first. Free ATS-friendly builder, no sign-up, Print to PDF.
+
+Indian recruiters and campus drives expect a reverse-chronological resume: your latest role or project first, then earlier ones, then education and skills. Freshers keep it to one page; experienced candidates may use two.
+
+This free builder needs no sign-up and adds no watermark. Build your India CV format in your browser, then use Print to PDF to save it. Your CV stays on your device.
+
+#### India CV format for freshers
+
+Freshers should lead with skills and projects, not education alone. List programming languages, tools and frameworks, then academic and internship projects with measurable outcomes — users reached, marks improved, time saved.
+
+Include Class X and XII percentages with board and year, because many campus recruiters set minimum eligibility marks. Add degree, college, CGPA with its scale (for example 8.4/10), internships, certifications such as NPTEL, AWS or Google, and a short career objective only if it names the role you want.
+
+#### India CV format: length, photo and declaration
+
+One page suits freshers and early-career roles; two pages are common once you have several years of relevant experience. A photo is optional — most private employers do not need one, so leave it out unless the employer or placement cell asks for it.
+
+A declaration is not needed for most private companies, but government, PSU and some traditional employers still expect one line with place, date and your name. Never put current or expected CTC on the resume; share it on the application form or when the recruiter asks.
+
+#### India CV template: Naukri, campus drives and PDF
+
+Recruiters search Naukri, LinkedIn India and Apna by skills and job titles, so match your skills section to the posting honestly and keep standard headings (Summary, Skills, Projects, Experience, Education). Avoid tables, text boxes and creative two-column layouts for ATS campus drives; single-column text parses cleanly.
+
+Save a text-based PDF named Firstname-Lastname-Resume.pdf unless the portal asks for Word. PDF keeps your formatting identical on every device, which matters when a recruiter opens it on a phone.
+
+Key rules: Reverse-chronological: latest job first; 1 page freshers, up to 2 pages experienced; CGPA with scale; Class X and XII for freshers.
+
+Frequently asked questions:
+
+Q: What is the best CV format for India?
+A: Reverse-chronological: latest job first, then earlier roles, then education and skills. One page for freshers, up to two pages for experienced candidates.
+
+Q: Should freshers include Class X and XII marks?
+A: Yes. Many campus recruiters set minimum Class X and XII percentages, so give board, year and percentage for both.
+
+Q: Do I need a photo or declaration on an Indian CV?
+A: A photo is optional for most private employers; add one only if asked. A declaration is expected mainly by government and PSU employers, not by most private companies.
+
+Q: Is India CV format PDF or Word better?
+A: A text-based PDF is best for most applications. Use Word only when the portal or employer asks for it.
+
+### Bangladesh — https://cvmakerpakistan.com/country-templates/bangladesh
+
+Bangladesh CV format: corporate structure with career summary, skills, experience, projects, education and references on request. 1 page for freshers, 2 pages up to 10 years of experience. Free builder, no sign-up, Print to PDF.
+
+Bangladeshi corporate employers expect a clear, formal CV: a short career summary, skills matched to the job, experience with results, education with years, and references only when asked.
+
+This free builder needs no sign-up and adds no watermark. Build your Bangladesh CV format in your browser, then use Print to PDF to save it. Your CV stays on your device.
+
+#### Bangladesh CV format: structure that employers expect
+
+Start with name, mobile, professional email, city and a LinkedIn or portfolio link. Follow with a career summary rewritten for the role, skills supported by evidence, experience with dates and achievements, projects for freshers and technical roles, then education and training.
+
+Traditional Bangladeshi CVs also list personal details such as father's name, date of birth and nationality. For modern corporate and multinational roles, keep personal details short and put the focus on skills and results instead.
+
+#### Bangladesh CV format: how many pages
+
+Freshers and early-career candidates should aim for 1 page. Candidates with up to about 10 years of experience commonly use 2 pages, and very senior candidates may use 3. Put the most important information on page one, because a busy recruiter may never reach page three.
+
+Use one column and standard headings so the CV reads cleanly in print and in applicant tracking systems. Save as PDF unless the employer asks for a Word file.
+
+#### Bangladeshi CV format Word file and PDF
+
+Many job seekers search for a Bangladeshi CV format Word file. This builder gives you something better than a fixed file: a live template you can edit, preview and print to PDF whenever your experience changes.
+
+Name the file clearly, for example CV_Name_Designation_Years, so recruiters can find it later. Keep the formatting simple — no heavy shading or graphics that print badly.
+
+Key rules: Career summary, skills, experience, education; 1 page freshers, 2 pages up to 10 years; References only when the employer asks.
+
+Frequently asked questions:
+
+Q: What is the best CV format for Bangladesh?
+A: A formal corporate format: career summary, skills, experience with results, projects, education, and references only when asked.
+
+Q: How many pages should a Bangladesh CV be?
+A: 1 page for freshers, 2 pages for up to about 10 years of experience, 3 pages only for very senior candidates.
+
+Q: Should I include personal details like father's name?
+A: Traditional formats include them, but modern corporate roles prefer a short personal section focused on contact details, skills and results.
+
+Q: Is Bangladesh CV format PDF or Word better?
+A: PDF is best for most applications because formatting stays identical. Use Word only when the employer asks for it.
+
+### Sri Lanka — https://cvmakerpakistan.com/country-templates/sri-lanka
+
+Sri Lanka CV format: 1-2 page A4 CV, single-column, with summary, experience, education, professional qualifications, skills and languages, and two non-related referees. Free builder, no sign-up, Print to PDF.
+
+Sri Lankan employers expect a one or two page A4 CV in a single column: contact details, professional summary, work experience with achievements, education, professional qualifications, skills and languages, and two non-related referees.
+
+This free builder needs no sign-up and adds no watermark. Build your Sri Lanka CV format in your browser, then use Print to PDF to save it. Your CV stays on your device.
+
+#### Sri Lanka CV format for freshers
+
+Freshers and school leavers should keep the CV to one page with education first: degree or diploma, then A/L stream and results, followed by projects, internships, part-time work, leadership in societies or sports, and skills.
+
+Write internships and projects with results, the same way an experienced candidate writes a job. A short line about what you built or improved matters more than a long list of duties.
+
+#### Sri Lanka CV format: referees, NIC and photo
+
+Two non-related referees are standard in Sri Lanka: a former manager, supervisor or lecturer with designation, organisation, phone number and email. Ask their permission before you list them, or write References available on request if you prefer.
+
+Your NIC number, date of birth, civil status and religion are not needed for most private sector applications. Add them only when the employer or application form asks, which is common for government posts and some banks. A photo is optional and rarely helps; leave it out unless the advertisement asks for one.
+
+#### Sri Lanka CV template: PDF and length
+
+One page suits students and fresh graduates; two pages suit most professionals; three pages only for senior specialists or executives with long careers. Put the strongest evidence on page one.
+
+Save as Firstname-Lastname-CV.pdf after a careful proofread. A clean single-column layout also reads well in applicant tracking systems used by banks, IT companies and multinationals.
+
+Key rules: 1 page freshers, 2 pages professionals; Two non-related referees are standard; NIC only when the employer asks.
+
+Frequently asked questions:
+
+Q: What is the best CV format for Sri Lanka?
+A: A one or two page A4 CV in a single column: contact, summary, experience with achievements, education, qualifications, skills, languages and two referees.
+
+Q: Do I need referees on a Sri Lankan CV?
+A: Yes. Two non-related referees are standard. Include their designation, organisation, phone and email, with their permission.
+
+Q: Should I include my NIC number or photo?
+A: Only when asked. NIC is common for government posts and some banks. A photo is optional and rarely helps for private sector roles.
+
+Q: How many pages should a Sri Lanka CV be?
+A: One page for students and freshers, two pages for most professionals, three only for senior specialists.
+
+### China — https://cvmakerpakistan.com/country-templates/china
+
+China CV format for CSC scholarship and university applications: professional 1-2 page CV with an uninterrupted study timeline from senior middle school, research and publications first. Free builder, no sign-up, Print to PDF.
+
+Students applying to Chinese universities and the CSC Chinese Government Scholarship need a professional 1-2 page CV that a professor can read in minutes: education with an uninterrupted timeline, research experience, publications and a clear study direction.
+
+This free builder needs no sign-up and adds no watermark. Build your China CV format in your browser, then use Print to PDF to save it for your CSC and university portals. Your CV stays on your device.
+
+#### China CV format for CSC scholarship
+
+The CSC application asks for a professional CV of 1-2 pages alongside the application form, degree certificates, transcripts, a study plan of at least 1000 words, two recommendation letters and a passport copy. Your CV supports all of these: it must agree with your transcripts and study plan.
+
+Professors deciding on acceptance letters look for research fit first. Put your degree, research projects, publications and the field you want to study in China at the top, before part-time jobs that do not relate to your study plan.
+
+#### China CV format: study experience timeline
+
+Chinese universities ask for a study experience resume whose start and end dates are uninterrupted, beginning from senior middle school. List every stage of education in order with institution, dates and level, and leave no unexplained gaps.
+
+If you studied or worked between degrees, show it in the same timeline. A gap with no explanation is the most common reason a university portal sends an application back for correction.
+
+#### Chinese CV template: language and PDF
+
+Write the CV in English unless the university asks for Chinese. Keep sentences short and factual, and use the same field names as your study plan so a professor can match them in seconds.
+
+Save a text-based PDF and check that it opens cleanly on a phone, because professors often read attachments on mobile first. Use one column and standard headings so nothing is lost when the PDF is printed or parsed.
+
+Key rules: Professional CV, 1-2 pages; Uninterrupted study timeline from senior middle school; Research, publications and study plan focus.
+
+Frequently asked questions:
+
+Q: How many pages should a China CV be for CSC?
+A: A professional CV of 1-2 pages. One page suits most applicants; two pages suit applicants with research and publications.
+
+Q: What is a study experience resume for China?
+A: An education timeline with uninterrupted start and end dates from senior middle school, matching your transcripts and study plan.
+
+Q: Should a China CV include a photo?
+A: This builder does not add photos. A clean, photo-free CV is accepted for CSC and university applications; follow the specific university portal if it asks otherwise.
+
+Q: Is China CV format PDF or Word better?
+A: A text-based PDF is best for uploads to CSC and university portals. Use Word only when a portal asks for it.
+
+## Resume templates
+
+### Executive Elite
+Best for: C-level executives, directors, senior managers. Dark serif header with premium typography for senior leadership roles.
+
+### Modern Impact
+Best for: Corporate, marketing, and mid-level professionals. Vibrant color header with bold sections that stand out to recruiters.
+
+### Clean Minimalist
+Best for: Design, consulting, and premium industries. Refined typography with generous white space for clean readability.
+
+### Creative Bold
+Best for: Designers, marketers, content creators. Expressive layout with dynamic accents and pill-shaped headings.
+
+### Software Engineer Pro
+Best for: Developers, DevOps, and data engineers. Monospace design with skills-first layout for technical roles.
+
+### Fresh Graduate
+Best for: Students, fresh graduates, entry-level applicants. Education-first layout built for candidates with limited experience.
+
+### Europass Standard
+Best for: Germany, Austria, Italy, Spain, and EU markets. Traditional Europass-compliant CV format for European job markets.
+
+### Two-Column Pro
+Best for: UX, product, and international professionals. Modern two-column layout with dark sidebar for contact and skills.
+
+### Designer Portfolio
+Best for: Designers, product managers, creative leads. Striking sidebar with avatar circle and skill progress bars.
+
+### Slate Professional
+Best for: Corporate, finance, and operations roles. Dark slate header with a bold amber rule — a sharp, boardroom-ready US look.
+
+### Midnight Bold
+Best for: Marketing, sales, and creative professionals. Black header block with accent bars — high contrast without a photo, fully ATS-readable.
+
+### Ivy Minimal
+Best for: Academia, law, consulting, and senior professionals. Centered serif layout with classic rules — quiet, credible, and recruiter-friendly.
+
+### Compact Metrics
+Best for: Analysts, engineers, and results-driven roles. Skills strip up top and tight sections that put numbers and outcomes first.
+
+### Heritage Green
+Best for: Pakistan, Gulf, and formal markets. Deep green double rule with classic formal sections — a dignified look for Pakistani and Gulf employers.
+
+### Oxford Classic
+Best for: UK professionals, law, academia, consulting. Left-aligned serif layout with a burgundy rule — the traditional British CV, polished for modern hiring.
+
+### Berlin Tabular
+Best for: Germany, Austria, and structured EU markets. Monochrome tabular layout with letterspaced headings — formal, precise, and easy to scan.
+
+### Maple Clean
+Best for: Canada, public sector, and corporate roles. Clean single-column design with a bold red top rule and clear, confident sections.
+
+### Sakura Minimal
+Best for: Japan and refined minimal markets. Airy minimal layout with soft rose accents and generous spacing — calm, precise, professional.
+
+### Nordic Light
+Best for: Sweden, Netherlands, and Nordic markets. Light, airy design with sky-blue rules — concise and modern, built for Nordic hiring.
+
+### Euro Classic
+Best for: Italy, Spain, Germany, and EU markets. Classic continental design with deep green headings — formal enough for Europass-style hiring.
+
+### Iberia Warm
+Best for: Spain, Portugal, and Mediterranean markets. Warm terracotta rules and confident sections — a professional Mediterranean look.
+
+### Harbour Corporate
+Best for: Singapore, Hong Kong, and corporate Asia. Teal-ruled corporate design with tight, confident sections for fast-moving Asian markets.
+
+### Pearl Executive
+Best for: Hong Kong, finance, and senior corporate roles. Charcoal header with a fine gold divider — understated executive polish.
+
+### Tulip Direct
+Best for: Netherlands and direct-style markets. Bold orange top rule with direct, achievement-first sections — no fluff, just results.
+
+### Gulf Gold
+Best for: UAE, executive, and premium Gulf roles. Warm sand header with gold rules — premium, elegant, and unmistakably Gulf.
+
+### Gulf Executive
+Best for: Saudi Arabia, UAE, Qatar, and Gulf markets. Deep emerald header with a fine gold divider — formal executive presence for Gulf hiring.
+
+### Qatar Maroon
+Best for: Qatar, government, and large-project roles. Rich maroon header in the Qatar national color — formal, confident, and distinctive.
+
+### Southern Ease
+Best for: Australia, New Zealand, and Oceania roles. Warm ochre accents with relaxed, airy spacing — professional without stiffness.
+
+### Fern Clean
+Best for: New Zealand and clean-ATS markets. Deep green headings with strong rules — clean, reference-ready, and ATS-friendly.
+
+### Duo Light
+Best for: Modern two-column markets: UK, NL, AU, SG, CA, UAE. Light sidebar for contact, skills, and languages with a full-width experience column — two-column where it is accepted.
+
+### India Navy
+Best for: India, campus drives, Naukri, and IT roles. Deep navy header with a saffron divider — confident, formal, and built for Indian hiring.
+
+### Bengal Green
+Best for: Bangladesh, corporate, and government roles. Flag-green header with a gold divider — formal and dignified for Bangladeshi employers.
+
+### Lanka Heritage
+Best for: Sri Lanka, banking, IT, and government roles. Centered serif layout with maroon and gold rules — classic Sri Lankan formality.
+
+### China Red
+Best for: China, CSC scholarship, and university applications. Bold red header with a gold divider — formal and clear for Chinese universities and CSC.
+
+### Lotus Calm
+Best for: South Asia, education, and service roles. Soft purple headings with airy spacing — calm, elegant, and easy to read.
+
+### Bamboo Fresh
+Best for: Asia, tech, and modern corporate roles. Fresh teal accents with a light tinted header — modern and clean for Asian employers.
+
+### Spice Warm
+Best for: South Asia, business, and creative roles. Warm brown headings with confident sections — a grounded, professional look.
+
+### Twin Columns
+Best for: India, Bangladesh, and modern two-column markets. Top header band with a light right sidebar — two-column layout where it is accepted, still ATS-readable.

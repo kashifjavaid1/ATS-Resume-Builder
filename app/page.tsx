@@ -7,8 +7,8 @@ import Faq from "@/components/Faq";
 
 export const metadata: Metadata = {
   // FIX 1 — absolute title: layout ka template ab brand dobara nahi jodega
-  title: { absolute: "CV Maker Pakistan & International Resume Builder — Free ATS-Friendly CV for 17 Countries" },
-  description: "Build a free ATS-friendly CV for 17 countries — Pakistan, USA, UK, Germany, Canada, Gulf and more. No sign-up. Pakistan format with CNIC, Matric / FSc guidance, then Print to PDF.",
+  title: { absolute: "CV Maker Pakistan & International Resume Builder — Free ATS-Friendly CV for 21 Countries" },
+  description: "Build a free ATS-friendly CV for 21 countries — Pakistan, USA, UK, Germany, Canada, India, Gulf and more. No sign-up. Pakistan format with CNIC, Matric / FSc guidance, then Print to PDF.",
   alternates: { canonical: "/" },
 };
 
@@ -22,7 +22,7 @@ const TOOLS = [
   { title: "Resume Examples", text: "See real examples by role and adapt them with your own experience and numbers.", href: "/resume-examples", icon: "💼" },
 ];
 
-// Home page pe 8 countries — baaki "See all 17" pe click kar ke
+// Home page pe 8 countries — baaki "See all 21" pe click kar ke
 const COUNTRIES_HOME = [
   { label: "Pakistan CV Format", href: "/cv-maker-pakistan", flagCode: "pk", bg: "bg-green-50" },
   { label: "US Resume Template", href: "/country-templates/usa", flagCode: "us", bg: "bg-blue-50" },
@@ -39,7 +39,7 @@ const COUNTRIES_MARQUEE = COUNTRIES_HOME;
 
 const STEPS = [
   { title: "Fill your details", text: "Add your name, contact, summary, experience, education and skills. Your CV updates live as you type." },
-  { title: "Choose your country format", text: "Pick from 17 country formats — Pakistan, US, UK, Germany, Gulf and more. Photo, length and section rules change with the country." },
+  { title: "Choose your country format", text: "Pick from 21 country formats — Pakistan, US, UK, Germany, India, Gulf and more. Photo, length and section rules change with the country." },
   { title: "Check your ATS score", text: "Run the ATS Resume Checker to find missing sections, weak bullets and formatting issues before you apply." },
   { title: "Print to PDF", text: "Preview your CV, then use Print to PDF in your browser to save a clean, print-ready PDF. No sign-up, no watermark." },
 ];
@@ -47,7 +47,7 @@ const STEPS = [
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "WebApplication", name: "CV Maker Pakistan", url: SITE_URL, applicationCategory: "BusinessApplication", operatingSystem: "Web", offers: { "@type": "Offer", price: "0", priceCurrency: "PKR" }, description: "Free online CV maker for Pakistan and 16 more countries. Build an ATS-friendly CV, check it, and Print to PDF. No sign-up." }).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "WebApplication", name: "CV Maker Pakistan", url: SITE_URL, applicationCategory: "BusinessApplication", operatingSystem: "Web", offers: { "@type": "Offer", price: "0", priceCurrency: "PKR" }, description: "Free online CV maker for Pakistan and 20 more countries. Build an ATS-friendly CV, check it, and Print to PDF. No sign-up." }).replace(/</g, "\\u003c") }} />
 
       {/* ===== Country marquee CSS — pure CSS, no JS ===== */}
       <style>{`
@@ -104,19 +104,19 @@ export default function Home() {
           <div className="space-y-6 lg:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3.5 py-1.5 text-xs font-semibold text-indigo-700 ring-1 ring-inset ring-indigo-600/20">
               <span className="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
-              🇵🇰 Pakistan + 16 More Countries • 100% Free & ATS-Optimized
+              🇵🇰 Pakistan + 20 More Countries • 100% Free & ATS-Optimized
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl leading-[1.12]">
               CV Maker Pakistan & <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">International ATS Resume Builder</span>
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Build a free, ATS-friendly CV for <strong className="text-slate-900">Pakistan</strong> — with CNIC name, Father’s Name, Matric / FSc guidance — or for <strong className="text-slate-900">16 more countries — USA, UK, Germany, Canada, Gulf & more</strong>. Live preview, keyword matching, and Print to PDF. Your data stays on your device.
+              Build a free, ATS-friendly CV for <strong className="text-slate-900">Pakistan</strong> — with CNIC name, Father’s Name, Matric / FSc guidance — or for <strong className="text-slate-900">20 more countries — USA, UK, Germany, Canada, India, Gulf & more</strong>. Live preview, keyword matching, and Print to PDF. Your data stays on your device.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link href="/resume-builder" prefetch={true} className="rounded-xl bg-emerald-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-600/20 transition-all hover:bg-emerald-500 hover:shadow-emerald-600/30 active:scale-95">Build Your Resume</Link>
               <Link href="/ats-resume-checker" prefetch={true} className="rounded-xl border border-slate-300 bg-white px-7 py-3.5 text-base font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50 hover:text-slate-900 active:scale-95">Check Resume ATS Score</Link>
             </div>
-            <p className="text-sm text-slate-600">Start with <Link href="/cv-maker-pakistan" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">CV Maker Pakistan</Link>, explore <Link href="/country-templates" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">all 17 country formats</Link>, or check your CV with the <Link href="/ats-resume-checker" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">ATS resume checker</Link>.</p>
+            <p className="text-sm text-slate-600">Start with <Link href="/cv-maker-pakistan" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">CV Maker Pakistan</Link>, explore <Link href="/country-templates" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">all 21 country formats</Link>, or check your CV with the <Link href="/ats-resume-checker" className="font-semibold text-indigo-700 no-underline hover:text-indigo-900">ATS resume checker</Link>.</p>
             <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center gap-2 text-xs font-semibold">
               <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-emerald-700 ring-1 ring-inset ring-emerald-200">100% Free</span>
               <span className="rounded-full bg-indigo-50 px-3 py-1.5 text-indigo-700 ring-1 ring-inset ring-indigo-200">No sign-up</span>
@@ -158,7 +158,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-8 text-white shadow-xl sm:p-10">
           <h2 className="text-2xl font-bold sm:text-3xl">Why job seekers in Pakistan & abroad use this free CV maker</h2>
-          <p className="mt-2 max-w-3xl leading-7 text-indigo-100">Most CV tools ask you to sign up, add a watermark, or pay to download. This one does not. Build your CV for any of 17 countries, including Pakistan, check it, and save it with Print to PDF — free, private, and fast.</p>
+          <p className="mt-2 max-w-3xl leading-7 text-indigo-100">Most CV tools ask you to sign up, add a watermark, or pay to download. This one does not. Build your CV for any of 21 countries, including Pakistan, check it, and save it with Print to PDF — free, private, and fast.</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             <div className="rounded-2xl bg-white/15 p-5 backdrop-blur-sm"><p className="text-2xl">⚡</p><h3 className="mt-2 font-bold">Fast — 5 minutes</h3><p className="mt-1 text-sm leading-6 text-indigo-100">Fill the form, preview live, save as PDF. No account, no waiting.</p></div>
             <div className="rounded-2xl bg-white/15 p-5 backdrop-blur-sm"><p className="text-2xl">🔒</p><h3 className="mt-2 font-bold">Private by design</h3><p className="mt-1 text-sm leading-6 text-indigo-100">Your CV stays in your browser. Nothing is uploaded to a server.</p></div>
@@ -203,7 +203,7 @@ export default function Home() {
       {/* ===== Country grid — 8, baaki See all pe ===== */}
       {/* FIX 3 — "See all" sirf 1 dafa: dashed card wala hata diya, neeche wala text link rakha */}
       <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
-        <h2 className="text-center text-2xl font-bold text-slate-900 sm:text-3xl">CV formats for Pakistan & 16 more countries</h2>
+        <h2 className="text-center text-2xl font-bold text-slate-900 sm:text-3xl">CV formats for Pakistan & 20 more countries</h2>
         <p className="mx-auto mt-2 max-w-2xl text-center leading-7 text-slate-600">One CV does not fit every country. Choose the country you are applying to and follow its format.</p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {COUNTRIES_HOME.map((c) => (
@@ -217,7 +217,7 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-4 text-center">
-          <Link href="/country-templates" className="text-sm font-bold text-indigo-600 no-underline hover:text-indigo-800">See all 17 country formats →</Link>
+          <Link href="/country-templates" className="text-sm font-bold text-indigo-600 no-underline hover:text-indigo-800">See all 21 country formats →</Link>
         </div>
       </section>
 
@@ -227,7 +227,7 @@ export default function Home() {
           heading="Frequently Asked Questions"
           items={[
             { q: "Is CV Maker Pakistan really free?", a: "Yes. CV Maker Pakistan is free to use online. There is no sign-up and no watermark. You build your CV in your browser and use Print to PDF to save it." },
-            { q: "Can I make a CV for other countries too?", a: "Yes. This builder covers Pakistan plus 16 more countries — USA, UK, Germany, Canada, Japan, Sweden, Italy, Spain, Singapore, Hong Kong, Netherlands, UAE, Saudi Arabia, Qatar, Australia and New Zealand. Each country has its own format page." },
+            { q: "Can I make a CV for other countries too?", a: "Yes. This builder covers Pakistan plus 20 more countries — USA, UK, Germany, Canada, Japan, Sweden, Italy, Spain, Singapore, Hong Kong, Netherlands, UAE, Saudi Arabia, Qatar, Australia, New Zealand, India, Bangladesh, Sri Lanka and China. Each country has its own format page." },
             { q: "Will my CV pass ATS?", a: "The builder uses single-column templates with standard headings that ATS software can read more easily, and the ATS checker highlights common issues. No tool can guarantee a pass, because every employer configures its system differently." },
             { q: "How long should my CV be?", a: "Fresh graduates: 1 page. 1-5 years of experience: 1 page, maximum 2. More than 5 years: up to 2 pages. Keep only what the job asks for." },
             { q: "Do I need a photo on my CV?", a: "It depends on the country. US and UK CVs usually leave out the photo. Pakistan and Gulf CVs include one only if the job advertisement asks for it. Each country page explains its own rule." },
@@ -238,3 +238,4 @@ export default function Home() {
     </div>
   );
 }
+

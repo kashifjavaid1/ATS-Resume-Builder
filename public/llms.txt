@@ -1,0 +1,91 @@
+# CV Maker Pakistan
+
+> Free ATS-friendly resume and CV builder for 21 countries — Pakistan, USA, UK, Germany, Canada, India, Bangladesh, Sri Lanka, China, Gulf and more. No sign-up, no watermark. Build in your browser and save with Print to PDF. Your data stays on your device.
+
+## Main pages
+- [CV Maker Pakistan — Home](https://cvmakerpakistan.com/): Free ATS-friendly CV builder for Pakistan and 20 more countries. No sign-up, no watermark, Print to PDF. Your data stays on your device.
+- [Free Online Resume Builder](https://cvmakerpakistan.com/resume-builder): Build a CV step by step with live preview, country formats and 38 templates, then save with Print to PDF.
+- [ATS Resume Checker](https://cvmakerpakistan.com/ats-resume-checker): Check a CV against 14 ATS checks, with a score capped at 95 and clear issues to fix.
+- [Resume Job Matcher](https://cvmakerpakistan.com/resume-job-matcher): Compare a resume with a job description and find missing keywords.
+- [Resume Templates](https://cvmakerpakistan.com/resume-templates): All 38 ATS-friendly resume templates, including single-column and two-column designs.
+- [Resume Examples](https://cvmakerpakistan.com/resume-examples): Resume examples to model a CV on.
+- [CV Formats by Country](https://cvmakerpakistan.com/country-templates): CV and resume formats for 21 countries, each with its own local rules.
+- [Pakistan CV Format](https://cvmakerpakistan.com/cv-format-pakistan): Pakistan CV format guide: CNIC name, Father’s Name, Matric / FSc guidance and a free builder.
+- [CV Maker Pakistan](https://cvmakerpakistan.com/cv-maker-pakistan): About the free CV builder for Pakistan and international formats.
+- [CV for Freshers Pakistan](https://cvmakerpakistan.com/cv-for-freshers-pakistan): CV guidance for fresh graduates in Pakistan.
+- [CV for Gulf & Saudi Jobs](https://cvmakerpakistan.com/cv-for-gulf-saudi-jobs): CV guidance for Gulf and Saudi Arabia jobs.
+- [Europe CV Format](https://cvmakerpakistan.com/europe-cv-format): Europe CV format guide.
+- [ATS Resume Guide](https://cvmakerpakistan.com/ats-resume-guide): Guide to writing an ATS-friendly resume.
+- [Resume Format Guide](https://cvmakerpakistan.com/resume-format-guide): Guide to resume formats.
+- [Blog](https://cvmakerpakistan.com/blog): Blog posts about CVs, resumes and job applications.
+- [About](https://cvmakerpakistan.com/about): About CV Maker Pakistan.
+- [Contact](https://cvmakerpakistan.com/contact): Contact CV Maker Pakistan.
+- [Privacy Policy](https://cvmakerpakistan.com/privacy): Privacy policy: CVs are built in the browser and stay on the user’s device.
+- [Terms of Use](https://cvmakerpakistan.com/terms): Terms of use.
+
+## CV formats by country
+- [Pakistan CV Format](https://cvmakerpakistan.com/country-templates/pakistan): Pakistan CV format: name matching CNIC, Father's Name, Matric / FSc / Higher Secondary School Certificate, Bachelor's or Master's with years, single-column ATS layout. 1 page for freshers, up to 2 pages for experienced candidates.
+- [United States CV Format](https://cvmakerpakistan.com/country-templates/usa): Single-column chronological format focused heavily on core technical skills, metrics, and modern ATS parsers.
+- [United Kingdom CV Format](https://cvmakerpakistan.com/country-templates/united-kingdom): Formal UK CV structure highlighting academic credentials, professional memberships, and targeted achievements.
+- [Germany & Austria CV Format](https://cvmakerpakistan.com/country-templates/germany-austria): Detailed chronological structures for a Germany CV and Austria CV, incorporating personal info, clear academic degrees, and skill matrices.
+- [Canada CV Format](https://cvmakerpakistan.com/country-templates/canada): Similar to US standards — a Canadian resume with emphasis on work authorization status and Canadian experience equivalence.
+- [Japan CV Format](https://cvmakerpakistan.com/country-templates/japan): Clean, structured formats for a Japanese CV, aligned with Japanese corporate recruitment standards and biographic precision.
+- [Sweden CV Format](https://cvmakerpakistan.com/country-templates/sweden): Minimalist, modern layouts for a Swedish CV, focusing on transparency, teamwork competencies, and balanced lifestyles.
+- [Italy CV Format](https://cvmakerpakistan.com/country-templates/italy): Europass-compatible structured layouts for an Italian CV, emphasizing linguistic capabilities and educational credentials.
+- [Spain CV Format](https://cvmakerpakistan.com/country-templates/spain): Professional templates for a Spanish CV, tailored for Iberian corporate markets and multinational enterprises.
+- [Singapore CV Format](https://cvmakerpakistan.com/country-templates/singapore): Fast-scanning Singapore resume layouts optimized for multinational corporations and financial institutions.
+- [Hong Kong CV Format](https://cvmakerpakistan.com/country-templates/hong-kong): International corporate standards for an HK CV (Hong Kong CV format), balancing executive summaries and financial/tech expertise.
+- [Netherlands CV Format](https://cvmakerpakistan.com/country-templates/netherlands): Clear, direct, and results-oriented Dutch CV formats popular in Western European hubs.
+- [United Arab Emirates CV Format](https://cvmakerpakistan.com/country-templates/uae): Tailored for the dynamic Gulf job market, accommodating visa status and executive milestones.
+- [Saudi Arabia CV Format](https://cvmakerpakistan.com/country-templates/saudi-arabia): Designed for a KSA CV format: Vision-aligned mega projects, engineering, and enterprise leadership roles.
+- [Qatar CV Format](https://cvmakerpakistan.com/country-templates/qatar): Optimized for a Qatar CV in energy, corporate, and regional international recruitment pipelines.
+- [Australia CV Format](https://cvmakerpakistan.com/country-templates/australia): Comprehensive professional standards for an Australian CV, focusing on competency indicators and career progression.
+- [New Zealand CV Format](https://cvmakerpakistan.com/country-templates/new-zealand): Clear, concise layouts for an NZ CV, aligning with local corporate expectations and verifiable experience.
+- [India CV Format](https://cvmakerpakistan.com/country-templates/india): India CV format: reverse-chronological resume, 1 page for freshers and up to 2 pages for experienced candidates, CGPA with scale, Class X and XII for freshers, skills and projects first. Free ATS-friendly builder, no sign-up, Print to PDF.
+- [Bangladesh CV Format](https://cvmakerpakistan.com/country-templates/bangladesh): Bangladesh CV format: corporate structure with career summary, skills, experience, projects, education and references on request. 1 page for freshers, 2 pages up to 10 years of experience. Free builder, no sign-up, Print to PDF.
+- [Sri Lanka CV Format](https://cvmakerpakistan.com/country-templates/sri-lanka): Sri Lanka CV format: 1-2 page A4 CV, single-column, with summary, experience, education, professional qualifications, skills and languages, and two non-related referees. Free builder, no sign-up, Print to PDF.
+- [China CV Format](https://cvmakerpakistan.com/country-templates/china): China CV format for CSC scholarship and university applications: professional 1-2 page CV with an uninterrupted study timeline from senior middle school, research and publications first. Free builder, no sign-up, Print to PDF.
+
+## Resume templates
+- Executive Elite: C-level executives, directors, senior managers. Dark serif header with premium typography for senior leadership roles.
+- Modern Impact: Corporate, marketing, and mid-level professionals. Vibrant color header with bold sections that stand out to recruiters.
+- Clean Minimalist: Design, consulting, and premium industries. Refined typography with generous white space for clean readability.
+- Creative Bold: Designers, marketers, content creators. Expressive layout with dynamic accents and pill-shaped headings.
+- Software Engineer Pro: Developers, DevOps, and data engineers. Monospace design with skills-first layout for technical roles.
+- Fresh Graduate: Students, fresh graduates, entry-level applicants. Education-first layout built for candidates with limited experience.
+- Europass Standard: Germany, Austria, Italy, Spain, and EU markets. Traditional Europass-compliant CV format for European job markets.
+- Two-Column Pro: UX, product, and international professionals. Modern two-column layout with dark sidebar for contact and skills.
+- Designer Portfolio: Designers, product managers, creative leads. Striking sidebar with avatar circle and skill progress bars.
+- Slate Professional: Corporate, finance, and operations roles. Dark slate header with a bold amber rule — a sharp, boardroom-ready US look.
+- Midnight Bold: Marketing, sales, and creative professionals. Black header block with accent bars — high contrast without a photo, fully ATS-readable.
+- Ivy Minimal: Academia, law, consulting, and senior professionals. Centered serif layout with classic rules — quiet, credible, and recruiter-friendly.
+- Compact Metrics: Analysts, engineers, and results-driven roles. Skills strip up top and tight sections that put numbers and outcomes first.
+- Heritage Green: Pakistan, Gulf, and formal markets. Deep green double rule with classic formal sections — a dignified look for Pakistani and Gulf employers.
+- Oxford Classic: UK professionals, law, academia, consulting. Left-aligned serif layout with a burgundy rule — the traditional British CV, polished for modern hiring.
+- Berlin Tabular: Germany, Austria, and structured EU markets. Monochrome tabular layout with letterspaced headings — formal, precise, and easy to scan.
+- Maple Clean: Canada, public sector, and corporate roles. Clean single-column design with a bold red top rule and clear, confident sections.
+- Sakura Minimal: Japan and refined minimal markets. Airy minimal layout with soft rose accents and generous spacing — calm, precise, professional.
+- Nordic Light: Sweden, Netherlands, and Nordic markets. Light, airy design with sky-blue rules — concise and modern, built for Nordic hiring.
+- Euro Classic: Italy, Spain, Germany, and EU markets. Classic continental design with deep green headings — formal enough for Europass-style hiring.
+- Iberia Warm: Spain, Portugal, and Mediterranean markets. Warm terracotta rules and confident sections — a professional Mediterranean look.
+- Harbour Corporate: Singapore, Hong Kong, and corporate Asia. Teal-ruled corporate design with tight, confident sections for fast-moving Asian markets.
+- Pearl Executive: Hong Kong, finance, and senior corporate roles. Charcoal header with a fine gold divider — understated executive polish.
+- Tulip Direct: Netherlands and direct-style markets. Bold orange top rule with direct, achievement-first sections — no fluff, just results.
+- Gulf Gold: UAE, executive, and premium Gulf roles. Warm sand header with gold rules — premium, elegant, and unmistakably Gulf.
+- Gulf Executive: Saudi Arabia, UAE, Qatar, and Gulf markets. Deep emerald header with a fine gold divider — formal executive presence for Gulf hiring.
+- Qatar Maroon: Qatar, government, and large-project roles. Rich maroon header in the Qatar national color — formal, confident, and distinctive.
+- Southern Ease: Australia, New Zealand, and Oceania roles. Warm ochre accents with relaxed, airy spacing — professional without stiffness.
+- Fern Clean: New Zealand and clean-ATS markets. Deep green headings with strong rules — clean, reference-ready, and ATS-friendly.
+- Duo Light: Modern two-column markets: UK, NL, AU, SG, CA, UAE. Light sidebar for contact, skills, and languages with a full-width experience column — two-column where it is accepted.
+- India Navy: India, campus drives, Naukri, and IT roles. Deep navy header with a saffron divider — confident, formal, and built for Indian hiring.
+- Bengal Green: Bangladesh, corporate, and government roles. Flag-green header with a gold divider — formal and dignified for Bangladeshi employers.
+- Lanka Heritage: Sri Lanka, banking, IT, and government roles. Centered serif layout with maroon and gold rules — classic Sri Lankan formality.
+- China Red: China, CSC scholarship, and university applications. Bold red header with a gold divider — formal and clear for Chinese universities and CSC.
+- Lotus Calm: South Asia, education, and service roles. Soft purple headings with airy spacing — calm, elegant, and easy to read.
+- Bamboo Fresh: Asia, tech, and modern corporate roles. Fresh teal accents with a light tinted header — modern and clean for Asian employers.
+- Spice Warm: South Asia, business, and creative roles. Warm brown headings with confident sections — a grounded, professional look.
+- Twin Columns: India, Bangladesh, and modern two-column markets. Top header band with a light right sidebar — two-column layout where it is accepted, still ATS-readable.
+
+## Optional
+- [Full site content](https://cvmakerpakistan.com/llms-full.txt): Complete text of all country format pages and template descriptions.
+- [Sitemap](https://cvmakerpakistan.com/sitemap.xml): All pages on the site.
