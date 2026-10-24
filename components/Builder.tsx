@@ -25,6 +25,10 @@ const COUNTRY_TEMPLATE_MAP: Record<string, TemplateId> = {
   AU: "modern", AUSTRALIA: "modern",
   NZ: "modern", "NEW-ZEALAND": "modern",
   PK: "classic", PAKISTAN: "classic",
+  IN: "india", INDIA: "india",
+  BD: "bengal", BANGLADESH: "bengal",
+  LK: "lanka", "SRI-LANKA": "lanka",
+  CN: "china", CHINA: "china",
 };
 
 
@@ -47,6 +51,10 @@ const COUNTRY_NAMES: Record<string, string> = {
   AU: "Australia", AUSTRALIA: "Australia",
   NZ: "New Zealand", "NEW-ZEALAND": "New Zealand",
   PK: "Pakistan", PAKISTAN: "Pakistan",
+  IN: "India", INDIA: "India",
+  BD: "Bangladesh", BANGLADESH: "Bangladesh",
+  LK: "Sri Lanka", "SRI-LANKA": "Sri Lanka",
+  CN: "China", CHINA: "China",
 };
 
 const text = [

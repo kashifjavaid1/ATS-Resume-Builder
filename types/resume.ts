@@ -34,7 +34,15 @@ export type TemplateId =
   | "maroon"
   | "southern"
   | "fern"
-  | "duo";
+  | "duo"
+  | "india"
+  | "bengal"
+  | "lanka"
+  | "china"
+  | "lotus"
+  | "bamboo"
+  | "spice"
+  | "twin";
 
 export type Resume = { 
   name: string; 

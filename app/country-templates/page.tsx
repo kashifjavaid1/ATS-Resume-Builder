@@ -5,7 +5,7 @@ import { Crumbs } from "@/components/Seo";
 export const metadata: Metadata = {
   title: "International Resume & CV Templates by Country | Free ATS Builder",
   description:
-    "Create 100% free, ATS-friendly resumes and CVs tailored for USA, UK, Germany, Canada, Japan, Australia, GCC, and global job markets. Zero sign-up required, Print to PDF.",
+    "Create 100% free, ATS-friendly resumes and CVs tailored for USA, UK, Germany, Canada, Japan, Australia, GCC, India, Bangladesh, Sri Lanka, China, and global job markets. Zero sign-up required, Print to PDF.",
   alternates: { canonical: "/country-templates" },
   openGraph: {
     title: "International Resume & CV Templates by Country | Free ATS Builder",

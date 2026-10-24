@@ -64,4 +64,16 @@ export const COUNTRY_TEMPLATE_SETS: Record<string, TemplateId[]> = {
   // New Zealand
   NZ: ["modern", "fern", "southern", "minimal"],
   "NEW-ZEALAND": ["modern", "fern", "southern", "minimal"],
+  // India (all-new set; twin is the two-column option)
+  IN: ["india", "twin", "lotus", "spice", "bamboo"],
+  INDIA: ["india", "twin", "lotus", "spice", "bamboo"],
+  // Bangladesh (all-new set; twin is the two-column option)
+  BD: ["bengal", "twin", "lotus", "spice"],
+  BANGLADESH: ["bengal", "twin", "lotus", "spice"],
+  // Sri Lanka (all-new set, single-column only)
+  LK: ["lanka", "lotus", "bamboo", "spice"],
+  "SRI-LANKA": ["lanka", "lotus", "bamboo", "spice"],
+  // China (all-new set, single-column only)
+  CN: ["china", "bamboo", "lotus", "spice"],
+  CHINA: ["china", "bamboo", "lotus", "spice"],
 };
