@@ -6,6 +6,7 @@ import type { TemplateId } from "@/types/resume";
 export const GENERAL_TEMPLATES: TemplateId[] = [
   "executive", "modern", "minimal", "creative", "tech",
   "graduate", "classic", "sidebar", "bold",
+  "royal", "aqua", "editorial", "skyline", "rose",
 ];
 
 // Per-country template sets. The first entry is the country's existing

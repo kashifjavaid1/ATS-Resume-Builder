@@ -1490,6 +1490,116 @@ export function Twin({ r }: { r: Resume }) {
   );
 }
 
+export function Royal({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => <h2 className="mt-5 mb-2 font-serif text-sm font-bold uppercase tracking-widest border-b-2 pb-1" style={{ borderColor: "#c9a227", color: "#172554" }}>{c}</h2>;
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-6 sm:py-7 text-center" style={{ backgroundColor: "#172554" }}>
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-1 break-words" style={{ color: "#d4af37" }}>{r.title}</p>
+        <p className="text-xs mt-2 font-medium break-words text-slate-300">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Aqua({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider pl-2" style={{ borderLeft: "4px solid #0f766e", color: "#0f766e" }}>{c}</h2>;
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ backgroundColor: "#0f766e" }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words" style={{ color: "#ccfbf1" }}>{r.title}</p>
+        <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Editorial({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => <h2 className="mt-5 mb-2 font-serif text-xs font-bold uppercase tracking-widest border-b border-slate-900 pb-1 text-slate-900">{c}</h2>;
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-6 sm:py-7 text-center border-b-4 border-double border-slate-900">
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 break-words">{r.name}</h1>
+        <p className="font-serif italic text-base mt-1 text-slate-600 break-words">{r.title}</p>
+        <p className="text-xs mt-2 font-medium uppercase tracking-widest text-slate-500 break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Skyline({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider border-b-2 pb-1" style={{ borderColor: "#bae6fd", color: "#1e40af" }}>{c}</h2>;
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ background: "linear-gradient(90deg, #1e40af, #0284c7)" }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words opacity-95">{r.title}</p>
+        <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
+export function Rose({ r }: { r: Resume }) {
+  const H = ({ c }: { c: string }) => <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider border-b pb-1" style={{ borderColor: "#fecdd3", color: "#9f1239" }}>{c}</h2>;
+  return (
+    <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
+      <header className="px-5 sm:px-8 py-5 sm:py-6 border-b" style={{ backgroundColor: "#fff1f2", borderColor: "#fecdd3" }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words" style={{ color: "#881337" }}>{r.name}</h1>
+        <p className="text-base font-medium mt-0.5 break-words" style={{ color: "#be123c" }}>{r.title}</p>
+        <p className="text-xs mt-2 font-medium break-words text-slate-500">{contact(r)}</p>
+      </header>
+      <div className="px-5 sm:px-8 py-5 sm:py-6 space-y-4">
+        {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
+        {r.experience?.length > 0 && <div className="cv-section"><H c="Experience" /><Exp r={r} /></div>}
+        {r.projects && r.projects.length > 0 && <div className="cv-section"><H c="Projects" /><ProjectsList projects={r.projects} /></div>}
+        {r.educationList?.length > 0 && <div className="cv-section"><H c="Education" /><EducationList educationList={r.educationList} /></div>}
+        {r.certifications?.length > 0 && <div className="cv-section"><H c="Certifications" /><CertificationsList certifications={r.certifications} /></div>}
+        {r.skills && <div className="cv-section"><H c="Skills" /><SkillsList skills={r.skills} /></div>}
+        {r.languages?.length > 0 && <div className="cv-section"><H c="Languages" /><LanguagesList languages={r.languages} /></div>}
+      </div>
+    </div>
+  );
+}
+
 export const TEMPLATES = {
   executive: Executive,
   modern: Modern,
@@ -1529,6 +1639,11 @@ export const TEMPLATES = {
   bamboo: Bamboo,
   spice: Spice,
   twin: Twin,
+  royal: Royal,
+  aqua: Aqua,
+  editorial: Editorial,
+  skyline: Skyline,
+  rose: Rose,
 } as const;
 
 export const TEMPLATE_INFO: Record<keyof typeof TEMPLATES, { name: string; bestFor: string; desc: string }> = {
@@ -1721,5 +1836,30 @@ export const TEMPLATE_INFO: Record<keyof typeof TEMPLATES, { name: string; bestF
     name: "Twin Columns",
     bestFor: "India, Bangladesh, and modern two-column markets",
     desc: "Top header band with a light right sidebar — two-column layout where it is accepted, still ATS-readable."
+  },
+  royal: {
+    name: "Royal Prestige",
+    bestFor: "Senior managers, executives, consultants",
+    desc: "Deep navy header with gold serif headings — a premium, formal look for leadership roles."
+  },
+  aqua: {
+    name: "Aqua Fresh",
+    bestFor: "Fresh graduates, healthcare, customer service",
+    desc: "Clean teal design with a fresh, modern header for early-career and service roles."
+  },
+  editorial: {
+    name: "Editorial Classic",
+    bestFor: "Academics, researchers, writers",
+    desc: "Black-and-white serif layout in a classic editorial style for academic and research CVs."
+  },
+  skyline: {
+    name: "Skyline Corporate",
+    bestFor: "IT, engineering, business professionals",
+    desc: "Blue gradient header with a structured corporate layout for technical and business roles."
+  },
+  rose: {
+    name: "Rose Elegance",
+    bestFor: "Marketing, design, communications",
+    desc: "Soft blush header with warm rose accents — stylish yet professional and ATS-readable."
   },
 };

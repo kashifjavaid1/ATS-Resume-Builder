@@ -42,7 +42,12 @@ export type TemplateId =
   | "lotus"
   | "bamboo"
   | "spice"
-  | "twin";
+  | "twin"
+  | "royal"
+  | "aqua"
+  | "editorial"
+  | "skyline"
+  | "rose";
 
 export type Resume = { 
   name: string; 

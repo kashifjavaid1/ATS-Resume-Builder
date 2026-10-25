@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { examples } from "@/lib/content";
 import { Crumbs, Cta } from "@/components/Seo";
-import { Modern } from "@/components/Templates";
+import { TEMPLATES } from "@/components/Templates";
 import { emptyResume } from "@/types/resume";
 
 export const dynamicParams = false;
@@ -37,8 +37,10 @@ export default async function Page({ params }: P) {
     summary: e.summary, 
     skills: e.skills.join(", "), 
     experience: [{ title: e.role, company: "Company Name", dates: "2022 - Present", bullets: e.bullets.join("\n") }], 
-    template: "modern" as const 
+    template: e.template ?? "modern",
   };
+
+  const T = TEMPLATES[r.template];
 
   // Encoded resume data so user can load it directly into the builder on click
   const encodedData = encodeURIComponent(JSON.stringify(r));
@@ -62,8 +64,8 @@ export default async function Page({ params }: P) {
         </Link>
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-slate-900/10" role="img" aria-label={`${e.role} resume example using the Modern Professional template`}>
-        <Modern r={r} />
+      <div className="mt-8 overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-slate-900/10" role="img" aria-label={`${e.role} resume example`}>
+        <T r={r} />
       </div>
 
       <div className="mt-12 space-y-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
