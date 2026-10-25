@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { examples } from "@/lib/content";
-import { Crumbs, Cta } from "@/components/Seo";
+import { Crumbs, Cta, Ld } from "@/components/Seo";
 import { TEMPLATES } from "@/components/Templates";
 import { emptyResume } from "@/types/resume";
 
@@ -87,6 +87,19 @@ export default async function Page({ params }: P) {
           Open the <Link className="font-semibold text-indigo-600 underline" href="/resume-builder">resume builder</Link> to start from this structure, pick a layout from the <Link className="font-semibold text-indigo-600 underline" href="/resume-templates">resume templates</Link>, then read the <Link className="font-semibold text-indigo-600 underline" href="/ats-resume-guide">ATS resume guide</Link> before you submit.
         </div>
       </div>
+
+      {e.faq && e.faq.length > 0 && (
+        <section id="faq" className="mt-12 scroll-mt-28">
+          <h2 className="text-2xl font-black text-slate-900">Frequently asked questions</h2>
+          {e.faq.map((f) => (
+            <div key={f.q} className="mt-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="font-semibold text-slate-900">{f.q}</h3>
+              <p className="mt-1 leading-7 text-slate-700">{f.a}</p>
+            </div>
+          ))}
+          <Ld data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: e.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }} />
+        </section>
+      )}
 
       <div className="mt-12">
         <Cta />
