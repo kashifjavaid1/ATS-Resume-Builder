@@ -5,6 +5,39 @@ export function Ld({ data }: { data: object }) { return <script type="applicatio
 
 const slugify = (h: string) => h.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
+function Rich({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).filter((x) => x.length > 0);
+  return (<>{parts.map((part, i) => {
+    const b = part.match(/^\*\*([^*]+)\*\*$/);
+    if (b) return <strong key={i} className="font-semibold text-slate-900">{b[1]}</strong>;
+    const l = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (l) return <Link key={i} href={l[2]} className="font-semibold text-indigo-600 underline decoration-indigo-300 underline-offset-2 transition-colors hover:text-indigo-800">{l[1]}</Link>;
+    return <span key={i}>{part}</span>;
+  })}</>);
+}
+
+type Block = { kind: "p"; text: string } | { kind: "ul" | "ol"; items: string[] };
+
+function toBlocks(lines: string[]): Block[] {
+  const blocks: Block[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (/^[-\u2022]\s+/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^[-\u2022]\s+/.test(lines[i])) { items.push(lines[i].replace(/^[-\u2022]\s+/, "")); i++; }
+      blocks.push({ kind: "ul", items });
+    } else if (/^\d{1,2}\.\s+/.test(line)) {
+      let j = i;
+      const items: string[] = [];
+      while (j < lines.length && /^\d{1,2}\.\s+/.test(lines[j])) { items.push(lines[j].replace(/^\d{1,2}\.\s+/, "")); j++; }
+      if (items.length >= 2) { blocks.push({ kind: "ol", items }); i = j; }
+      else { blocks.push({ kind: "p", text: line }); i++; }
+    } else { blocks.push({ kind: "p", text: line }); i++; }
+  }
+  return blocks;
+}
+
 export function Crumbs({ items }: { items: [string, string][] }) {
   const all: [string, string][] = [["Home", "/"], ...items];
   return (<><nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-slate-500">{all.map(([n, h], i) => <span key={h} className="flex items-center gap-1.5">{i > 0 && <span className="text-slate-300">›</span>}{i < all.length - 1 ? <Link href={h} className="font-medium text-slate-500 transition-colors hover:text-indigo-600">{n}</Link> : <span className="font-semibold text-slate-800">{n}</span>}</span>)}</nav>
@@ -52,12 +85,12 @@ export function ArticleView({ a, path }: { a: Article; path: string }) {
     </nav>
 
     {/* Content sections as cards */}
-    {a.sections.map((s, i) => <section key={s.h} id={slugify(s.h)} className="mt-6 scroll-mt-28 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"><div className="flex items-start gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-base font-black text-white shadow-md">{i + 1}</span><h2 className="text-2xl font-bold text-slate-900">{s.h}</h2></div>{s.p.map((t, j) => <p key={j} className="mt-3 leading-7 text-slate-700">{t}</p>)}</section>)}
+    {a.sections.map((s, i) => <section key={s.h} id={slugify(s.h)} className="mt-6 scroll-mt-28 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"><div className="flex items-start gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-base font-black text-white shadow-md">{i + 1}</span><h2 className="text-2xl font-bold text-slate-900">{s.h}</h2></div>{toBlocks(s.p).map((b, j) => b.kind === "p" ? <p key={j} className="mt-3 leading-7 text-slate-700"><Rich text={b.text} /></p> : b.kind === "ul" ? <ul key={j} className="mt-3 list-disc space-y-1.5 pl-6 leading-7 text-slate-700">{b.items.map((it, k) => <li key={k}><Rich text={it} /></li>)}</ul> : <ol key={j} className="mt-3 list-decimal space-y-1.5 pl-6 leading-7 text-slate-700">{b.items.map((it, k) => <li key={k}><Rich text={it} /></li>)}</ol>)}</section>)}
 
     {/* CTA — only once, in the middle (after sections, before FAQ) */}
     <Cta />
 
-    {a.faq && <section id="faq" className="mt-6 scroll-mt-28"><h2 className="text-2xl font-bold text-slate-900">Frequently asked questions</h2>{a.faq.map(f => <div key={f.q} className="mt-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><h3 className="font-semibold text-slate-900">{f.q}</h3><p className="mt-1 leading-7 text-slate-700">{f.a}</p></div>)}
+    {a.faq && <section id="faq" className="mt-6 scroll-mt-28"><h2 className="text-2xl font-bold text-slate-900">Frequently asked questions</h2>{a.faq.map(f => <div key={f.q} className="mt-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><h3 className="font-semibold text-slate-900">{f.q}</h3><p className="mt-1 leading-7 text-slate-700"><Rich text={f.a} /></p></div>)}
       <Ld data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: a.faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }} /></section>}
 
     <Ld data={{ "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.desc, mainEntityOfPage: BASE + path }} /></article>);
