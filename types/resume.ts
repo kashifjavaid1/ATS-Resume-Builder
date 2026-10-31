@@ -67,7 +67,8 @@ export type Resume = {
   languages: Language[];
   projects?: Project[];
   template: TemplateId; 
-  accent: string 
+  accent: string;
+  photo?: string 
 };
 
 export const emptyResume: Resume = { 
@@ -98,7 +99,8 @@ export const emptyResume: Resume = {
     { name: "Project Title", description: "What you built and the result it produced\nTools or skills you used", link: "" }
   ],
   template: "modern", 
-  accent: "#4f46e5" 
+  accent: "#4f46e5",
+  photo: "" 
 };
 
 export const resumeToText = (r: Resume) => [

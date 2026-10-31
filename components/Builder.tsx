@@ -224,6 +224,28 @@ export default function Builder() {
     startTransition(() => setR(p => ({ ...p, [k]: v })));
   }, []);
 
+  const onPhoto = (e: any) => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      const size = 480;
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        const s = Math.min(img.width, img.height);
+        ctx.drawImage(img, (img.width - s) / 2, (img.height - s) / 2, s, s, 0, 0, size, size);
+        up("photo", canvas.toDataURL("image/jpeg", 0.85));
+      }
+      URL.revokeObjectURL(url);
+    };
+    img.src = url;
+  };
+
   const exp = useCallback((i: number, k: string, v: string) => {
     startTransition(() => {
       setR(p => ({
@@ -417,6 +439,19 @@ export default function Builder() {
                   <input className={`${inputStyle} mt-1.5`} value={r[k]} onChange={e => up(k, e.target.value)} />
                 </label>
               ))}
+
+              <div className="pt-1">
+                <span className="block text-xs font-bold uppercase tracking-wider text-slate-600">Photo (Optional)</span>
+                {r.photo ? (
+                  <div className="mt-2 flex items-center gap-3">
+                    <img src={r.photo} alt="" className="h-16 w-16 rounded-lg object-cover border border-slate-200" />
+                    <button type="button" onClick={() => up("photo", "")} className="text-xs font-semibold text-red-600 underline">Remove photo</button>
+                  </div>
+                ) : (
+                  <input type="file" accept="image/*" onChange={onPhoto} className="mt-1.5 block w-full text-xs text-slate-600" />
+                )}
+                <p className="mt-1.5 text-[11px] leading-snug text-slate-500">Optional. Helpful for local and Gulf jobs. Skip it for ATS and multinational applications. Your photo stays in your browser and is never uploaded.</p>
+              </div>
 
               {isEurope && (
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 pt-2">
