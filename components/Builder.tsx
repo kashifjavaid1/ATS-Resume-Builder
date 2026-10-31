@@ -331,6 +331,10 @@ export default function Builder() {
   };
 
   const country = selectedCountry || "";
+  // Countries where CV photos are not accepted: the photo option stays hidden
+  // there and a saved photo is never rendered in that country's templates.
+  const NO_PHOTO_COUNTRIES = ["US", "USA", "UK", "GB", "UNITED-KINGDOM", "CA", "CANADA", "AU", "AUSTRALIA", "NZ", "NEW-ZEALAND", "SE", "SWEDEN"];
+  const photoAllowed = !NO_PHOTO_COUNTRIES.includes(country);
   const isEurope = ["GERMANY-AUSTRIA", "DE", "EUROPE", "EU", "IT", "ES"].includes(country);
   const isGCC = ["UAE", "SAUDI-ARABIA", "QATAR", "KSA", "QA", "SA"].includes(country);
   const isLocked = !!selectedCountry && !!COUNTRY_TEMPLATE_MAP[selectedCountry];
@@ -440,6 +444,7 @@ export default function Builder() {
                 </label>
               ))}
 
+              {photoAllowed ? (
               <div className="pt-1">
                 <span className="block text-xs font-bold uppercase tracking-wider text-slate-600">Photo (Optional)</span>
                 <input id="cv-photo-upload" type="file" accept="image/*" onChange={onPhoto} className="hidden" />
@@ -465,6 +470,12 @@ export default function Builder() {
                 )}
                 <p className="mt-1.5 text-[11px] leading-snug text-slate-500">Optional. Helpful for local and Gulf jobs. Skip it for ATS and multinational applications. Your photo stays in your browser and is never uploaded.</p>
               </div>
+              ) : (
+              <div className="pt-1">
+                <span className="block text-xs font-bold uppercase tracking-wider text-slate-600">Photo</span>
+                <p className="mt-1.5 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-[11px] leading-snug text-slate-600">CVs for this country do not carry a photo. Recruiters there expect a clean text CV, so the photo stays out here. Open a country where photos are normal and the photo option comes back.</p>
+              </div>
+              )}
 
               {isEurope && (
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 pt-2">
@@ -657,7 +668,7 @@ export default function Builder() {
     id="resume"
     className="mx-auto w-full max-w-[794px] overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-slate-900/10 lg:sticky lg:top-24"
   >
-    <T r={r} />
+    <T r={photoAllowed ? r : { ...r, photo: "" }} />
   </div>
 </section>
     </div>
