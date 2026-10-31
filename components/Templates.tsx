@@ -1,3 +1,102 @@
+import { Resume, Edu, Cert, Language, Project } from "@/types/resume";
+
+const bullets = (s: string) => s.split("\n").filter(Boolean);
+
+const Exp = ({ r }: { r: Resume }) => (
+  <div className="space-y-4">
+    {r.experience.map((e, i) => (
+      <div key={i} className="group">
+        <div className="flex justify-between items-baseline gap-2">
+          <h3 className="text-sm font-bold text-slate-900 min-w-0 break-words">{e.title}, <span className="font-semibold text-indigo-600" style={{ color: r.accent }}>{e.company}</span></h3>
+          <span className="text-xs font-medium text-slate-500 shrink-0">{e.dates}</span>
+        </div>
+        <ul className="list-disc ml-4 text-[13px] text-slate-700 space-y-1 mt-1">
+          {bullets(e.bullets).map((b, j) => <li key={j} className="break-words">{b}</li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+);
+
+const EducationList = ({ educationList }: { educationList: Edu[] }) => {
+  if (!educationList || educationList.length === 0) return null;
+  return (
+    <div className="space-y-3">
+      {educationList.map((ed, i) => (
+        <div key={i} className="flex justify-between items-baseline gap-2 min-w-0">
+          <div className="min-w-0">
+            <h3 className="text-sm font-bold text-slate-900 break-words">{ed.degree}</h3>
+            <p className="text-xs text-slate-600 break-words">{ed.institution} {ed.details && `• ${ed.details}`}</p>
+          </div>
+          <span className="text-xs font-medium text-slate-500 shrink-0">{ed.dates}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const CertificationsList = ({ certifications }: { certifications: Cert[] }) => {
+  if (!certifications || certifications.length === 0) return null;
+  return (
+    <div className="space-y-2">
+      {certifications.map((c, i) => (
+        <div key={i} className="flex justify-between items-baseline gap-2 text-[13px] min-w-0">
+          <span className="font-bold text-slate-900 break-words min-w-0">{c.name} <span className="font-normal text-slate-600">— {c.issuer}</span></span>
+          <span className="text-xs font-medium text-slate-500 shrink-0">{c.date}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const ProjectsList = ({ projects }: { projects?: Project[] }) => {
+  if (!projects || projects.length === 0) return null;
+  return (
+    <div className="space-y-3">
+      {projects.map((p, i) => (
+        <div key={i} className="min-w-0">
+          <h3 className="text-sm font-bold text-slate-900 break-words">{p.name}</h3>
+          {p.link && <p className="text-xs text-slate-500 break-all">{p.link}</p>}
+          <ul className="list-disc ml-4 text-[13px] text-slate-700 space-y-1 mt-1">
+            {bullets(p.description).map((b, j) => <li key={j} className="break-words">{b}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const LanguagesList = ({ languages }: { languages: Language[] }) => {
+  if (!languages || languages.length === 0) return null;
+  return (
+    <div className="flex flex-wrap gap-1.5 mt-1.5">
+      {languages.map((l, i) => (
+        <span key={i} className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 break-words">
+          {l.name} ({l.proficiency})
+        </span>
+      ))}
+    </div>
+  );
+};
+
+const contact = (r: Resume) => [r.email, r.phone, r.location].filter(Boolean).join(" | ");
+
+const Photo = ({ r, className }: { r: Resume; className: string }) =>
+  r.photo ? <img src={r.photo} alt={r.name} className={className} /> : null;
+
+const SkillsList = ({ skills }: { skills: string }) => {
+  if (!skills) return null;
+  return (
+    <div className="flex flex-wrap gap-1.5 mt-1.5">
+      {skills.split(",").map((s, idx) => (
+        <span key={idx} className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-700 break-words">
+          {s.trim()}
+        </span>
+      ))}
+    </div>
+  );
+};
+
 export function Modern({ r }: { r: Resume }) {
   const H = ({ c }: { c: string }) => <h2 className="mt-5 mb-2 text-xs font-bold uppercase tracking-wider border-b border-slate-100 pb-1" style={{ color: r.accent }}>{c}</h2>;
   return (
