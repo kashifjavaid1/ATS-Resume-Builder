@@ -442,13 +442,26 @@ export default function Builder() {
 
               <div className="pt-1">
                 <span className="block text-xs font-bold uppercase tracking-wider text-slate-600">Photo (Optional)</span>
+                <input id="cv-photo-upload" type="file" accept="image/*" onChange={onPhoto} className="hidden" />
                 {r.photo ? (
-                  <div className="mt-2 flex items-center gap-3">
-                    <img src={r.photo} alt="" className="h-16 w-16 rounded-lg object-cover border border-slate-200" />
-                    <button type="button" onClick={() => up("photo", "")} className="text-xs font-semibold text-red-600 underline">Remove photo</button>
+                  <div className="mt-2 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3">
+                    <img src={r.photo} alt="" className="h-16 w-16 rounded-lg object-cover ring-1 ring-slate-200" />
+                    <div className="flex flex-col items-start gap-1.5">
+                      <span className="text-xs font-semibold text-slate-700">Photo added</span>
+                      <div className="flex gap-2">
+                        <label htmlFor="cv-photo-upload" className="cursor-pointer rounded-md border border-indigo-200 bg-white px-2.5 py-1 text-xs font-semibold text-indigo-700 hover:bg-indigo-50">Change photo</label>
+                        <button type="button" onClick={() => up("photo", "")} className="rounded-md border border-red-200 bg-white px-2.5 py-1 text-xs font-semibold text-red-600 hover:bg-red-50">Remove</button>
+                      </div>
+                    </div>
                   </div>
                 ) : (
-                  <input type="file" accept="image/*" onChange={onPhoto} className="mt-1.5 block w-full text-xs text-slate-600" />
+                  <label htmlFor="cv-photo-upload" className="mt-2 flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-5 text-center transition hover:border-indigo-400 hover:bg-indigo-50">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
+                      <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="h-5 w-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8.5A1.5 1.5 0 014.5 7h2L8 4.5h8L17.5 7h2A1.5 1.5 0 0121 8.5v9A1.5 1.5 0 0119.5 19h-15A1.5 1.5 0 013 17.5v-9z" /><circle cx="12" cy="12.5" r="3.5" /></svg>
+                    </span>
+                    <span className="mt-2 text-sm font-semibold text-slate-700">Upload your photo</span>
+                    <span className="mt-0.5 text-[11px] text-slate-500">JPG or PNG, a clear square photo works best</span>
+                  </label>
                 )}
                 <p className="mt-1.5 text-[11px] leading-snug text-slate-500">Optional. Helpful for local and Gulf jobs. Skip it for ATS and multinational applications. Your photo stays in your browser and is never uploaded.</p>
               </div>
