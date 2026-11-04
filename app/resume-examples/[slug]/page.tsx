@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const e = examples.find(x => x.slug === resolvedParams.slug); 
   if (!e) return {};
 
-  const title = `${e.role} Resume Example and Writing Tips`;
+  const title = e.metaTitle ?? `${e.role} Resume Example and Writing Tips`;
   return { 
     title, 
     description: `See a ${e.role.toLowerCase()} resume example with a sample summary, key skills and bullet points. ${e.tag}`, 
@@ -84,9 +84,22 @@ export default async function Page({ params }: P) {
         </div>
 
         <div className="pt-4 border-t border-slate-100 text-sm text-slate-600">
-          Open the <Link className="font-semibold text-indigo-600 underline" href="/resume-builder">resume builder</Link> to start from this structure, pick a layout from the <Link className="font-semibold text-indigo-600 underline" href="/resume-templates">resume templates</Link>, then read the <Link className="font-semibold text-indigo-600 underline" href="/ats-resume-guide">ATS resume guide</Link> before you submit.
+          Open the <Link className="font-semibold text-indigo-600 underline" href="/resume-builder">resume builder</Link> to start from this structure, pick a layout from the <Link className="font-semibold text-indigo-600 underline" href="/resume-templates">resume templates</Link>, then read the <Link className="font-semibold text-indigo-600 underline" href="/ats-resume-guide">ATS resume guide</Link> and run your draft through the <Link className="font-semibold text-indigo-600 underline" href="/ats-resume-checker">ATS resume checker</Link> before you submit.
         </div>
       </div>
+
+      {e.sections && e.sections.length > 0 && (
+        <div className="mt-12 space-y-10">
+          {e.sections.map((s) => (
+            <section key={s.h}>
+              <h2 className="text-2xl font-black text-slate-900">{s.h}</h2>
+              {s.p.map((p, i) => (
+                <p key={i} className="mt-3 text-slate-600 leading-relaxed">{p}</p>
+              ))}
+            </section>
+          ))}
+        </div>
+      )}
 
       {e.faq && e.faq.length > 0 && (
         <section id="faq" className="mt-12 scroll-mt-28">
@@ -100,6 +113,19 @@ export default async function Page({ params }: P) {
           <Ld data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: e.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }} />
         </section>
       )}
+
+      <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="text-2xl font-black text-slate-900">Other resume examples</h2>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+          {examples.filter((x) => x.slug !== slug).slice(0, 4).map((o) => (
+            <li key={o.slug}>
+              <Link href={`/resume-examples/${o.slug}`} className="block rounded-xl border border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold text-indigo-700 hover:bg-indigo-50">
+                {o.role} CV Example →
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <div className="mt-12">
         <Cta />
