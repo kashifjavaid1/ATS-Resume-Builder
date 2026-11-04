@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import GAPageTracker from "@/components/GAPageTracker";
 import Script from "next/script";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   gtag('js', new Date());
   gtag('config', 'G-SLYHWKH165');`}
         </Script>
+        <GAPageTracker />
 
         <Navbar />
 
