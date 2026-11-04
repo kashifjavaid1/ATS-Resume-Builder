@@ -7,7 +7,7 @@ import Faq from "@/components/Faq";
 
 export const metadata: Metadata = {
   // FIX 1 — absolute title: layout ka template ab brand dobara nahi jodega
-  title: { absolute: "CV Maker Pakistan & International Resume Builder — Free ATS-Friendly CV for 21 Countries" },
+  title: { absolute: "Free CV Maker Pakistan — ATS-Friendly, No Sign-Up | CV Maker Pakistan" },
   description: "Build a free ATS-friendly CV for 21 countries — Pakistan, USA, UK, Germany, Canada, India, Gulf and more. No sign-up. Pakistan format with CNIC, Matric / FSc guidance, then Print to PDF.",
   alternates: { canonical: "/" },
 };

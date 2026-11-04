@@ -413,7 +413,7 @@ export const COUNTRIES: Country[] = [
       { q: "What should a Saudi Arabia CV format for nurses include?", a: "Licence and registration, clinical areas, hospital experience, and certifications — with dates. Keep the same single-column, ATS-friendly structure." },
       { q: "Is a Saudi Arabia CV format in Word or PDF better?", a: "A text-based PDF is usually best. Use Word only when the employer asks for it. Remember: Detailed credentials." },
     ],
-    metaTitle: "Saudi Arabia CV Format — Free Builder | KSA CV Template & PDF",
+    metaTitle: "Saudi Arabia CV Format — Free Template for Pakistanis 2026",
     metaDesc: "Build a Saudi CV format (Saudi Arabia / KSA) free: formal Gulf CV template with credentials. PDF via print. No sign-up.",
   },
   {

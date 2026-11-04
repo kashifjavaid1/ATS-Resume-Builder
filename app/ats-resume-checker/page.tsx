@@ -3,7 +3,7 @@ import Faq from "@/components/Faq";
 import Checker from "@/components/Checker";
 
 export const metadata: Metadata = { 
-  title: "ATS Resume Checker & Job Matcher", 
+  title: "Free ATS Resume Checker Pakistan — Score Your CV Online",
   description: "Check your resume for ATS readability and compare it with a job description. Runs in your browser; nothing is uploaded.", 
   alternates: { canonical: "/ats-resume-checker" } 
 };

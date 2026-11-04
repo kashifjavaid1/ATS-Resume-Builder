@@ -5,12 +5,12 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   // FIX — absolute title: layout ka template ab brand dobara nahi jodega
-  title: { absolute: "CV Maker Pakistan — Free Online Resume Builder | Print to PDF" },
+  title: { absolute: "CV Maker Pakistan — Free Online CV Builder 2026 | CV Maker Pakistan" },
   description:
     "CV Maker Pakistan: build a professional, ATS-friendly CV online free. No sign-up. Add your Matric, FSc / Higher Secondary School Certificate, degree, skills and work history, then Print to PDF. Your CV stays on your device.",
   alternates: { canonical: "/cv-maker-pakistan" },
   openGraph: {
-    title: "CV Maker Pakistan — Free Online Resume Builder",
+    title: "CV Maker Pakistan — Free Online CV Builder 2026",
     description:
       "Build a professional, ATS-friendly CV online free. No sign-up. Pakistan format with Matric, FSc, CNIC guidance. Print to PDF.",
     type: "website",
@@ -183,6 +183,20 @@ export default function Page() {
             <span className="mt-1 text-sm leading-6 text-indigo-600">Open the free builder, fill your details, preview live, Print to PDF.</span>
           </Link>
         </div>
+      </section>
+
+      {/* ===== Gulf + country formats ===== */}
+      <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 className="text-2xl font-bold text-slate-900">Applying outside Pakistan?</h2>
+        <p className="mt-2 leading-7 text-slate-600">
+          Gulf and international employers read a different format from the local one. Start with the{" "}
+          <Link href="/country-templates/uae" className="font-semibold text-indigo-700 underline">UAE CV format</Link>{" "}
+          or the{" "}
+          <Link href="/country-templates/saudi-arabia" className="font-semibold text-indigo-700 underline">Saudi Arabia CV format</Link>{" "}
+          and read the full{" "}
+          <Link href="/blog/cv-for-gulf-jobs-from-pakistan" className="font-semibold text-indigo-700 underline">CV format for Gulf jobs from Pakistan</Link>{" "}
+          before you apply.
+        </p>
       </section>
 
       {/* ===== FAQ — same content, card design ===== */}

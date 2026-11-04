@@ -3,7 +3,7 @@ import Faq from "@/components/Faq";
 import Builder from "@/components/Builder";
 
 export const metadata: Metadata = {
-  title: "Free Online Resume Builder",
+  title: "Free Resume Builder Pakistan — ATS Templates, Instant PDF",
   description: "Build an ATS-friendly resume online with live preview and 38 templates. Autosaves locally and downloads as a PDF.",
   alternates: { canonical: "/resume-builder" }
 };
