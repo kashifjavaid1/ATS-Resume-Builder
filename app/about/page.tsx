@@ -107,6 +107,33 @@ export default function Page() {
         <Link href="/privacy" className="shrink-0 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white shadow-md hover:bg-emerald-700">Privacy Policy →</Link>
       </section>
 
+      {/* ===== How the tools work together ===== */}
+      <section className="mx-auto max-w-3xl space-y-4 leading-7 text-slate-600">
+        <h2 className="text-2xl font-bold text-slate-900">How the tools work together</h2>
+        <p>
+          Most people start in the builder and finish in the checker. The builder shapes the document with the
+          right headings and the right country rules. The checker then stress tests the result and names every
+          weak spot it finds. The matcher takes the last step and compares your finished CV with one real job
+          description so the words of that employer meet the words of your experience.
+        </p>
+        <p>
+          Used in that order the three tools cover the full journey from a blank page to an application that is
+          ready to send. The guides and examples on this site support each step with formats and samples for
+          Pakistan and for the countries Pakistanis apply to most.
+        </p>
+      </section>
+
+      {/* ===== Free means free ===== */}
+      <section className="mx-auto max-w-3xl space-y-4 leading-7 text-slate-600">
+        <h2 className="text-2xl font-bold text-slate-900">Free means free here</h2>
+        <p>
+          There is no premium tier on this site and no locked download waiting at the end of the form. The CV
+          you build is the CV you keep and it carries no watermark. If advertising ever appears on these pages
+          then it will sit beside the tools where it belongs. It will never be stamped across your document.
+          That frustration is the reason this site exists and it stays removed.
+        </p>
+      </section>
+
       {/* ===== FAQ — screenshot keywords naturally ===== */}
       <section>
         <Faq

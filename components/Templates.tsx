@@ -103,7 +103,7 @@ export function Modern({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ background: r.accent }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium opacity-95 mt-0.5 break-words">{r.title}</p>
         <p className="text-xs mt-2 opacity-90 font-medium break-words">{contact(r)}</p>
       </header>
@@ -125,7 +125,7 @@ export function Classic({ r }: { r: Resume }) {
     <div className="bg-white text-slate-900 p-5 sm:p-8 text-sm min-h-[1000px]" style={{ fontFamily: "Georgia, serif" }}>
       <div className="text-center border-b border-slate-200 pb-4 mb-2">
         <Photo r={r} className="mx-auto mb-3 block h-24 w-24 rounded-full object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-wide break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-bold tracking-wide break-words">{r.name}</div>
         <p className="italic text-slate-600 mt-0.5 break-words">{r.title}</p>
         <p className="text-xs text-slate-500 mt-1 break-words">{contact(r)}</p>
       </div>
@@ -144,7 +144,7 @@ export function Tech({ r }: { r: Resume }) {
   return (
     <div className="bg-white text-slate-800 p-5 sm:p-8 text-sm min-h-[1000px]">
       <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-      <h1 className="font-mono text-xl sm:text-2xl font-bold break-words">{r.name}</h1>
+      <div className="font-mono text-xl sm:text-2xl font-bold break-words">{r.name}</div>
       <p style={{ color: r.accent }} className="font-mono font-medium break-words">{r.title}</p>
       <p className="text-xs text-slate-500 mt-1 font-mono break-words">{contact(r)}</p>
       {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 font-mono text-xs leading-relaxed break-words">{r.summary}</p></div>}
@@ -163,7 +163,7 @@ export function Executive({ r }: { r: Resume }) {
     <div className="bg-white text-slate-900 text-sm min-h-[1000px]" style={{ fontFamily: "Georgia, serif" }}>
       <header className="bg-slate-900 px-5 sm:px-8 py-5 sm:py-7 text-white">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight break-words">{r.name}</h1>
+        <div className="text-3xl sm:text-4xl font-bold tracking-tight break-words">{r.name}</div>
         <p className="mt-1 text-xs font-semibold tracking-widest uppercase break-words" style={{ color: r.accent }}>{r.title}</p>
         <p className="mt-2 text-xs text-slate-300 font-sans break-words">{contact(r)}</p>
       </header>
@@ -184,7 +184,7 @@ export function Minimal({ r }: { r: Resume }) {
   return (
     <div className="bg-white text-slate-700 p-5 sm:p-10 text-sm font-light min-h-[1000px]">
       <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-      <h1 className="text-3xl sm:text-4xl font-extralight tracking-tight text-slate-900 break-words">{r.name}</h1>
+      <div className="text-3xl sm:text-4xl font-extralight tracking-tight text-slate-900 break-words">{r.name}</div>
       <p className="mt-1 text-sm font-medium text-slate-500 break-words">{r.title}</p>
       <p className="mt-1 text-xs text-slate-400 break-words">{contact(r)}</p>
       {r.summary && <div className="cv-section"><H c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
@@ -203,7 +203,7 @@ export function Creative({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 p-5 sm:p-8 text-sm min-h-[1000px]">
       <div className="border-l-8 pl-4 py-1" style={{ borderColor: r.accent }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-3xl sm:text-4xl font-black leading-none tracking-tight break-words" style={{ color: r.accent }}>{r.name}</h1>
+        <div className="text-3xl sm:text-4xl font-black leading-none tracking-tight break-words" style={{ color: r.accent }}>{r.name}</div>
         <p className="mt-1 text-base font-semibold text-slate-700 break-words">{r.title}</p>
         <p className="mt-1 text-xs text-slate-500 break-words">{contact(r)}</p>
       </div>
@@ -222,7 +222,7 @@ export function Graduate({ r }: { r: Resume }) {
   return (
     <div className="bg-white text-slate-800 p-5 sm:p-8 text-sm min-h-[1000px]">
       <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-      <h1 className="text-2xl sm:text-3xl font-extrabold break-words" style={{ color: r.accent }}>{r.name}</h1>
+      <div className="text-2xl sm:text-3xl font-extrabold break-words" style={{ color: r.accent }}>{r.name}</div>
       <p className="font-semibold text-slate-700 break-words">{r.title}</p>
       <p className="text-xs text-slate-500 mt-0.5 break-words">{contact(r)}</p>
       {r.summary && <div className="cv-section"><H c="Objective" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
@@ -318,9 +318,9 @@ export function Sidebar({ r }: { r: Resume }) {
       <div className="w-[62%] sm:w-[64%] md:w-[66%] px-4 sm:px-5 md:px-8 py-5 sm:py-6 md:py-10 min-w-0">
         {/* Header */}
         <header className="mb-5 sm:mb-6 md:mb-8">
-          <h1 className="text-xl sm:text-2xl md:text-4xl font-black tracking-tight text-slate-900 uppercase leading-tight break-words">
+          <div className="text-xl sm:text-2xl md:text-4xl font-black tracking-tight text-slate-900 uppercase leading-tight break-words">
             {r.name || "Your Name"}
-          </h1>
+          </div>
           <p className="text-sm sm:text-base md:text-lg font-medium text-slate-600 mt-1 sm:mt-2 break-words">
             {r.title || "Professional Title"}
           </p>
@@ -574,13 +574,13 @@ export function Bold({ r }: { r: Resume }) {
 
       <div className="flex-1 min-w-0 px-4 sm:px-5 md:px-8 py-5 sm:py-6 md:py-10">
         <header className="mb-5 sm:mb-6 md:mb-8">
-          <h1
+          <div
             className="text-[32px] sm:text-[40px] md:text-[52px] font-black uppercase tracking-tight leading-[0.9] break-words"
             style={{ color: r.accent }}
           >
             {firstLine}
             {restLine && <><br />{restLine}</>}
-          </h1>
+          </div>
           {r.title && (
             <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg font-medium text-slate-700 tracking-wide break-words">{r.title}</p>
           )}
@@ -704,7 +704,7 @@ export function Slate({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ backgroundColor: "#0f172a" }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words" style={{ color: "#fbbf24" }}>{r.title}</p>
         <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
       </header>
@@ -729,7 +729,7 @@ export function Midnight({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ backgroundColor: "#000000" }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words" style={{ color: r.accent }}>{r.title}</p>
         <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
       </header>
@@ -754,7 +754,7 @@ export function Ivy({ r }: { r: Resume }) {
     <div className="bg-white text-slate-900 p-5 sm:p-8 text-sm min-h-[1000px]" style={{ fontFamily: "Georgia, serif" }}>
       <div className="text-center border-b border-slate-200 pb-4 mb-2">
         <Photo r={r} className="mx-auto mb-3 block h-24 w-24 rounded-full object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-wide break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-bold tracking-wide break-words">{r.name}</div>
         <p className="italic mt-0.5 break-words" style={{ color: "#1e3a5f" }}>{r.title}</p>
         <p className="text-xs text-slate-500 mt-1 break-words">{contact(r)}</p>
       </div>
@@ -778,7 +778,7 @@ export function Compact({ r }: { r: Resume }) {
       <div className="px-5 sm:px-8 pt-5 sm:pt-6 pb-4 border-b-2 border-slate-900 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
         <Photo r={r} className="h-20 w-20 rounded-lg object-cover shrink-0" />
         <div className="min-w-0">
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+          <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
           <p className="text-base font-medium mt-0.5 break-words" style={{ color: r.accent }}>{r.title}</p>
         </div>
         <p className="text-xs text-slate-500 font-medium break-words sm:text-right shrink-0">{contact(r)}</p>
@@ -804,7 +804,7 @@ export function Heritage({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 pt-6 pb-4 border-b-4 border-double" style={{ borderColor: "#166534" }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#166534]">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#166534]">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-slate-600">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -829,7 +829,7 @@ export function Oxford({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="font-serif text-3xl sm:text-4xl font-bold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="font-serif text-base mt-1 break-words text-[#7f1d1d]">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
         <div className="h-0.5 mt-4 bg-[#7f1d1d]" />
@@ -855,7 +855,7 @@ export function Berlin({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 border-b border-slate-300">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-xl sm:text-2xl font-bold uppercase tracking-wide break-words text-slate-900">{r.name}</h1>
+        <div className="text-xl sm:text-2xl font-bold uppercase tracking-wide break-words text-slate-900">{r.name}</div>
         <p className="text-xs uppercase tracking-[0.2em] mt-1 break-words text-slate-500">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -880,7 +880,7 @@ export function Maple({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm border-t-8" style={{ borderColor: "#c8102e" }}>
       <header className="px-5 sm:px-8 py-5 sm:py-6">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-[#c8102e]">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -905,7 +905,7 @@ export function Sakura({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-7 sm:py-8">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-medium tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-medium tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base mt-1 break-words text-slate-500">{r.title}</p>
         <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -930,7 +930,7 @@ export function Nordic({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-6 sm:py-7">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base mt-1 break-words text-slate-500">{r.title}</p>
         <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -955,7 +955,7 @@ export function Euro({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-[#14532d]">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -980,7 +980,7 @@ export function Iberia({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 border-b-4 border-[#c2410c]">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-[#c2410c]">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1005,7 +1005,7 @@ export function Harbour({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 border-b-4 border-teal-700">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-teal-800">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1030,7 +1030,7 @@ export function Pearl({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-zinc-800">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-zinc-300">{r.title}</p>
         <p className="text-xs mt-2 text-zinc-400 font-medium break-words">{contact(r)}</p>
         <div className="h-px mt-4 bg-amber-400/70 clear-both" />
@@ -1056,7 +1056,7 @@ export function Tulip({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm border-t-4 border-orange-600">
       <header className="px-5 sm:px-8 py-5 sm:py-6">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-orange-600">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1081,7 +1081,7 @@ export function Gulf({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 bg-[#f5efe0]">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#451a03]">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#451a03]">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-[#92400e]">{r.title}</p>
         <p className="text-xs mt-2 text-stone-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1106,7 +1106,7 @@ export function Emerald({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-emerald-900">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-emerald-100">{r.title}</p>
         <p className="text-xs mt-2 text-emerald-200/80 font-medium break-words">{contact(r)}</p>
         <div className="h-px mt-4 bg-amber-300/40 clear-both" />
@@ -1132,7 +1132,7 @@ export function Maroon({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-[#8A1538]">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-rose-100">{r.title}</p>
         <p className="text-xs mt-2 text-rose-200/80 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1157,7 +1157,7 @@ export function Southern({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm border-t-4 border-amber-700/70">
       <header className="px-5 sm:px-8 py-6 sm:py-7">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base mt-1 break-words text-amber-800">{r.title}</p>
         <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1182,7 +1182,7 @@ export function Fern({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#052e16]">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-[#052e16]">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-green-800">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1261,7 +1261,7 @@ export function Duo({ r }: { r: Resume }) {
       </aside>
       <div className="flex-1 min-w-0 px-4 sm:px-6 md:px-8 py-5 sm:py-6 md:py-10">
         <header className="mb-5 sm:mb-6">
-          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</h1>
+          <div className="text-xl sm:text-2xl font-extrabold tracking-tight break-words text-slate-900">{r.name}</div>
           <p className="text-sm font-semibold mt-0.5 break-words text-slate-600">{r.title}</p>
         </header>
         {r.summary && <div className="cv-section"><MainH c="Summary" /><p className="text-slate-600 leading-relaxed text-[13px] break-words">{r.summary}</p></div>}
@@ -1282,7 +1282,7 @@ export function India({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-blue-950">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-blue-100">{r.title}</p>
         <p className="text-xs mt-2 text-blue-200/80 font-medium break-words">{contact(r)}</p>
         <div className="h-1 mt-4 bg-amber-500/80 clear-both" />
@@ -1308,7 +1308,7 @@ export function Bengal({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-[#006a4e]">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-emerald-50">{r.title}</p>
         <p className="text-xs mt-2 text-emerald-100/80 font-medium break-words">{contact(r)}</p>
         <div className="h-px mt-4 bg-amber-300/50 clear-both" />
@@ -1334,7 +1334,7 @@ export function Lanka({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-6 sm:py-7 text-center">
         <Photo r={r} className="mx-auto mb-3 block h-24 w-24 rounded-full object-cover" />
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight break-words text-[#8D153A]">{r.name}</h1>
+        <div className="font-serif text-3xl sm:text-4xl font-bold tracking-tight break-words text-[#8D153A]">{r.name}</div>
         <p className="font-serif text-base mt-1 break-words text-slate-600">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
         <div className="h-0.5 w-24 mx-auto mt-4 bg-amber-500" />
@@ -1360,7 +1360,7 @@ export function China({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-red-700">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-red-50">{r.title}</p>
         <p className="text-xs mt-2 text-red-100/80 font-medium break-words">{contact(r)}</p>
         <div className="h-px mt-4 bg-amber-300/60 clear-both" />
@@ -1386,7 +1386,7 @@ export function Lotus({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-6 sm:py-7">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-bold tracking-tight break-words text-slate-900">{r.name}</div>
         <p className="text-base mt-1 break-words text-purple-800">{r.title}</p>
         <p className="text-xs mt-3 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1411,7 +1411,7 @@ export function Bamboo({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 bg-teal-50">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-teal-950">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-teal-950">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-teal-800">{r.title}</p>
         <p className="text-xs mt-2 text-teal-900/60 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1436,7 +1436,7 @@ export function Spice({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-stone-900">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words text-stone-900">{r.name}</div>
         <p className="text-base font-semibold mt-0.5 break-words text-[#92400e]">{r.title}</p>
         <p className="text-xs mt-2 text-slate-500 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1480,7 +1480,7 @@ export function Twin({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white bg-slate-800">
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words text-slate-200">{r.title}</p>
         <p className="text-xs mt-2 text-slate-300 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1537,7 +1537,7 @@ export function Royal({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-6 sm:py-7 text-center" style={{ backgroundColor: "#172554" }}>
         <Photo r={r} className="mx-auto mb-3 block h-24 w-24 rounded-full object-cover" />
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white break-words">{r.name}</h1>
+        <div className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white break-words">{r.name}</div>
         <p className="text-base font-medium mt-1 break-words" style={{ color: "#d4af37" }}>{r.title}</p>
         <p className="text-xs mt-2 font-medium break-words text-slate-300">{contact(r)}</p>
       </header>
@@ -1560,7 +1560,7 @@ export function Aqua({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ backgroundColor: "#0f766e" }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words" style={{ color: "#ccfbf1" }}>{r.title}</p>
         <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1583,7 +1583,7 @@ export function Editorial({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-6 sm:py-7 text-center border-b-4 border-double border-slate-900">
         <Photo r={r} className="mx-auto mb-3 block h-24 w-24 rounded-full object-cover" />
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 break-words">{r.name}</h1>
+        <div className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 break-words">{r.name}</div>
         <p className="font-serif italic text-base mt-1 text-slate-600 break-words">{r.title}</p>
         <p className="text-xs mt-2 font-medium uppercase tracking-widest text-slate-500 break-words">{contact(r)}</p>
       </header>
@@ -1606,7 +1606,7 @@ export function Skyline({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 text-white" style={{ background: "linear-gradient(90deg, #1e40af, #0284c7)" }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words">{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words opacity-95">{r.title}</p>
         <p className="text-xs mt-2 opacity-80 font-medium break-words">{contact(r)}</p>
       </header>
@@ -1629,7 +1629,7 @@ export function Rose({ r }: { r: Resume }) {
     <div className="bg-white text-slate-800 text-sm min-h-[1000px] shadow-sm">
       <header className="px-5 sm:px-8 py-5 sm:py-6 border-b" style={{ backgroundColor: "#fff1f2", borderColor: "#fecdd3" }}>
         <Photo r={r} className="float-right ml-4 mb-1 h-24 w-[76px] rounded-md object-cover" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words" style={{ color: "#881337" }}>{r.name}</h1>
+        <div className="text-2xl sm:text-3xl font-extrabold tracking-tight break-words" style={{ color: "#881337" }}>{r.name}</div>
         <p className="text-base font-medium mt-0.5 break-words" style={{ color: "#be123c" }}>{r.title}</p>
         <p className="text-xs mt-2 font-medium break-words text-slate-500">{contact(r)}</p>
       </header>
