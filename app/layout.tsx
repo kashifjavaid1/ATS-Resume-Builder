@@ -85,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><Link href="/resume-templates" prefetch={true} className="hover:text-white transition-colors">Resume Templates</Link></li>
                   <li><Link href="/resume-examples" prefetch={true} className="hover:text-white transition-colors">Resume Examples</Link></li>
                   <li><Link href="/country-templates" prefetch={true} className="hover:text-white transition-colors">Country Templates</Link></li>
+                  <li><a href="https://www.pixeltoolapps.com" target="_blank" rel="noopener" className="hover:text-white transition-colors">PixelTools — Image Compressor & Passport Photo Maker</a></li>
                 </ul>
               </div>
 
